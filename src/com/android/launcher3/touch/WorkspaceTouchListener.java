@@ -24,8 +24,10 @@ import static android.view.MotionEvent.ACTION_UP;
 import static com.android.launcher3.LauncherState.NORMAL;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_WORKSPACE_LONGPRESS;
 
+import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.Rect;
+import android.os.PowerManager;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
@@ -41,6 +43,8 @@ import com.android.launcher3.Workspace;
 import com.android.launcher3.dragndrop.DragLayer;
 import com.android.launcher3.testing.TestLogging;
 import com.android.launcher3.testing.TestProtocol;
+
+import com.android.launcher3.Utilities;
 
 /**
  * Helper class to handle touch on empty space in workspace and show options popup on long press
@@ -67,6 +71,9 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
 
     private int mLongPressState = STATE_CANCELLED;
 
+    private final PowerManager mPm;
+    private final boolean mDoubleTapEnabled;
+
     private final GestureDetector mGestureDetector;
 
     public WorkspaceTouchListener(Launcher launcher, Workspace workspace) {
@@ -76,6 +83,8 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         // likely to cause movement.
         mTouchSlop = 2 * ViewConfiguration.get(launcher).getScaledTouchSlop();
         mGestureDetector = new GestureDetector(workspace.getContext(), this);
+        mPm = (PowerManager) workspace.getContext().getSystemService(Context.POWER_SERVICE);
+        mDoubleTapEnabled = Utilities.isDoubleTapGestureEnabled(workspace.getContext());
     }
 
     @Override
@@ -179,5 +188,13 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
                 cancelLongPress();
             }
         }
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent event) {
+        if (mDoubleTapEnabled) {
+            mPm.goToSleep(event.getEventTime());
+        }
+        return true;
     }
 }
