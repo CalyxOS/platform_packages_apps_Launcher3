@@ -25,4 +25,7 @@ public final class FeatureFlags extends BaseFlags {
     private FeatureFlags() {
         // Prevent instantiation
     }
+
+    // Feature flag to enable moving the QSB on the 0th screen of the workspace.
+    public static final boolean QSB_ON_FIRST_SCREEN = false;
 }
