@@ -26,4 +26,7 @@ public class ApiWrapper {
     public static Person[] getPersons(ShortcutInfo si) {
         return Utilities.EMPTY_PERSON_ARRAY;
     }
+
+    // Feature flag to enable moving the QSB on the 0th screen of the workspace.
+    public static final boolean QSB_ON_FIRST_SCREEN = false;
 }
