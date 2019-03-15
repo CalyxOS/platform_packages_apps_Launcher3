@@ -22,4 +22,7 @@ package com.android.launcher3.config;
 public final class FeatureFlags extends BaseFlags {
 
     private FeatureFlags() {}
+
+    // Feature flag to enable moving the QSB on the 0th screen of the workspace.
+    public static final boolean QSB_ON_FIRST_SCREEN = false;
 }
