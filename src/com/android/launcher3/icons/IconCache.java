@@ -337,11 +337,7 @@ public class IconCache extends BaseIconCache {
 
     @Override
     protected boolean getEntryFromDB(ComponentKey cacheKey, CacheEntry entry, boolean lowRes) {
-        if (mIconProvider.isClockIcon(cacheKey)) {
-            // For clock icon, we always load the dynamic icon
-            return false;
-        }
-        return super.getEntryFromDB(cacheKey, entry, lowRes);
+        return false;
     }
 
     public static abstract class IconLoadRequest extends HandlerRunnable {
