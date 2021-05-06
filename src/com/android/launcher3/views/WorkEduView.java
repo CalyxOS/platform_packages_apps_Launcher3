@@ -131,13 +131,13 @@ public class WorkEduView extends AbstractSlideInView
             animator.addListener(new AnimationSuccessListener() {
                 @Override
                 public void onAnimationSuccess(Animator animator) {
-                    mContentText.setText(mLauncher.getString(R.string.work_profile_edu_work_apps));
+                    mContentText.setText(mLauncher.getString(R.string.work_profile_edu_work_apps2));
                     ObjectAnimator.ofFloat(mContentText, ALPHA, 1).start();
                 }
             });
             animator.start();
         } else {
-            mContentText.setText(mLauncher.getString(R.string.work_profile_edu_work_apps));
+            mContentText.setText(mLauncher.getString(R.string.work_profile_edu_work_apps2));
         }
         mNextWorkEduStep = WORK_EDU_WORK_APPS;
         mProceedButton.setOnClickListener(v -> handleClose(true));

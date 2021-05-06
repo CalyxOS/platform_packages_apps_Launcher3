@@ -15,4 +15,6 @@
      limitations under the License.
 -->
 <resources>
+    <!--- User onboarding title for work profile apps -->
+    <string name="work_profile_edu_work_apps2">Work apps &amp; data</string>
 </resources>
