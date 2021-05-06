@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5c6f523_ac415fac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-06T15:45:32Z",
+      "side": 1,
+      "message": "Probably shouldn\u0027t call it \u0027our\u0027 profiles, but we all know what I meant.",
+      "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cce0cb24_daf1c5d4",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-06T15:45:32Z",
+      "side": 1,
+      "message": "Could use a better string.",
+      "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "873909ce_a4188bb0",
+        "filename": "src/com/android/launcher3/views/WorkEduView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-06T15:45:32Z",
+      "side": 1,
+      "message": "These changes should be conditional, we still want to keep the same message for work profiles created via other means.",
+      "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    }
+  ]
+}
