@@ -50,6 +50,24 @@
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0b488ac_61cc75ab",
+        "filename": "src/com/android/launcher3/views/WorkEduView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-05-07T13:49:15Z",
+      "side": 1,
+      "message": "Would have to use this function https://cs.android.com/android/platform/superproject/+/android-11.0.0_r1:frameworks/base/core/java/android/app/admin/DevicePolicyManager.java;l\u003d7014;bpv\u003d0;bpt\u003d1\nQuestion becomes is it worth the extra code for a one-time message like this. Users see this already when using shelter, insular and such",
+      "parentUuid": "873909ce_a4188bb0",
+      "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
     }
   ]
 }
