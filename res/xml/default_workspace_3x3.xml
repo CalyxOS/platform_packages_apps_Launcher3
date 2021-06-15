@@ -93,7 +93,7 @@
         launcher:screen="0"
         launcher:x="2"
         launcher:y="-1"
-        launcher:packageName="org.fdroid.fdroid"
-        launcher:className="org.fdroid.fdroid.views.main.MainActivity" />
+        launcher:packageName="org.calyxos.fdroid"
+        launcher:className="org.calyxos.fdroid.views.main.MainActivity" />
 
 </favorites>
