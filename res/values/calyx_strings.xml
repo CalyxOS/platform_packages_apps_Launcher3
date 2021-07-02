@@ -15,4 +15,7 @@
      limitations under the License.
 -->
 <resources>
+    <string name="paused_apps_dialog_title">App paused</string>
+    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="paused_apps_drop_target_label">Pause app</string>
 </resources>
