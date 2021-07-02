@@ -182,6 +182,7 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3
 LOCAL_REQUIRED_MODULES := privapp_whitelist_com.android.launcher3
+LOCAL_CERTIFICATE := platform
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/quickstep/res \
