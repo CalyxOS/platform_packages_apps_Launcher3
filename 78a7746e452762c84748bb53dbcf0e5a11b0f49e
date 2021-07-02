@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "411a2dbf_f0e3b287",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-02T03:05:08Z",
+      "side": 1,
+      "message": "Works but the signature change is far from ideal",
+      "revId": "78a7746e452762c84748bb53dbcf0e5a11b0f49e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28780e84_a65b803f",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-07-02T03:05:08Z",
+      "side": 1,
+      "message": "https://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/res/AndroidManifest.xml?q\u003dandroid.permission.SUSPEND_APPS\u0026ss\u003dandroid%2Fplatform%2Fsuperproject\u0026start\u003d11",
+      "range": {
+        "startLine": 185,
+        "startChar": 0,
+        "endLine": 185,
+        "endChar": 29
+      },
+      "revId": "78a7746e452762c84748bb53dbcf0e5a11b0f49e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
