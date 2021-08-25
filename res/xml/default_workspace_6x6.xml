@@ -109,13 +109,6 @@
 
     <favorite
         launcher:screen="0"
-        launcher:x="2"
-        launcher:y="-1"
-        launcher:packageName="com.aurora.store"
-        launcher:className="com.aurora.store.activity.AuroraActivity" />
-
-    <favorite
-        launcher:screen="0"
         launcher:x="5"
         launcher:y="-1"
         launcher:packageName="org.fdroid.fdroid"
