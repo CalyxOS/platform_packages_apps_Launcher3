@@ -36,6 +36,42 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04edd559_6374bcf9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T21:30:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c64d5d3_727a3339",
+      "revId": "78a7746e452762c84748bb53dbcf0e5a11b0f49e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88cb6c22_ba091414",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T21:30:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c64d5d3_727a3339",
+      "revId": "78a7746e452762c84748bb53dbcf0e5a11b0f49e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "28780e84_a65b803f",
@@ -49,6 +85,30 @@
       "writtenOn": "2021-07-02T03:05:08Z",
       "side": 1,
       "message": "https://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/res/AndroidManifest.xml?q\u003dandroid.permission.SUSPEND_APPS\u0026ss\u003dandroid%2Fplatform%2Fsuperproject\u0026start\u003d11",
+      "range": {
+        "startLine": 185,
+        "startChar": 0,
+        "endLine": 185,
+        "endChar": 29
+      },
+      "revId": "78a7746e452762c84748bb53dbcf0e5a11b0f49e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51b79851_d1bd3e52",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T21:30:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "28780e84_a65b803f",
       "range": {
         "startLine": 185,
         "startChar": 0,
