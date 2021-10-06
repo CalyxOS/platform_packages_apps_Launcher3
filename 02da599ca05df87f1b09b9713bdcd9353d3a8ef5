@@ -33,6 +33,24 @@
       "message": "What does stock say? Technically it also prevents you from starting the app, although the app could start on it\u0027s own (Service)",
       "revId": "02da599ca05df87f1b09b9713bdcd9353d3a8ef5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84d42c59_dcb9e08f",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T16:39:55Z",
+      "side": 1,
+      "message": "This is good for now.",
+      "parentUuid": "96c6f9d5_a0365def",
+      "revId": "02da599ca05df87f1b09b9713bdcd9353d3a8ef5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
