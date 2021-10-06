@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "090a223e_a1e5982c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T16:39:38Z",
+      "side": 1,
+      "message": "Let\u0027s ship this for now, we can iterate more on this if we keep it unchanged for 12, and if not, it\u0027d all be moot.",
+      "revId": "02da599ca05df87f1b09b9713bdcd9353d3a8ef5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "96c6f9d5_a0365def",
