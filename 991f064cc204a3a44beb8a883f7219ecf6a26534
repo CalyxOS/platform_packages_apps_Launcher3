@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53e0200b_2091ea00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-13T16:49:02Z",
+      "side": 1,
+      "message": "Upgrades: org.fdroid.fdroid\nNew installs: org.calyxos.fdroid\n\nShould use resolve to keep both package names.",
+      "revId": "991f064cc204a3a44beb8a883f7219ecf6a26534",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
