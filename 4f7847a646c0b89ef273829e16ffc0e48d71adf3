@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "663134f2_d8273996",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-11-23T02:36:50Z",
+      "side": 1,
+      "message": "Can be abandoned, squashed into previous commit",
+      "revId": "4f7847a646c0b89ef273829e16ffc0e48d71adf3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
