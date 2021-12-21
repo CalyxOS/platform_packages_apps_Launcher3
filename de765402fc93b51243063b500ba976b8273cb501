@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "420a4d69_b0278eb6",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-21T21:24:54Z",
+      "side": 1,
+      "message": "Not found",
+      "revId": "de765402fc93b51243063b500ba976b8273cb501",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61b02f6d_fd35cc2d",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-21T21:24:54Z",
+      "side": 1,
+      "message": "drawable not found",
+      "revId": "de765402fc93b51243063b500ba976b8273cb501",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
