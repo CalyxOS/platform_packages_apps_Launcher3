@@ -69,6 +69,23 @@
       "parentUuid": "61b02f6d_fd35cc2d",
       "revId": "de765402fc93b51243063b500ba976b8273cb501",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "856842b1_a9c0937f",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-12-21T23:59:57Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "de765402fc93b51243063b500ba976b8273cb501",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
