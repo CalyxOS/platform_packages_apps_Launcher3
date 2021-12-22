@@ -16,6 +16,23 @@
       "message": "Upgrades: org.fdroid.fdroid\nNew installs: org.calyxos.fdroid\n\nShould use resolve to keep both package names.",
       "revId": "991f064cc204a3a44beb8a883f7219ecf6a26534",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddb1e5fb_75352572",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-22T13:48:45Z",
+      "side": 1,
+      "message": "Need to handle both names, for users.\n\nNew installs: New package name\nOld installs / upgrade: Old package name, so it has to kept for icon to show up in new users.",
+      "revId": "991f064cc204a3a44beb8a883f7219ecf6a26534",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
