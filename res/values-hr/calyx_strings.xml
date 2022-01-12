@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause">Zaustavi</string>
+    <string name="pause_apps_dialog_title">Zaustaviti %1$s\?</string>
+    <string name="paused_apps_drop_target_label">Zaustavi aplikaciju</string>
+    <string name="pause_apps_dialog_message">Obavijesti za %1$s će se zaustaviti</string>
+    <string name="paused_apps_dialog_title">Aplikacija zaustavljena</string>
+    <string name="paused_apps_dialog_message">Pokretač je direktno zaustavio %1$s</string>
+    <string name="work_apps_pause_btn_text_calyx">Isključi poslovne aplikacije</string>
+    <string name="work_apps_paused_title_calyx">Poslovne aplikacije su isključene</string>
+    <string name="work_apps_enable_btn_text_calyx">Uključi poslovne aplikacije</string>
+    <string name="work_apps_paused_info_body_calyx">Tvoje poslovne aplikacije ti ne mogu slati obavijesti, koristiti tvoju bateriju ili pristupiti tvojoj lokaciji</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Tvoje poslovne aplikacije ne mogu primati telefonske pozive ili tekstualne poruke, slati ti obavijesti, koristiti tvoju bateriju ili pristupiti tvojoj lokaciji</string>
+</resources>

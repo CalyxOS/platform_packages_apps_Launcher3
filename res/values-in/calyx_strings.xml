@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause">Jeda</string>
+    <string name="pause_apps_dialog_message">Notifikasi untuk %1$s akan dijeda</string>
+    <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
+    <string name="pause_apps_dialog_title">Jeda %1$s\?</string>
+    <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
+    <string name="paused_apps_dialog_message">%1$s telah dijeda secara langsung dari peluncur</string>
+    <string name="work_apps_pause_btn_text_calyx">Matikan aplikasi Kerja</string>
+    <string name="work_apps_paused_info_body_calyx">Aplikasi-aplikasi Kerja saat ini tidak dapat mengirimkan notifikasi, menggunakan baterai, atau mengakses lokasi Anda</string>
+    <string name="work_apps_paused_title_calyx">Aplikasi Kerja saat ini dimatikan</string>
+    <string name="work_apps_enable_btn_text_calyx">Nyalakan aplikasi Kerja</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Aplikasi-aplikasi Kerja saat ini tidak dapat menerima panggilan atau SMS, mengirimi Anda notifikasi, menggunakan baterai, atau mengakses lokasi Anda</string>
+</resources>

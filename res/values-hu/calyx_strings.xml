@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause">Szünetel</string>
+    <string name="paused_apps_dialog_message">%1$s közvetlenül az indítópultból került szüneteltetve</string>
+    <string name="paused_apps_drop_target_label">App szüneteltetése</string>
+    <string name="pause_apps_dialog_title">%1$s szüneteltetése?</string>
+    <string name="paused_apps_dialog_title">App szünetelve</string>
+    <string name="pause_apps_dialog_message">%1$s értesítései szünetelésre kerülnek</string>
+    <string name="work_apps_paused_title_calyx">Munka appok kikapcsolva</string>
+    <string name="work_apps_pause_btn_text_calyx">Munka appok kikapcsolása</string>
+    <string name="work_apps_enable_btn_text_calyx">Munka appok bekapcsolása</string>
+    <string name="work_apps_paused_info_body_calyx">A munka appok nem küldhetnek értesítéseket, nem használhatják az akkumulátort, és nem férhetnek hozzá a helymeghatározáshoz</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">A munka appok nem fogadhatnak hívásokat vagy szöveges üzeneteket, nem küldhetnek értesítéseket, nem használhatják az akkut, vagy a helymeghatározást</string>
+</resources>
