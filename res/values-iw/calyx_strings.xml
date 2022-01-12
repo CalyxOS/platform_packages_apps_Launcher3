@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause">השהיה</string>
+    <string name="pause_apps_dialog_title">להשהות את %1$s\?</string>
+    <string name="pause_apps_dialog_message">ההתראות של %1$s יושהו</string>
+    <string name="paused_apps_dialog_title">היישומון מושהה</string>
+    <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
+    <string name="paused_apps_drop_target_label">השהיית היישומון</string>
+    <string name="work_apps_pause_btn_text_calyx">כיבוי יישומוני עבודה</string>
+    <string name="work_apps_enable_btn_text_calyx">הפעלת יישומוני עבודה</string>
+    <string name="work_apps_paused_info_body_calyx">יישומוני העבודה שלך לא יכולים לשלוח לך התראות, להשתמש בסוללה שלך או לגשת למקום שלך</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">יישומוני העבודה שלך לא יכולים לקבל שיחות טלפון או הודעות, לשלוח לך התראות, להשתמש בסוללה שלך או לגשת למקום שלך</string>
+    <string name="work_apps_paused_title_calyx">יישומוני עבודה כבויים</string>
+</resources>

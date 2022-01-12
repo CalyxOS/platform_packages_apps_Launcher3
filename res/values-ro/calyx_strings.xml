@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause_apps_dialog_title">Întrerupi %1$s?</string>
+    <string name="paused_apps_drop_target_label">Întrerupe aplicația</string>
+    <string name="paused_apps_dialog_message">%1$s a fost întreruptă direct din lansator</string>
+    <string name="pause">Întrerupe</string>
+    <string name="work_apps_pause_btn_text_calyx">Întrerupe aplicațiile de serviciu</string>
+    <string name="pause_apps_dialog_message">Notificările pentru %1$s vor fi întrerupte</string>
+    <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
+    <string name="work_apps_enable_btn_text_calyx">Activează aplicațiile de serviciu</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Aplicațiile de serviciu nu pot primi apeluri telefonice sau mesaje text, nu pot trimite notificări, nu pot folosi bateria și nu pot accesa locația</string>
+    <string name="work_apps_paused_title_calyx">Aplicațiile de serviciu sunt dezactivate</string>
+    <string name="work_apps_paused_info_body_calyx">Aplicațiile de serviciu nu pot trimite notificări, nu pot folosi bateria și nu pot accesa locația</string>
+</resources>
