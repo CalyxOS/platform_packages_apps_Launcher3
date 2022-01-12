@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause">இடைநிறுத்தம்</string>
+    <string name="pause_apps_dialog_title">இடைநிறுத்தம் %1$s?</string>
+    <string name="paused_apps_dialog_title">பயன்பாடு இடைநிறுத்தப்பட்டது</string>
+    <string name="work_apps_pause_btn_text_calyx">வேலை பயன்பாடுகளை அணைக்கவும்</string>
+    <string name="pause_apps_dialog_message">%1$s க்கான அறிவிப்புகள் இடைநிறுத்தப்படும்</string>
+    <string name="paused_apps_dialog_message">%1$s நேரடியாக துவக்கத்திலிருந்து இடைநிறுத்தப்பட்டது</string>
+    <string name="paused_apps_drop_target_label">இடைநிறுத்த பயன்பாடு</string>
+    <string name="work_apps_paused_title_calyx">வேலை பயன்பாடுகள் முடக்கப்பட்டுள்ளன</string>
+    <string name="work_apps_enable_btn_text_calyx">வேலை பயன்பாடுகளை இயக்கவும்</string>
+    <string name="work_apps_paused_info_body_calyx">உங்கள் பணி பயன்பாடுகள் உங்களுக்கு அறிவிப்புகளை அனுப்பவோ, உங்கள் பேட்டரியைப் பயன்படுத்தவோ அல்லது உங்கள் இருப்பிடத்தை அணுகவோ முடியாது</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">உங்கள் பணி பயன்பாடுகள் தொலைபேசி அழைப்புகள் அல்லது குறுஞ்செய்திகளைப் பெறவோ, அறிவிப்புகளை அனுப்பவோ, உங்கள் பேட்டரியைப் பயன்படுத்தவோ அல்லது உங்கள் இருப்பிடத்தை அணுகவோ முடியாது</string>
+</resources>
