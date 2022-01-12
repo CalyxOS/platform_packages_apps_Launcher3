@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="paused_apps_dialog_title">Uygulama duraklatıldı</string>
+    <string name="paused_apps_dialog_message">%1$s doğrudan başlatıcıdan duraklatıldı</string>
+    <string name="paused_apps_drop_target_label">Uygulamayı duraklat</string>
+    <string name="pause">Duraklat</string>
+    <string name="pause_apps_dialog_title">%1$s duraklatılsın mı\?</string>
+    <string name="pause_apps_dialog_message">%1$s için bildirimler duraklatılacak</string>
+    <string name="work_apps_pause_btn_text_calyx">İş uygulamalarını kapat</string>
+    <string name="work_apps_paused_title_calyx">İş uygulamaları kapalı</string>
+    <string name="work_apps_paused_info_body_calyx">İş uygulamalarınız size bildirim gönderemez, pilinizi kullanamaz veya konumunuza erişemez</string>
+    <string name="work_apps_enable_btn_text_calyx">İş uygulamalarını aç</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">İş uygulamalarınız telefon aramaları veya metin mesajları alamaz, size bildirim gönderemez, pilinizi kullanamaz veya konumunuza erişemez</string>
+</resources>

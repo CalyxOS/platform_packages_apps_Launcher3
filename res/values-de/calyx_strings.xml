@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="paused_apps_dialog_message">%1$s wurde direkt vom Launcher pausiert</string>
+    <string name="pause_apps_dialog_title">%1$s pausieren\?</string>
+    <string name="pause_apps_dialog_message">Benachrichtigungen für %1$s werden pausiert</string>
+    <string name="paused_apps_dialog_title">App pausiert</string>
+    <string name="pause">Pausieren</string>
+    <string name="paused_apps_drop_target_label">App pausieren</string>
+    <string name="work_apps_pause_btn_text_calyx">Geschäftliche Apps ausschalten</string>
+    <string name="work_apps_paused_info_body_calyx">Deine geschäftlichen Apps können dir keine Benachrichtigungen senden, deinen Akku verbrauchen oder auf deinen Standort zugreifen</string>
+    <string name="work_apps_enable_btn_text_calyx">Geschäftliche Apps einschalten</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Deine geschäftlichen Apps können keine Anrufe oder Textnachrichten empfangen, dir keine Benachrichtigungen senden, deinen Akku verbrauchen oder auf deinen Standort zugreifen</string>
+    <string name="work_apps_paused_title_calyx">Geschäftliche Apps sind ausgeschaltet</string>
+</resources>
