@@ -142,12 +142,12 @@ public final class FeatureFlags {
 
     public static final BooleanFlag ENABLE_BULK_WORKSPACE_ICON_LOADING = getDebugFlag(270392203,
             "ENABLE_BULK_WORKSPACE_ICON_LOADING",
-            true,
+            false,
             "Enable loading workspace icons in bulk.");
 
     public static final BooleanFlag ENABLE_BULK_ALL_APPS_ICON_LOADING = getDebugFlag(270392465,
             "ENABLE_BULK_ALL_APPS_ICON_LOADING",
-            true,
+            false,
             "Enable loading all apps icons in bulk.");
 
     public static final BooleanFlag ENABLE_DATABASE_RESTORE = getDebugFlag(270392706,
