@@ -60,14 +60,14 @@ public class UserManagerState {
     }
 
     /**
-     * Returns true if any user profile has quiet mode enabled.
+     * Returns true if all user profiles have quiet mode enabled.
      */
-    public boolean isAnyProfileQuietModeEnabled() {
+    public boolean isAllProfilesQuietModeEnabled() {
         for (int i = mQuietUsersHashCodeMap.size() - 1; i >= 0; i--) {
-            if (mQuietUsersHashCodeMap.valueAt(i)) {
-                return true;
+            if (!mQuietUsersHashCodeMap.valueAt(i)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
