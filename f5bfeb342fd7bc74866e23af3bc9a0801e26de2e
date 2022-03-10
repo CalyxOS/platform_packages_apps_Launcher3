@@ -16,6 +16,24 @@
       "message": "Should change it here as well for consistency.",
       "revId": "f5bfeb342fd7bc74866e23af3bc9a0801e26de2e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23a54fdd_c6640747",
+        "filename": "res/xml/device_profiles.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-10T17:47:08Z",
+      "side": 1,
+      "message": "Doesn\u0027t show up on phones anyway.",
+      "parentUuid": "ea54359e_d38d850a",
+      "revId": "f5bfeb342fd7bc74866e23af3bc9a0801e26de2e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
