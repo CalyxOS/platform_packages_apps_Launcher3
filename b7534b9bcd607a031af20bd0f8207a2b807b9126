@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5aab8066_3edd74a9",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-10T17:43:17Z",
+      "side": 1,
+      "message": "This had to be changed, matches AppInfo above.",
+      "revId": "b7534b9bcd607a031af20bd0f8207a2b807b9126",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
