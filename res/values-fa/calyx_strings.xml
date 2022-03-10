@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">مکث کنید</string>
+    <string name="pause_apps_dialog_message">اعلان‌ های %1$s متوقف می‌شوند</string>
+    <string name="paused_apps_dialog_message">%1$s مستقیماً از راه‌انداز متوقف شد</string>
+    <string name="paused_apps_dialog_title">برنامه متوقف شد</string>
+    <string name="pause_apps_dialog_title">%1$s مکث شود؟</string>
+    <string name="paused_apps_drop_target_label">متوقف کردن برنامه</string>
+</resources>
