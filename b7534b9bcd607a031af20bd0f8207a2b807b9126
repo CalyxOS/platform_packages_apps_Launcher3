@@ -39,6 +39,30 @@
       },
       "revId": "b7534b9bcd607a031af20bd0f8207a2b807b9126",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c05f5128_4c07fdd8",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-10T18:51:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2b6eb76_1963aa13",
+      "range": {
+        "startLine": 254,
+        "startChar": 96,
+        "endLine": 254,
+        "endChar": 97
+      },
+      "revId": "b7534b9bcd607a031af20bd0f8207a2b807b9126",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
