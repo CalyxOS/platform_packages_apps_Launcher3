@@ -16,6 +16,23 @@
       "message": "Pick to Lineage / Trebuchet if applicable.",
       "revId": "752e9bb8d8525af8f30817264b17e8c6384a3037",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b70f2c4_dd0c134b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-21T17:00:34Z",
+      "side": 1,
+      "message": "File a bug with Google and send it to AOSP even if applicable.",
+      "revId": "752e9bb8d8525af8f30817264b17e8c6384a3037",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
