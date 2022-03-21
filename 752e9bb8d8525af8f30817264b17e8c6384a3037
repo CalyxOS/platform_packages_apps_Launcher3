@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bbb1a90_f7981f6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-21T17:00:04Z",
+      "side": 1,
+      "message": "Pick to Lineage / Trebuchet if applicable.",
+      "revId": "752e9bb8d8525af8f30817264b17e8c6384a3037",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
