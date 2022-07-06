@@ -16,6 +16,23 @@
       "message": "This change has not yet been tested with a fresh install or update of CalyxOS, but SYSTEM_TOOLS is not referenced elsewhere in AOSP apart from older SDK metadata files or prebuilts/sdk/[version]/public/data/api-versions.xml, which appears to list SYSTEM_TOOLS as having been removed in API level 23. In other words, there shouldn\u0027t be problems, but it would still be good to verify.",
       "revId": "ade4a5326f442ee0c73c09298e66034dc608f375",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d71cb2b_bad24bfb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-06T14:38:35Z",
+      "side": 1,
+      "message": "Mind sending this to AOSP?",
+      "revId": "ade4a5326f442ee0c73c09298e66034dc608f375",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
