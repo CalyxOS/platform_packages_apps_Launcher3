@@ -33,6 +33,24 @@
       "message": "Mind sending this to AOSP?",
       "revId": "ade4a5326f442ee0c73c09298e66034dc608f375",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baaff22b_434d735a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-07-06T17:19:08Z",
+      "side": 1,
+      "message": "OK. Filed upstream at https://android-review.googlesource.com/c/platform/packages/apps/Launcher3/+/2147122",
+      "parentUuid": "6d71cb2b_bad24bfb",
+      "revId": "ade4a5326f442ee0c73c09298e66034dc608f375",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
