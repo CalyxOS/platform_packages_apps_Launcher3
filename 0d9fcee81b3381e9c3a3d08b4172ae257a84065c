@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa7b7890_73f4875d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-16T20:17:00Z",
+      "side": 1,
+      "message": "What\u0027s the source and licensing on these changes?",
+      "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8826d0bb_fdf60eb7",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-16T20:17:00Z",
+      "side": 1,
+      "message": "Hard no.\n\nDon\u0027t want to sign apps with platform key unless there\u0027s a valid reason (e.g. SeedVault needs it for MANAGE_DOCUMENTS - UX without that is not ideal)",
+      "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
