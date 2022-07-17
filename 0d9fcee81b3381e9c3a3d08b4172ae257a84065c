@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b745ac30_8cd672e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-07-17T02:41:24Z",
+      "side": 1,
+      "message": "Picked them from: https://github.com/AospExtended/platform_packages_apps_Launcher3",
+      "parentUuid": "fa7b7890_73f4875d",
+      "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8826d0bb_fdf60eb7",
