@@ -51,6 +51,24 @@
       "message": "Hard no.\n\nDon\u0027t want to sign apps with platform key unless there\u0027s a valid reason (e.g. SeedVault needs it for MANAGE_DOCUMENTS - UX without that is not ideal)",
       "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebf5e861_3827d3ee",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-07-17T18:56:26Z",
+      "side": 1,
+      "message": "The permission \"android.permission.DEVICE_POWER\" is signature only, so this is needed.",
+      "parentUuid": "8826d0bb_fdf60eb7",
+      "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
