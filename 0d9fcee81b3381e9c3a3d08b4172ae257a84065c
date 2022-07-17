@@ -69,6 +69,24 @@
       "parentUuid": "8826d0bb_fdf60eb7",
       "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50462335_37f41fe5",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-17T19:00:48Z",
+      "side": 1,
+      "message": "We\u0027ll just have to skip this then, not going to do this change for a simple feature.",
+      "parentUuid": "ebf5e861_3827d3ee",
+      "revId": "0d9fcee81b3381e9c3a3d08b4172ae257a84065c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
