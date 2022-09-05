@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17579c5d_f8b1736a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-09-05T11:55:42Z",
+      "side": 1,
+      "message": "Kind of works, app drawer is still buggy on 13",
+      "revId": "b4873ddf4ec9594423ad379f1ed9b0a43af5457f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
