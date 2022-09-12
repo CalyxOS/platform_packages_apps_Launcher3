@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7293cb5_c86a80d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-12T16:23:52Z",
+      "side": 1,
+      "message": "1. `fastboot -w flashall` \u003d Still bad like before\n2. Work profile -\u003e Add new profile \u003d Bad, it was fine before\n3. Delete work profile \u003d Good",
+      "revId": "23bd989c52f9365892e9abc6406b1567e89195ee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
