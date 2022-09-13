@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d538a5e3_dafd39a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-13T20:59:27Z",
+      "side": 1,
+      "message": "https://android.googlesource.com/platform/packages/apps/Launcher3/+/07ca884eea5153d12aef874a5dcccfe3e343f4b4",
+      "revId": "9257ddf7321bbeeab503d5a6790c86e6aed61136",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
