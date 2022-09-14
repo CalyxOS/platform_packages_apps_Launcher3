@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29343788_78410718",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-14T21:31:00Z",
+      "side": 1,
+      "message": "fr tho let\u0027s have it be `isAllProfilesQuietModeEnabled()`\n\nI went back from \u0027are\u0027 because we want to know if quiet mode is enabled for all profles.\n\n`areAllProfilesQuiet()` would be grammatically correct too, I think.",
+      "revId": "6e79e837e90c36d5aa6e74b0385d7a9a96c72443",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
