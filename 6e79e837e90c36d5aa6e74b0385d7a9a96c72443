@@ -16,6 +16,23 @@
       "message": "fr tho let\u0027s have it be `isAllProfilesQuietModeEnabled()`\n\nI went back from \u0027are\u0027 because we want to know if quiet mode is enabled for all profles.\n\n`areAllProfilesQuiet()` would be grammatically correct too, I think.",
       "revId": "6e79e837e90c36d5aa6e74b0385d7a9a96c72443",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "448f659c_408ae928",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-09-15T00:05:22Z",
+      "side": 1,
+      "message": "Something\u0027s wrong with this at the moment. Pressing Turn Off Work Apps once turns off all profiles but doesn\u0027t hide apps. Pressing it again causes the button to disappear. So this doesn\u0027t work yet",
+      "revId": "6e79e837e90c36d5aa6e74b0385d7a9a96c72443",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
