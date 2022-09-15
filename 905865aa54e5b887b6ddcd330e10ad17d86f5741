@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36a84623_8f892e04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-09-15T03:37:46Z",
+      "side": 1,
+      "message": "For the record, this latest patchset doesn\u0027t work properly either. This time it is exactly the same as I originally used in android12L successfully, except commit message.",
+      "revId": "905865aa54e5b887b6ddcd330e10ad17d86f5741",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
