@@ -16,6 +16,24 @@
       "message": "Let\u0027s get the color overlays needed for this in at some point so we can get this shipped.",
       "revId": "68ba2b57fb5d4f1ee89397b1adb2d0629a67c9b3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7e73bd3_1a716bcb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-09-15T18:53:40Z",
+      "side": 1,
+      "message": "This isn\u0027t about the color selection, it\u0027s the themed icons. Half of the apps we ship don\u0027t have themed icons yet though and it looks bad",
+      "parentUuid": "1adfa9a6_f10e125e",
+      "revId": "68ba2b57fb5d4f1ee89397b1adb2d0629a67c9b3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
