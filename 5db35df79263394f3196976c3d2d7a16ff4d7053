@@ -33,6 +33,24 @@
       "message": "Tabs issue is still the same on 6 for me. Formatted data and flashed the update \u003e reboot \u003e create new work profile. Noticed tabs are still close to search bar and now bottom padding is too large.",
       "revId": "5db35df79263394f3196976c3d2d7a16ff4d7053",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "312876fd_8b990195",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-27T12:48:24Z",
+      "side": 1,
+      "message": "Let\u0027s go back to the drawing board, and start with how the test you did looks with AOSP Launcher3.",
+      "parentUuid": "3b29f23b_3dcf6b54",
+      "revId": "5db35df79263394f3196976c3d2d7a16ff4d7053",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
