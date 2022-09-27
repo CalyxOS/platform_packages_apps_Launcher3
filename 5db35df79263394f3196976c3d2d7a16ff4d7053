@@ -16,6 +16,23 @@
       "message": "Looks ok on sunfish",
       "revId": "5db35df79263394f3196976c3d2d7a16ff4d7053",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b29f23b_3dcf6b54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-09-27T12:28:24Z",
+      "side": 1,
+      "message": "Tabs issue is still the same on 6 for me. Formatted data and flashed the update \u003e reboot \u003e create new work profile. Noticed tabs are still close to search bar and now bottom padding is too large.",
+      "revId": "5db35df79263394f3196976c3d2d7a16ff4d7053",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
