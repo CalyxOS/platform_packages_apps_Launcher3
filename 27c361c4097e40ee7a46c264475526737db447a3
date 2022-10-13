@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c899f954_40bbcdab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-10-13T13:17:45Z",
+      "side": 1,
+      "message": "Fixes the gestures freezing up / ignoring input. Still occasional glitch that interrupts the gesture (the device sees a split-second \"finger up\" event that never happened), but no more freeze.",
+      "revId": "27c361c4097e40ee7a46c264475526737db447a3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
