@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "513f03b6_a706ec81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-11-25T16:33:44Z",
+      "side": 1,
+      "message": "Overview gesture glitches also occur on stock Google ROM: Pixel 6 Pro, TP1A.20221105.002. This fix is already merged, but wanted to leave this info here for the record.",
+      "revId": "bd1e6f661d834dc51582639e9ecb6601d1480767",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
