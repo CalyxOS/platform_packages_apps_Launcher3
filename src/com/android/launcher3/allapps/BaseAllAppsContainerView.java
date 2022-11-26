@@ -132,6 +132,8 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
     private final int mScrimColor;
     private final int mHeaderProtectionColor;
     protected final float mHeaderThreshold;
+    private int mHeaderBottomAdjustment;
+    private int mHeaderTopAdjustment;
     private ScrimView mScrimView;
     private int mHeaderColor;
     private int mTabsProtectionAlpha;
@@ -144,6 +146,10 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
         mScrimColor = Themes.getAttrColor(context, R.attr.allAppsScrimColor);
         mHeaderThreshold = getResources().getDimensionPixelSize(
                 R.dimen.dynamic_grid_cell_border_spacing);
+        mHeaderBottomAdjustment = getResources().getDimensionPixelSize(
+                R.dimen.all_apps_header_bottom_adjustment);
+        mHeaderTopAdjustment = getResources().getDimensionPixelSize(
+                R.dimen.all_apps_header_top_adjustment);
         mHeaderProtectionColor = Themes.getAttrColor(context, R.attr.allappsHeaderProtectionColor);
 
         mWorkManager = new WorkProfileManager(
@@ -736,14 +742,12 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
             mHeaderPaint.setAlpha((int) (getAlpha() * Color.alpha(mHeaderColor)));
         }
         if (mHeaderPaint.getColor() != mScrimColor && mHeaderPaint.getColor() != 0) {
-            int bottom = getHeaderBottom();
             FloatingHeaderView headerView = getFloatingHeaderView();
-            if (!mUsingTabs) {
-                // Add protection which is otherwise added when tabs scroll up.
-                bottom += headerView.getTabsAdditionalPaddingTop();
-            }
-            canvas.drawRect(0, 0, canvas.getWidth(), bottom, mHeaderPaint);
             int tabsHeight = headerView.getPeripheralProtectionHeight();
+            int floatingHeaderBottom = headerView.getBottom();
+            int floatingHeaderPaddingBottom = headerView.getPaddingBottom();
+            int bottom = floatingHeaderBottom - floatingHeaderPaddingBottom - tabsHeight;
+            canvas.drawRect(0, 0, canvas.getWidth(), bottom, mHeaderPaint);
             if (mTabsProtectionAlpha > 0 && tabsHeight != 0) {
                 if (DEBUG_HEADER_PROTECTION) {
                     mHeaderPaint.setColor(Color.BLUE);
@@ -751,7 +755,9 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
                 } else {
                     mHeaderPaint.setAlpha((int) (getAlpha() * mTabsProtectionAlpha));
                 }
-                canvas.drawRect(0, bottom, canvas.getWidth(), bottom + tabsHeight, mHeaderPaint);
+                // Why use mHeaderTopAdjustment? Because it works.
+                final int protectionBottom = floatingHeaderBottom - mHeaderTopAdjustment;
+                canvas.drawRect(0, bottom, canvas.getWidth(), protectionBottom, mHeaderPaint);
             }
         }
     }

@@ -85,6 +85,8 @@ public class FloatingHeaderView extends LinearLayout implements
     // These two values are necessary to ensure that the header protection is drawn correctly.
     private final int mTabsAdditionalPaddingTop;
     private final int mTabsAdditionalPaddingBottom;
+    private final int mHeaderPillHeight;
+    private final int mHeaderTopMargin;
     private boolean mHeaderProtectionSupported;
 
     protected ViewGroup mTabLayout;
@@ -128,6 +130,10 @@ public class FloatingHeaderView extends LinearLayout implements
                 .getDimensionPixelSize(R.dimen.all_apps_header_bottom_adjustment);
         mHeaderProtectionSupported = context.getResources().getBoolean(
                 R.bool.config_header_protection_supported);
+        mHeaderPillHeight = context.getResources()
+                .getDimensionPixelSize(R.dimen.all_apps_header_pill_height);
+        mHeaderTopMargin = context.getResources()
+                .getDimensionPixelSize(R.dimen.all_apps_header_top_margin);
     }
 
     @Override
@@ -488,7 +494,7 @@ public class FloatingHeaderView extends LinearLayout implements
         if (mTabsHidden || mFloatingRowsCollapsed || !mHeaderCollapsed) {
             return 0;
         }
-        return Math.max(0,
-                getTabLayout().getBottom() - getPaddingTop() + getPaddingBottom() + mTranslationY);
+        return Math.max(mHeaderPillHeight - getPaddingTop() + mHeaderTopMargin
+                + mTranslationY, 0);
     }
 }
