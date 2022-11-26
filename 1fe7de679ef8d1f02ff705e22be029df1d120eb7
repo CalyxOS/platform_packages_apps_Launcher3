@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae81fef5_bc74061b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-11-26T02:28:06Z",
+      "side": 1,
+      "message": "Works for me on Pixel 4a (5G). Could definitely use testing on other devices.",
+      "revId": "1fe7de679ef8d1f02ff705e22be029df1d120eb7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
