@@ -24,9 +24,11 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.model.StringCache;
 import com.android.launcher3.views.ActivityContext;
 
 /**
@@ -72,12 +74,24 @@ public class WorkEduCard extends FrameLayout implements
     protected void onFinishInflate() {
         super.onFinishInflate();
         findViewById(R.id.action_btn).setOnClickListener(this);
+<<<<<<< HEAD
+||||||| bc92776f2f
+        MarginLayoutParams lp = ((MarginLayoutParams) findViewById(R.id.wrapper).getLayoutParams());
+        lp.width = mActivityContext.getAppsView().getFloatingHeaderView().getTabWidth();
+=======
+
+        StringCache cache = mActivityContext.getStringCache();
+        if (cache != null) {
+            TextView title = findViewById(R.id.work_apps_paused_title);
+            title.setText(cache.workProfileEdu);
+        }
+>>>>>>> android-13.0.0_r16
     }
 
     @Override
     public void onClick(View view) {
         startAnimation(mDismissAnim);
-        Utilities.getPrefs(getContext()).edit().putInt(WorkAdapterProvider.KEY_WORK_EDU_STEP,
+        Utilities.getPrefs(getContext()).edit().putInt(WorkProfileManager.KEY_WORK_EDU_STEP,
                 1).apply();
     }
 

@@ -88,6 +88,7 @@ public class WorkModeSwitch extends Button implements Insettable, View.OnClickLi
     @Override
     public void setInsets(Rect insets) {
         mInsets.set(insets);
+<<<<<<< HEAD
         MarginLayoutParams lp = (MarginLayoutParams) getLayoutParams();
         if (lp != null) {
             int bottomMargin = getResources().getDimensionPixelSize(R.dimen.work_fab_margin_bottom);
@@ -107,6 +108,29 @@ public class WorkModeSwitch extends Button implements Insettable, View.OnClickLi
             }
 
             lp.bottomMargin = bottomMargin;
+||||||| bc92776f2f
+        ViewGroup.MarginLayoutParams marginLayoutParams =
+                (ViewGroup.MarginLayoutParams) getLayoutParams();
+        if (marginLayoutParams != null) {
+            marginLayoutParams.bottomMargin = bottomInset + marginLayoutParams.bottomMargin;
+=======
+        MarginLayoutParams lp = (MarginLayoutParams) getLayoutParams();
+        if (lp != null) {
+            int bottomMargin = getResources().getDimensionPixelSize(R.dimen.work_fab_margin_bottom);
+            DeviceProfile dp = ActivityContext.lookupContext(getContext()).getDeviceProfile();
+            if (FeatureFlags.ENABLE_FLOATING_SEARCH_BAR.get()) {
+                bottomMargin <<= 1;  // Double margin to add space above search bar.
+                bottomMargin += dp.hotseatQsbHeight;
+            }
+
+            if (!dp.isGestureMode && dp.isTaskbarPresent) {
+                bottomMargin += dp.taskbarSize;
+            } else {
+                bottomMargin += insets.bottom;
+            }
+
+            lp.bottomMargin = bottomMargin;
+>>>>>>> android-13.0.0_r16
         }
     }
 
@@ -171,12 +195,14 @@ public class WorkModeSwitch extends Button implements Insettable, View.OnClickLi
 
     @Override
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
-        if (Utilities.ATLEAST_R && isEnabled()) {
+        if (!Utilities.ATLEAST_R) {
+            return insets;
+        }
+        if (insets.isVisible(WindowInsets.Type.ime())) {
+            Insets keyboardInsets = insets.getInsets(WindowInsets.Type.ime());
+            setTranslationY(mInsets.bottom - keyboardInsets.bottom);
+        } else {
             setTranslationY(0);
-            if (insets.isVisible(WindowInsets.Type.ime())) {
-                Insets keyboardInsets = insets.getInsets(WindowInsets.Type.ime());
-                setTranslationY(mInsets.bottom - keyboardInsets.bottom);
-            }
         }
         return insets;
     }
