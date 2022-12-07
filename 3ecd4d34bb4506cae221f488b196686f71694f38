@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1212d61_aa64cf10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-07T12:46:58Z",
+      "side": 1,
+      "message": "Yep, modifying the link in the commit message to clarify",
+      "parentUuid": "fbf82105_7090bdb2",
+      "revId": "3ecd4d34bb4506cae221f488b196686f71694f38",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a070181_9ab02743",
