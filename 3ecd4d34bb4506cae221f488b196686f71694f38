@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbf82105_7090bdb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-12-07T12:43:44Z",
+      "side": 1,
+      "message": "hmm. Oliver, any idea why this issue was only affecting work profiles in your testing? and this fixed that?",
+      "revId": "3ecd4d34bb4506cae221f488b196686f71694f38",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a070181_9ab02743",
