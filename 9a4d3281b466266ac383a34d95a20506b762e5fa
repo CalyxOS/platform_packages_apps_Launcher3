@@ -22,6 +22,30 @@
       },
       "revId": "9a4d3281b466266ac383a34d95a20506b762e5fa",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d10dc502_a56a936b",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-07T12:35:21Z",
+      "side": 1,
+      "message": "No, don\u0027t do that now, this is just a staging branch, it\u0027ll only cause confusion.\n\nKeep your change open, we\u0027ll deal with it once QPR1 is in.",
+      "parentUuid": "33b2bd6d_99dfa46a",
+      "range": {
+        "startLine": 297,
+        "startChar": 58,
+        "endLine": 297,
+        "endChar": 94
+      },
+      "revId": "9a4d3281b466266ac383a34d95a20506b762e5fa",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
