@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77fbceab_d5faa877",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-07T12:48:45Z",
+      "side": 1,
+      "message": "Proper resolution in 14848: Fix spacing and header protection for All Apps | https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/14848",
+      "revId": "b68f91a761b2f1b85036ad83a0bab381898a6357",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
