@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33b2bd6d_99dfa46a",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-12-07T12:15:22Z",
+      "side": 1,
+      "message": "I think we need to switch this to \"android\". See https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/14815. Can possibly be squashed in?",
+      "range": {
+        "startLine": 297,
+        "startChar": 58,
+        "endLine": 297,
+        "endChar": 94
+      },
+      "revId": "9a4d3281b466266ac383a34d95a20506b762e5fa",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
