@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2e500a0_3bc5d29b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-12-14T21:25:03Z",
+      "side": 1,
+      "message": "Can\u0027t upload required patch until Id64717f6.",
+      "revId": "26c6b126ad5a6e3fd5b9862a2945316b822f863f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
