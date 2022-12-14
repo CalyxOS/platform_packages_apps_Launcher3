@@ -235,12 +235,9 @@ public class TaskIconCache implements DisplayInfoChangeListener {
             if ((index = mDefaultIcons.indexOfKey(userId)) >= 0) {
                 return mDefaultIcons.valueAt(index).newIcon(mContext);
             } else {
-                try (BaseIconFactory li = getIconFactory()) {
-                    BitmapInfo info = mDefaultIconBase.withFlags(
-                            li.getBitmapFlagOp(new IconOptions().setUser(UserHandle.of(userId))));
-                    mDefaultIcons.put(userId, info);
-                    return info.newIcon(mContext);
-                }
+                BitmapInfo info = mDefaultIconBase.withUser(UserHandle.of(userId));
+                mDefaultIcons.put(userId, info);
+                return info.newIcon(mContext);
             }
         }
     }
