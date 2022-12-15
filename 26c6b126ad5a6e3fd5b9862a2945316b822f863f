@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b893c309_9d7759e9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-15T12:06:48Z",
+      "side": 1,
+      "message": "Another way to do this is just use the same Change-Id for both.\n\nGiven that this one is up, you could copy paste this to the other commit.\n\nChange-Ids need to be unique per-project, per-branch.",
+      "revId": "26c6b126ad5a6e3fd5b9862a2945316b822f863f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2e500a0_3bc5d29b",
