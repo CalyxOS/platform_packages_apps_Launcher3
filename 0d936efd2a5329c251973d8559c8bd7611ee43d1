@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76f2721f_a8d7a175",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2022-12-27T14:53:50Z",
+      "side": 1,
+      "message": "im getting erros with this patch and https://gitlab.com/tmw_calyxos_fork/platform_frameworks_libs_systemui/-/commit/93dfd2a1e5b447c08b3d79b79725398554ef16cc\n\nerror: cannot find symbol\n            final Drawable badge \u003d LauncherIcons.obtain(context).getBadgeForUser(info.user);\n                                                                ^\n  symbol:   method getBadgeForUser(UserHandle)\n  location: class LauncherIcons\n\nDo i missed something ?",
+      "revId": "0d936efd2a5329c251973d8559c8bd7611ee43d1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
