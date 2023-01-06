@@ -16,6 +16,24 @@
       "message": "im getting erros with this patch and https://gitlab.com/tmw_calyxos_fork/platform_frameworks_libs_systemui/-/commit/93dfd2a1e5b447c08b3d79b79725398554ef16cc\n\nerror: cannot find symbol\n            final Drawable badge \u003d LauncherIcons.obtain(context).getBadgeForUser(info.user);\n                                                                ^\n  symbol:   method getBadgeForUser(UserHandle)\n  location: class LauncherIcons\n\nDo i missed something ?",
       "revId": "0d936efd2a5329c251973d8559c8bd7611ee43d1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b52deba_81a0125c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-06T14:40:35Z",
+      "side": 1,
+      "message": "That\u0027s the correct commit, but from the error, it appears it may not have actually been applied, or not compiled. The missing method is added by that commit. Do you see \"Multiple work profiles badge colors for Launcher3\" as the top entry when you run `git -C frameworks/libs/systemui log` from the android13 directory? Not sure if it should matter, but try running a full `m` if you are currently just trying `m Launcher3`.",
+      "parentUuid": "76f2721f_a8d7a175",
+      "revId": "0d936efd2a5329c251973d8559c8bd7611ee43d1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
