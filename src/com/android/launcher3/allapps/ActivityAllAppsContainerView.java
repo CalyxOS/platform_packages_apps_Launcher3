@@ -666,13 +666,15 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         }
 
         RelativeLayout.LayoutParams layoutParams = (LayoutParams) v.getLayoutParams();
-        layoutParams.addRule(RelativeLayout.ALIGN_TOP, R.id.search_container_all_apps);
+        layoutParams.addRule(RelativeLayout.BELOW, R.id.search_container_all_apps);
 
         int topMargin = getContext().getResources().getDimensionPixelSize(
-                R.dimen.all_apps_header_top_margin);
+                R.dimen.all_apps_search_bar_bottom_adjustment);
         if (includeTabsMargin) {
             topMargin += getContext().getResources().getDimensionPixelSize(
-                    R.dimen.all_apps_header_pill_height);
+                    R.dimen.all_apps_header_pill_height)
+                    + getContext().getResources().getDimensionPixelSize(
+                    R.dimen.all_apps_tabs_margin_top);
         }
         layoutParams.topMargin = topMargin;
     }
@@ -709,6 +711,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         layoutParams.removeRule(RelativeLayout.ABOVE);
         layoutParams.removeRule(RelativeLayout.ALIGN_TOP);
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.removeRule(RelativeLayout.BELOW);
     }
 
     protected BaseAllAppsAdapter<T> createAdapter(AlphabeticalAppsList<T> appsList) {
