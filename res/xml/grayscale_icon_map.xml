@@ -14,4 +14,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<icons></icons>
+<icons>
+    <!--<icon drawable="@drawable/themed_icon_aurora" package="com.aurora.store" />-->
+    <!--<icon drawable="@drawable/themed_icon_briar" package="org.briarproject.briar.android" />-->
+    <icon drawable="@drawable/themed_icon_calyxvpn" package="org.calyxinstitute.vpn" />
+    <icon drawable="@drawable/themed_icon_fdroid" package="org.fdroid.fdroid" />
+    <icon drawable="@drawable/themed_icon_microg" package="com.google.android.gms" />
+    <icon drawable="@drawable/themed_icon_mupdf" package="com.artifex.mupdf.viewer.app" />
+    <icon drawable="@drawable/themed_icon_ooni" package="org.openobservatory.ooniprobe" />
+    <icon drawable="@drawable/themed_icon_orbot" package="org.torproject.android" />
+    <!--<icon drawable="@drawable/themed_icon_riseup" package="se.leap.riseupvpn" />-->
+    <icon drawable="@drawable/themed_icon_tor" package="org.torproject.torbrowser" />
+    <!--<icon drawable="@drawable/themed_icon_weather" package="wangdaye.com.geometricweather" />-->
+</icons>
