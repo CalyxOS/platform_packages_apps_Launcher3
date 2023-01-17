@@ -16,6 +16,24 @@
       "message": "If calyxvpn works but this doesn\u0027t then that\u0027s very strange, as they\u0027re literally the same apps.\n\nThere might be a slight version difference though.",
       "revId": "620e18e29d0fe088696baa2156c8ec620b403bd0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8dbd4ed_0023e64e",
+        "filename": "res/xml/grayscale_icon_map.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-17T13:27:31Z",
+      "side": 1,
+      "message": "Nevermind, icon missing.",
+      "parentUuid": "4d67e832_fbb10484",
+      "revId": "620e18e29d0fe088696baa2156c8ec620b403bd0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
