@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0126fb9_5783e5b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-17T12:53:07Z",
+      "side": 1,
+      "message": "I\u0027d say let\u0027s just ship this.\n\nPeople have asked for this for a while.\n\nLet\u0027s not have perfect be the enemy of good. It\u0027s not on by default anyway.\n\nWe\u0027ll add our icons as we can, and try to upstream as much as we can. Till then, this could go in.",
+      "revId": "5f856fb4a4c792277247c36656ca25cf29fa8fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
