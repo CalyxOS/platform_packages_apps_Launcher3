@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "8c5b37ec_fafc7e34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-19T22:36:19Z",
+      "side": 1,
+      "message": "The stock feature doesn\u0027t claim to be indefinite. It says it will pause notifications \"for the rest of the day\". That said, from a quick test, apps remained pause after a reboot (and a few more reboots).\n\nThis from `adb shell dumpsys package org.fdroid.fdroid`, after pausing F-Droid:\n```\n    Suspend params:\n      suspendingPackage\u003dcom.google.android.apps.wellbeing dialogInfo\u003dSuspendDialogInfo: {mIconId \u003d 0x7f080233 mTitle \u003d \"‎App paused\"mNeutralButtonText \u003d \"‎Unpause app\"mDialogMessage \u003d \"‎%1$s is paused for the rest of the day\" mNeutralButtonAction \u003d 1}\n```\n\nSo from that, at least, they don\u0027t appear to alter the suspending package.",
+      "parentUuid": "ff79d495_1dfeb60c",
+      "revId": "42e7fbf4f2e42e33d9d51b3c74adbc1f594b03f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "8487595e_362c9919",
         "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
         "patchSetId": 4
