@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff79d495_1dfeb60c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-19T22:27:29Z",
+      "side": 1,
+      "message": "Removing -2 but I\u0027d like to consider any scenarios while this may get in the way first before +2ing.\n\nAlso I wonder what Pixel Launcher or rather Digital Wellbeing does.",
+      "revId": "42e7fbf4f2e42e33d9d51b3c74adbc1f594b03f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8487595e_362c9919",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-19T22:27:29Z",
+      "side": 1,
+      "message": "This was added in https://cs.android.com/android/_/android/platform/frameworks/base/+/f0f84c8f9230de6aad80fa211791acd01e437253",
+      "revId": "42e7fbf4f2e42e33d9d51b3c74adbc1f594b03f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
