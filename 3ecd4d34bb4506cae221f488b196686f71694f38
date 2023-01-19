@@ -51,6 +51,24 @@
       "message": "It\u0027d be good to add a brief comment here matching the commit message.\n\nGood to have context that \"android\" is a package name, and why we\u0027re using it.",
       "revId": "3ecd4d34bb4506cae221f488b196686f71694f38",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "211f3d96_6add8f1e",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-19T21:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a070181_9ab02743",
+      "revId": "3ecd4d34bb4506cae221f488b196686f71694f38",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
