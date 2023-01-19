@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9da1876_92dc557a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-19T14:00:14Z",
+      "side": 1,
+      "message": "I forgot and didn\u0027t notice that I used the same Change-ID for both. 😅\n\nAnyway, the other is here: https://review.calyxos.org/c/CalyxOS/platform_frameworks_libs_systemui/+/15270",
+      "revId": "7b92d96e604ad1455a48338f0b14dd36618744ba",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
