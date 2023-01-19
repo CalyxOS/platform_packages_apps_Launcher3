@@ -51,6 +51,24 @@
       "message": "This does still work and build atop the January security update (CalyxOS 4.5.0), but also still needs the mentioned commit, which we\u0027ll get into Gerrit soon.",
       "revId": "0d936efd2a5329c251973d8559c8bd7611ee43d1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b34ac15_0df1188d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-19T13:57:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b52deba_81a0125c",
+      "revId": "0d936efd2a5329c251973d8559c8bd7611ee43d1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
