@@ -16,6 +16,23 @@
       "message": "Fortunately this all has been working for me on CalyxOS with no tweaks needed.",
       "revId": "b0ad7886c6800c3774ecd1564869cab5692cec91",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91811ca1_b93a9894",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-20T18:19:16Z",
+      "side": 1,
+      "message": "This and the revert below it would get us sync\u0027d up with LineageOS so we\u0027re not out of step on this. Other than that, I don\u0027t think it will provide any functional benefits for CalyxOS users (should appear to be a no-op).",
+      "revId": "b0ad7886c6800c3774ecd1564869cab5692cec91",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
