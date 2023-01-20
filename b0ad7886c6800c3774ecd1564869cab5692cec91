@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c4187d4_5b492770",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-01-20T18:12:33Z",
+      "side": 1,
+      "message": "Fortunately this all has been working for me on CalyxOS with no tweaks needed.",
+      "revId": "b0ad7886c6800c3774ecd1564869cab5692cec91",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
