@@ -16,6 +16,23 @@
       "message": "For the record, this latest patchset doesn\u0027t work properly either. This time it is exactly the same as I originally used in android12L successfully, except commit message.",
       "revId": "905865aa54e5b887b6ddcd330e10ad17d86f5741",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "346fdaaa_25d7f6e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-02-15T17:21:00Z",
+      "side": 1,
+      "message": "Acknowledging that there is a quirk in which you can \"Pause\" twice, and then the button goes away, this is still a massive improvement in that it allows you to access work apps even if one work profile is paused. I\u0027ve been using this patch for several months.",
+      "revId": "905865aa54e5b887b6ddcd330e10ad17d86f5741",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
