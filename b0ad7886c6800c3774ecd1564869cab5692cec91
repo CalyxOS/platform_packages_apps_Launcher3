@@ -33,6 +33,23 @@
       "message": "This and the revert below it would get us sync\u0027d up with LineageOS so we\u0027re not out of step on this. Other than that, I don\u0027t think it will provide any functional benefits for CalyxOS users (should appear to be a no-op).",
       "revId": "b0ad7886c6800c3774ecd1564869cab5692cec91",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b0a7aa_c4477f09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-02-15T18:12:30Z",
+      "side": 1,
+      "message": "bump",
+      "revId": "b0ad7886c6800c3774ecd1564869cab5692cec91",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
