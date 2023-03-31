@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d08b5ff_f22966b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-03-31T20:24:36Z",
+      "side": 1,
+      "message": "Stock doesn\u0027t let you pause individual work apps at all, by the way.\n\nI don\u0027t think this was ever mentioned here, but I think the info is useful to have in relation to this issue and I keep forgetting it.",
+      "revId": "1dc617d28caab5183aa64a0c73f2e535ed334234",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
