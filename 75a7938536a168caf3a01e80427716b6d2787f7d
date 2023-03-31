@@ -16,6 +16,23 @@
       "message": "4.8.0 due Monday will need this working, can either do this (revert) or fix it.",
       "revId": "75a7938536a168caf3a01e80427716b6d2787f7d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bfa0da2_ba37e3bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-03-31T14:13:15Z",
+      "side": 1,
+      "message": "I\u0027ll look at this and try to get a fix in today.\n\nWe have to find out if reverting is enough to fix the issue for users who got the beta and have apps stuck paused already. I don\u0027t think it will be, so we may need some special handling unfortunately. I\u0027ll see.",
+      "revId": "75a7938536a168caf3a01e80427716b6d2787f7d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
