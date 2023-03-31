@@ -68,6 +68,24 @@
       "message": "As expected, reverting this will not solve the problem for beta users, and will require a separate fix.\n\nI would say revert this. As far as I can tell, making this patch work properly would require a framework change, and if we already have to do that, we should be able to solve the actual problem in the framework *without* losing the data for which package actually performed the suspension.",
       "revId": "75a7938536a168caf3a01e80427716b6d2787f7d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fb6415c_cd76da3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-03-31T14:45:58Z",
+      "side": 1,
+      "message": "(By \"revert this\" I mean let\u0027s merge this revert lol)",
+      "parentUuid": "78ece726_33a08255",
+      "revId": "75a7938536a168caf3a01e80427716b6d2787f7d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
