@@ -22,6 +22,7 @@ import android.os.UserHandle;
 import androidx.annotation.NonNull;
 
 import com.android.launcher3.InvariantDeviceProfile;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.graphics.IconShape;
 import com.android.launcher3.icons.mono.MonoIconThemeController;
 import com.android.launcher3.pm.UserCache;
@@ -41,6 +42,8 @@ public class LauncherIcons extends BaseIconFactory implements AutoCloseable {
     private static final MainThreadInitializedObject<Pool> POOL =
             new MainThreadInitializedObject<>(Pool::new);
 
+    private static final String KEY_FORCE_MONOCHROME_ICONS = "pref_forced_monochrome_icons";
+
     /**
      * Return a new Message instance from the global pool. Allows us to
      * avoid allocating new objects in many cases.
@@ -55,6 +58,8 @@ public class LauncherIcons extends BaseIconFactory implements AutoCloseable {
 
     private final ConcurrentLinkedQueue<LauncherIcons> mPool;
 
+    private boolean mForceMonochromeAppIcons;
+
     protected LauncherIcons(Context context, int fillResIconDpi, int iconBitmapSize,
             ConcurrentLinkedQueue<LauncherIcons> pool) {
         super(context, fillResIconDpi, iconBitmapSize,
@@ -63,6 +68,8 @@ public class LauncherIcons extends BaseIconFactory implements AutoCloseable {
             mThemeController = new MonoIconThemeController();
         }
         mPool = pool;
+        mForceMonochromeAppIcons =
+                LauncherPrefs.getPrefs(context).getBoolean(KEY_FORCE_MONOCHROME_ICONS, false);
     }
 
     /**
