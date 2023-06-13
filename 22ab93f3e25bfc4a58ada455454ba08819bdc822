@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23951983_66b8fc82",
+        "filename": "src/com/android/launcher3/allapps/ActivityAllAppsContainerView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-13T22:06:55Z",
+      "side": 1,
+      "message": "Wrong resolution, duplicated correct value below.",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 72
+      },
+      "revId": "22ab93f3e25bfc4a58ada455454ba08819bdc822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca37cf7b_b6001fab",
+        "filename": "src/com/android/launcher3/allapps/ActivityAllAppsContainerView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-13T22:06:55Z",
+      "side": 1,
+      "message": "Need to double check this part",
+      "revId": "22ab93f3e25bfc4a58ada455454ba08819bdc822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
