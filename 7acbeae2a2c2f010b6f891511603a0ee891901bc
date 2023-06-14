@@ -16,6 +16,23 @@
       "message": "Seems to work ok from a quick check.",
       "revId": "7acbeae2a2c2f010b6f891511603a0ee891901bc",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80952cce_c7dc1d7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-14T14:38:22Z",
+      "side": 1,
+      "message": "Same, I don\u0027t see anything blocking. We\u0027re back to having a spacing quirk after a user returns from a search. It\u0027s minor but I can try to fix it.",
+      "revId": "7acbeae2a2c2f010b6f891511603a0ee891901bc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
