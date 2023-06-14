@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "157981d3_d38cd1ee",
+        "filename": "src/com/android/launcher3/InvariantDeviceProfile.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-14T12:40:38Z",
+      "side": 1,
+      "message": "For reference, getCurrentGridName already does the same thing.",
+      "revId": "1b4b2d3382182cbce9dd457bf07b6afb80644f41",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
