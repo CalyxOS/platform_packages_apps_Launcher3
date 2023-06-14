@@ -22,6 +22,30 @@
       },
       "revId": "d9fd96daec8c10658aeb8fee81e793b119293e6c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a8a16f6_3ba2df8b",
+        "filename": "src/com/android/launcher3/config/FeatureFlags.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-14T12:07:50Z",
+      "side": 1,
+      "message": "Ah okay,\n\n\u003e This feature is not yet ready for release, keep the flag turned off for QPR2\n\n\nhttps://gitlab.com/CalyxOS/platform_packages_apps_Launcher3/-/commit/b10b38a4f728fc9daadd18b89a0f50358da1029c",
+      "parentUuid": "ea13903c_94d12b3b",
+      "range": {
+        "startLine": 331,
+        "startChar": 40,
+        "endLine": 331,
+        "endChar": 45
+      },
+      "revId": "d9fd96daec8c10658aeb8fee81e793b119293e6c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
