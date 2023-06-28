@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "b5c6f523_ac415fac",
         "filename": "/COMMIT_MSG",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Probably shouldn\u0027t call it \u0027our\u0027 profiles, but we all know what I meant.",
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
-      "serverId": "35266860-6252-469c-a67d-185064479fc0",
-      "unresolved": true
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "cce0cb24_daf1c5d4",
         "filename": "res/values/calyx_strings.xml",
@@ -31,10 +32,10 @@
       "side": 1,
       "message": "Could use a better string.",
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
-      "serverId": "35266860-6252-469c-a67d-185064479fc0",
-      "unresolved": true
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "873909ce_a4188bb0",
         "filename": "src/com/android/launcher3/views/WorkEduView.java",
@@ -48,10 +49,10 @@
       "side": 1,
       "message": "These changes should be conditional, we still want to keep the same message for work profiles created via other means.",
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
-      "serverId": "35266860-6252-469c-a67d-185064479fc0",
-      "unresolved": true
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "f0b488ac_61cc75ab",
         "filename": "src/com/android/launcher3/views/WorkEduView.java",
@@ -66,10 +67,10 @@
       "message": "Would have to use this function https://cs.android.com/android/platform/superproject/+/android-11.0.0_r1:frameworks/base/core/java/android/app/admin/DevicePolicyManager.java;l\u003d7014;bpv\u003d0;bpt\u003d1\nQuestion becomes is it worth the extra code for a one-time message like this. Users see this already when using shelter, insular and such",
       "parentUuid": "873909ce_a4188bb0",
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
-      "serverId": "35266860-6252-469c-a67d-185064479fc0",
-      "unresolved": true
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "e686a08d_4286e30e",
         "filename": "src/com/android/launcher3/views/WorkEduView.java",
@@ -84,8 +85,96 @@
       "message": "As long as it\u0027s not too complicated, I\u0027d say it\u0027s worth it.\n\nWhen you\u0027re using other apps that would be the \"IT Admin\" per se, here there isn\u0027t one.",
       "parentUuid": "f0b488ac_61cc75ab",
       "revId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
-      "serverId": "35266860-6252-469c-a67d-185064479fc0",
-      "unresolved": true
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ],
+  "submitRequirementResults": [
+    {
+      "submitRequirement": {
+        "name": "Builds",
+        "description": {
+          "value": "Make sure it builds. A minimum vote is blocking."
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Builds\u003dMAX AND -label:Builds\u003dMIN"
+        },
+        "overrideExpression": {
+          "value": {
+            "expressionString": "label:Builds\u003d0 AND (label:Works\u003dMAX OR label:Bypass-Verification\u003dMAX)"
+          }
+        },
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Builds=MAX AND -label:Builds=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Builds=MAX","label:Builds=MIN"]}
+      },
+      "overrideExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Builds=0 AND (label:Works=MAX OR label:Bypass-Verification=MAX)"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Builds=0"],"failingAtoms":["label:Works=MAX","label:Bypass-Verification=MAX"]}
+      },
+      "patchSetCommitId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
+    },
+    {
+      "submitRequirement": {
+        "name": "Code-Review",
+        "description": {
+          "value": "A maximum vote is required for the \u0027Code-Review\u0027 label. A minimum vote is blocking."
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Code-Review\u003dMAX AND -label:Code-Review\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": false
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX AND -label:Code-Review=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MIN"],"failingAtoms":["label:Code-Review=MAX"]}
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
+    },
+    {
+      "submitRequirement": {
+        "name": "Works",
+        "description": {
+          "value": "Make sure it works. A minimum vote is blocking."
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Works\u003dMAX AND -label:Works\u003dMIN"
+        },
+        "overrideExpression": {
+          "value": {
+            "expressionString": "label:Works\u003d0 AND label:Bypass-Verification\u003dMAX"
+          }
+        },
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Works=MAX AND -label:Works=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Works=MAX","label:Works=MIN"]}
+      },
+      "overrideExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Works=0 AND label:Bypass-Verification=MAX"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Works=0"],"failingAtoms":["label:Bypass-Verification=MAX"]}
+      },
+      "patchSetCommitId": "b81edbb04cec6f1f83fa161028f99b047d1b99da",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
     }
   ]
 }
