@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c72a441a_0a505c3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-07-05T18:57:30Z",
+      "side": 1,
+      "message": "Doesn\u0027t do what it says it does.\n\nWhat it actually does:\n- *Always* shows work apps in the work tab of the app drawer, even without multiple profiles. Never replaces this with the screen that shows a work profile is paused.\n- Never shows a button to turn on work apps. Instead, the user has to tap a particular app on the work tab, which prompts to start the work profile, and then loads the app.",
+      "revId": "c759756498b2b1e5cc7dd43b82ef87f4dae23501",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
