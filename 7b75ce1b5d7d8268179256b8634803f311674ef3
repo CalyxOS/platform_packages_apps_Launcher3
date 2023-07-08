@@ -22,6 +22,30 @@
       },
       "revId": "7b75ce1b5d7d8268179256b8634803f311674ef3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54aee58b_d9f2e9d2",
+        "filename": "res/xml/default_workspace_6x5.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-08T19:41:44Z",
+      "side": 0,
+      "message": "Yeah we could, we only have one email app.",
+      "parentUuid": "055c2dcd_94ca8429",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 124
+      },
+      "revId": "7b75ce1b5d7d8268179256b8634803f311674ef3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
