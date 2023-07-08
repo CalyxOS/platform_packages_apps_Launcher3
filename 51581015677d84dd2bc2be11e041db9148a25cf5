@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ceb5daa_14793299",
+        "filename": "res/xml/default_workspace_6x5.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-07-08T19:38:52Z",
+      "side": 1,
+      "message": "This didn\u0027t work on my install, however it\u0027s present in all other phone workspace configurations",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 106
+      },
+      "revId": "51581015677d84dd2bc2be11e041db9148a25cf5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
