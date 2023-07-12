@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "779b30e5_9c567e4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-07-12T01:35:21Z",
+      "side": 1,
+      "message": "Reworked this. I think it\u0027s a simple start for improved usability.",
+      "revId": "258412558f7ef7105b112b9156e8d441d498d2d3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
