@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">ਵਿਰਾਮ</string>
+    <string name="pause_apps_dialog_title">ਰੋਕੋ %1$s\?</string>
+    <string name="pause_apps_dialog_message">%1$s ਲਈ ਸੂਚਨਾਵਾਂ ਨੂੰ ਰੋਕ ਦਿੱਤਾ ਜਾਵੇਗਾ</string>
+    <string name="paused_apps_dialog_title">ਐਪ ਰੋਕੀ ਗਈ</string>
+    <string name="work_apps_pause_btn_text_calyx">ਕੰਮ ਸੰਬੰਧੀ ਐਪਾਂ ਬੰਦ ਕਰੋ</string>
+    <string name="paused_apps_dialog_message">%1$s ਨੂੰ ਲਾਂਚਰ ਤੋਂ ਸਿੱਧਾ ਰੋਕਿਆ ਗਿਆ ਸੀ</string>
+    <string name="paused_apps_drop_target_label">ਐਪ ਰੋਕੋ</string>
+</resources>
