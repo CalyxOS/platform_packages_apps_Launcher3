@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dedf4eb8_a950537b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T19:07:58Z",
+      "side": 1,
+      "message": "Squashed with the following change, which was just a fix of a problematic rebase or merge, so not shown in commit message: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/19456/1",
+      "revId": "1afad7f59e17d04a40f346eeefcf6e5db68cc547",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
