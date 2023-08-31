@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d540273_b4b26e15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T18:45:28Z",
+      "side": 1,
+      "message": "I squashed in two more changes (see commit message), let me know if not correct",
+      "revId": "fceac888717935cd92b76e341c646af93ef00769",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
