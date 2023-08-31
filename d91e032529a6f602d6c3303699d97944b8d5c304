@@ -16,6 +16,40 @@
       "message": "Squashed in the following, but it was minor with no commit message so I did not modify this one\u0027s commit message: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/16043",
       "revId": "d91e032529a6f602d6c3303699d97944b8d5c304",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "540ae818_67b048da",
+        "filename": "res/drawable/bg_all_apps_searchbox.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T18:58:37Z",
+      "side": 1,
+      "message": "Upstream change means this no longer needed to be modified (previously this patch changed it from 2dp to 58dp)",
+      "revId": "d91e032529a6f602d6c3303699d97944b8d5c304",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba24b030_006a8f63",
+        "filename": "res/layout/search_container_all_apps.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T18:58:37Z",
+      "side": 1,
+      "message": "Upstream change means `android:elevation\u003d\"1dp\"` is no longer present (previously this patch changed it to 0dp).",
+      "revId": "d91e032529a6f602d6c3303699d97944b8d5c304",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
