@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1825b57_fdd5f329",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T19:20:44Z",
+      "side": 1,
+      "message": "Also includes the following fixups squashed in, not commented on in the commit message because they were just small but needed fixes related to porting or silly mistakes:\n- https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/19447 (Iea43ba32)\n- https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/19455 (Idd5df69b)",
+      "revId": "56dfefa74a679b79dce77941bdf82218d4db6cde",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
