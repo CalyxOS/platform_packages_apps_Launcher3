@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ea380b2_176d7b7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T18:53:19Z",
+      "side": 1,
+      "message": "Squashed in the following, but it was minor with no commit message so I did not modify this one\u0027s commit message: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/16043",
+      "revId": "d91e032529a6f602d6c3303699d97944b8d5c304",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
