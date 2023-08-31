@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1f5a083_2010c25c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T19:13:13Z",
+      "side": 1,
+      "message": "secondary_launcher.xml change no longer needed after upstream change",
+      "revId": "b559343d65bcfcf1c436c8cb34f0d852ee12839f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
