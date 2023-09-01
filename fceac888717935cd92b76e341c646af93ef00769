@@ -16,6 +16,24 @@
       "message": "I squashed in two more changes (see commit message), let me know if not correct",
       "revId": "fceac888717935cd92b76e341c646af93ef00769",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1facee6e_61056a6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-01T22:31:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d540273_b4b26e15",
+      "revId": "fceac888717935cd92b76e341c646af93ef00769",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
