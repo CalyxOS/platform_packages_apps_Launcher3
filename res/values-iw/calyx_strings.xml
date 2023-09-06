@@ -6,4 +6,5 @@
     <string name="paused_apps_dialog_title">היישומון מושהה</string>
     <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
     <string name="paused_apps_drop_target_label">השהיית היישומון</string>
+    <string name="work_apps_pause_btn_text_calyx">כיבוי יישומוני עבודה</string>
 </resources>
