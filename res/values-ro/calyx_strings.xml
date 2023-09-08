@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause_apps_dialog_title">Pauza %1$s\?</string>
+    <string name="paused_apps_drop_target_label">Pune pe pauza aplicatia</string>
+    <string name="paused_apps_dialog_message">%1$s a fost pus pe pauza direct de catre lansator</string>
+    <string name="pause">Pauza</string>
+    <string name="work_apps_pause_btn_text_calyx">Opreste aplicatiile de lucru</string>
+    <string name="pause_apps_dialog_message">Notificarile pentru %1$s sunt pe pauza</string>
+    <string name="paused_apps_dialog_title">Aplicatie pe pauza</string>
+</resources>
