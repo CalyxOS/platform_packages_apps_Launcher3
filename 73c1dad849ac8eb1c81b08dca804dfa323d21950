@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "438ba736_6e060006",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T11:17:54Z",
+      "side": 1,
+      "message": "Could not perform action: Failed to submit 1 change due to the following problems:\nChange 20307: Depends on change that was not submitted. Commit 73c1dad849ac8eb1c81b08dca804dfa323d21950 depends on commit 1cf9d7d0829fdb45b59bc06b1b11ed11f3b879c6 which cannot be merged. Is the change of this commit not visible to \u0027chirayudesai\u0027 or was it deleted?",
+      "revId": "73c1dad849ac8eb1c81b08dca804dfa323d21950",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
