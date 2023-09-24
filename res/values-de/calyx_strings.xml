@@ -6,4 +6,5 @@
     <string name="paused_apps_dialog_title">App pausiert</string>
     <string name="pause">Pausieren</string>
     <string name="paused_apps_drop_target_label">App pausieren</string>
+    <string name="work_apps_pause_btn_text_calyx">Geschäftliche Apps ausschalten</string>
 </resources>

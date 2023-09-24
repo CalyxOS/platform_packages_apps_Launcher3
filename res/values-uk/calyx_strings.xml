@@ -6,4 +6,5 @@
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_message">Сповіщення для %1$s буде призупинено</string>
     <string name="paused_apps_dialog_title">Застосунок призупинено</string>
+    <string name="work_apps_pause_btn_text_calyx">Вимкнути робочі застосунки</string>
 </resources>

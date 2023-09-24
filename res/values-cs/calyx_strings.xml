@@ -6,4 +6,5 @@
     <string name="pause_apps_dialog_message">Oznámení z %1$s budou pozastavena</string>
     <string name="paused_apps_dialog_message">Aplikace %1$s byla pozastavena přímo z přehledu aplikací</string>
     <string name="paused_apps_drop_target_label">Pozastavit aplikaci</string>
+    <string name="work_apps_pause_btn_text_calyx">Vypnout pracovní aplikace</string>
 </resources>

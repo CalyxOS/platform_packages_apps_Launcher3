@@ -6,4 +6,5 @@
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı\?</string>
     <string name="pause_apps_dialog_message">%1$s için bildirimler duraklatılacak</string>
+    <string name="work_apps_pause_btn_text_calyx">İş uygulamalarını kapat</string>
 </resources>

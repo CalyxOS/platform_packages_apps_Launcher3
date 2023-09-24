@@ -6,4 +6,5 @@
     <string name="paused_apps_dialog_title">Η εφαρμογή τέθηκε σε παύση</string>
     <string name="paused_apps_dialog_message">Το %1$s τέθηκε σε παύση απευθείας από τον εκκινητή εφαρμογών</string>
     <string name="paused_apps_drop_target_label">Παύση εφαρμογής</string>
+    <string name="work_apps_pause_btn_text_calyx">Απενεργοποίηση εφαρμογών εργασίας</string>
 </resources>
