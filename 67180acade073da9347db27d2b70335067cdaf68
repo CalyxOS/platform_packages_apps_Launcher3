@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4edc5092_240db404",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T23:00:37Z",
+      "side": 1,
+      "message": "Moved to end, builds fine without, warn: removing resource com.android.launcher3:string/work_apps_pause_btn_text_calyx without required default value.\n\nWill have to figure out translations.\n\nWould also like to have this feature working again.",
+      "parentUuid": "6a42c567_ec88514d",
+      "revId": "67180acade073da9347db27d2b70335067cdaf68",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "228ea570_95de56c7",
