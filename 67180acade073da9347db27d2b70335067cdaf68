@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a42c567_ec88514d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T18:55:33Z",
+      "side": 1,
+      "message": "This is now \"unpause apps\"",
+      "revId": "67180acade073da9347db27d2b70335067cdaf68",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "228ea570_95de56c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T18:55:33Z",
+      "side": 1,
+      "message": "This has changed, can leave it out for now and figure things out later.",
+      "revId": "67180acade073da9347db27d2b70335067cdaf68",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
