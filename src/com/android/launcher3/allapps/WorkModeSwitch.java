@@ -93,7 +93,7 @@ public class WorkModeSwitch extends LinearLayout implements Insettable,
         }
 
         setInsets(mActivityContext.getDeviceProfile().getInsets());
-        setPauseMode(mDoPause);
+        updateStringFromCache();
 
         getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
     }
@@ -212,14 +212,10 @@ public class WorkModeSwitch extends LinearLayout implements Insettable,
         return mScrollThreshold;
     }
 
-    public void setPauseMode(final boolean doPause) {
-        final StringCache cache = mActivityContext.getStringCache();
-        if (doPause) {
-            mIcon.setImageResource(R.drawable.ic_corp_off);
-            if (cache != null) mTextView.setText(cache.workProfilePauseButton);
-        } else {
-            mIcon.setImageResource(R.drawable.ic_corp);
-            if (cache != null) mTextView.setText(cache.workProfileEnableButton);
+    public void updateStringFromCache(){
+        StringCache cache = mActivityContext.getStringCache();
+        if (cache != null) {
+            mTextView.setText(cache.workProfilePauseButton);
         }
     }
 }
