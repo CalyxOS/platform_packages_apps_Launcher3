@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause_apps_dialog_title">តើផ្អាក %1$s ឬ\?</string>
+    <string name="paused_apps_drop_target_label">កម្មវិធីផ្អាក</string>
+    <string name="paused_apps_dialog_message">%1$s ត្រូវបានផ្អាកដោយផ្ទាល់ពី launcher</string>
+    <string name="pause">ផ្អាក</string>
+    <string name="work_apps_pause_btn_text_calyx">បិទកម្មវិធីការងារ</string>
+    <string name="pause_apps_dialog_message">ការជូនដំណឹងសម្រាប់ %1$s នឹងត្រូវបានផ្អាក</string>
+    <string name="paused_apps_dialog_title">កម្មវិធីបានផ្អាក</string>
+</resources>
