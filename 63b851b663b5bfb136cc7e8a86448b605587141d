@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69228b52_c944aaa7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-10-31T20:01:00Z",
+      "side": 1,
+      "message": "Visually, looks okay to me.",
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33b3cba6_c472f62a",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-10-31T20:01:00Z",
+      "side": 1,
+      "message": "I\u0027m not really sure how to test this one (how to have a work profile with \"telephony\" available), but it\u0027s just a string change.",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 202
+      },
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
