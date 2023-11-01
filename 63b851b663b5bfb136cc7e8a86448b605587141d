@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fac15db3_dbd42351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T13:44:52Z",
+      "side": 1,
+      "message": "Do you mean\n1) Turn off works apps using the toggle in the launcher at the bottom right\n2) Tap on any work app, you see \"Unpause work apps?\"",
+      "parentUuid": "e53d894a_3813ae68",
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "33b3cba6_c472f62a",
         "filename": "res/values/calyx_strings.xml",
         "patchSetId": 4
