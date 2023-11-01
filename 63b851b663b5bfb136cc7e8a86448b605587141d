@@ -89,6 +89,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86500a19_ad4e438b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T16:00:09Z",
+      "side": 1,
+      "message": "Ok.\n\nWe can tweak that code too if needed, just can\u0027t touch strings.xml - so it\u0027d have to be a new string in calyx_strings, basically just like this change.",
+      "parentUuid": "a05303e0_a4f1ca76",
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33b3cba6_c472f62a",
