@@ -71,6 +71,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a05303e0_a4f1ca76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-01T14:00:59Z",
+      "side": 1,
+      "message": "That string (and looks like the dialog itself) is actually part of fw/b, resulting from this change: https://cs.android.com/android/_/android/platform/frameworks/base/+/eb7a0040329518760cc1b048db5dd475b234c342\n\nSo we can\u0027t change it here.",
+      "parentUuid": "bf93dfe7_552175fb",
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33b3cba6_c472f62a",
