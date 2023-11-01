@@ -90,6 +90,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "a86bf51d_aadfade7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-11-01T13:10:57Z",
+      "side": 1,
+      "message": "Unless I\u0027m reading it wrong, the change that you linked looked like it was the opposite of what we actually want, so I\u0027d have to pick a revert and then rename everything to `_calyx` and move it over, etc.\n\nFor example it changes \"Turn on work apps\" to \"Unpause apps\"; that\u0027s not what we want, I thought.",
+      "parentUuid": "65e13539_babd9080",
+      "revId": "67180acade073da9347db27d2b70335067cdaf68",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "228ea570_95de56c7",
