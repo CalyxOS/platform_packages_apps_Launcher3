@@ -39,6 +39,30 @@
       },
       "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e46e7efb_96fb1ae6",
+        "filename": "res/values/calyx_strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T11:14:46Z",
+      "side": 1,
+      "message": "That\u0027s ok",
+      "parentUuid": "33b3cba6_c472f62a",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 202
+      },
+      "revId": "63b851b663b5bfb136cc7e8a86448b605587141d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
