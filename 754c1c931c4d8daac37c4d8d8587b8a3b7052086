@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96e1e6fd_6224a552",
+        "filename": "res/xml/default_workspace_3x3.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-17T10:29:47Z",
+      "side": 1,
+      "message": "Another way to do the same thing is use resolve",
+      "revId": "754c1c931c4d8daac37c4d8d8587b8a3b7052086",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f88fb018_8dcb3002",
+        "filename": "res/xml/default_workspace_3x3.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-17T10:29:47Z",
+      "side": 1,
+      "message": "\", F-Droid Basic or F-Droid\"",
+      "revId": "754c1c931c4d8daac37c4d8d8587b8a3b7052086",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
