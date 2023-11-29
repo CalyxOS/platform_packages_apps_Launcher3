@@ -81,6 +81,13 @@
         launcher:screen="0"
         launcher:x="2"
         launcher:y="-1"
+        launcher:packageName="org.fdroid.basic"
+        launcher:className="org.fdroid.fdroid.views.main.MainActivity" />
+
+    <favorite
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="-1"
         launcher:packageName="org.fdroid.fdroid"
         launcher:className="org.fdroid.fdroid.views.main.MainActivity" />
 
