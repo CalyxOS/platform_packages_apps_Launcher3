@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b5da9ab_ee55d823",
+        "filename": "quickstep/src/com/android/launcher3/taskbar/TaskbarManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-07T17:35:12Z",
+      "side": 1,
+      "message": "`mContext might not have been initialized yet`",
+      "revId": "19852e97a140314954b13641fd94ba97eb49cf35",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
