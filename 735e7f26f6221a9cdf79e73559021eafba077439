@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fec19066_336153ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-07T19:57:12Z",
+      "side": 1,
+      "message": "QPR1 adds a color for this and it looks fine to me. Not sure if it\u0027s better or worse, but I don\u0027t notice anything unusual.",
+      "revId": "735e7f26f6221a9cdf79e73559021eafba077439",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
