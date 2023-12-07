@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed7f3533_27463990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-12-07T21:10:41Z",
+      "side": 1,
+      "message": "Test: Manual: Create a widget for Gallery. It should prompt for details before creating the widget (Choose an album, Choose an image, or Shuffle all images); then, it should successfully create the widget.\n\nLooks fixed in QPR1.",
+      "revId": "e8d9ed2b6f09d59305e3a004ea4083c4bb9927d8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
