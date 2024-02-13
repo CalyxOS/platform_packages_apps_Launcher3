@@ -7,4 +7,8 @@
     <string name="paused_apps_dialog_message">%1$s 被直接从启动器暂停</string>
     <string name="paused_apps_drop_target_label">暂停应用</string>
     <string name="work_apps_pause_btn_text_calyx">关闭工作应用</string>
+    <string name="work_apps_paused_title_calyx">工作配置内的应用已关闭</string>
+    <string name="work_apps_enable_btn_text_calyx">启用工作配置应用</string>
+    <string name="work_apps_paused_info_body_calyx">工作配置内的应用无法发送通知、使用电量或访问位置</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">工作配置内的应用无法接电话或发消息、发送通知、使用电量或访问位置</string>
 </resources>
