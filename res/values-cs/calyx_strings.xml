@@ -7,4 +7,8 @@
     <string name="paused_apps_dialog_message">Aplikace %1$s byla pozastavena přímo z přehledu aplikací</string>
     <string name="paused_apps_drop_target_label">Pozastavit aplikaci</string>
     <string name="work_apps_pause_btn_text_calyx">Vypnout pracovní aplikace</string>
+    <string name="work_apps_enable_btn_text_calyx">Zapnout pracovní aplikace</string>
+    <string name="work_apps_paused_info_body_calyx">Vaše pracovní aplikace vám nemohou posílat oznámení, používat vaši baterii ani zjišťovat vaši polohu</string>
+    <string name="work_apps_paused_title_calyx">Pracovní aplikace jsou vypnuty</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Vaše pracovní aplikace nemohou přijímat hovory ani textové zprávy, posílat vám oznámení, používat vaši baterii nebo zjišťovat vaši polohu</string>
 </resources>

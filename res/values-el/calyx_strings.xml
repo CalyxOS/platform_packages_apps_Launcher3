@@ -7,4 +7,8 @@
     <string name="paused_apps_dialog_message">Το %1$s τέθηκε σε παύση απευθείας από τον εκκινητή εφαρμογών</string>
     <string name="paused_apps_drop_target_label">Παύση εφαρμογής</string>
     <string name="work_apps_pause_btn_text_calyx">Απενεργοποίηση εφαρμογών εργασίας</string>
+    <string name="work_apps_enable_btn_text_calyx">Ενεργοποιήστε τις εφαρμογές εργασίας</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Οι εφαρμογές εργασίας δεν μπορούν να λαμβάνουν τηλεφωνικές κλήσεις ή μηνύματα κειμένου, να στέλνουν ειδοποιήσεις, να χρησιμοποιούν την μπαταρία ή να έχουν πρόσβαση στην τοποθεσία σας</string>
+    <string name="work_apps_paused_title_calyx">Οι εφαρμογές εργασίας είναι απενεργοποιημένες</string>
+    <string name="work_apps_paused_info_body_calyx">Οι εφαρμογές εργασίας δεν μπορούν να στέλνουν ειδοποιήσεις, να χρησιμοποιούν την μπαταρία ή να έχουν πρόσβαση στην τοποθεσία σας</string>
 </resources>

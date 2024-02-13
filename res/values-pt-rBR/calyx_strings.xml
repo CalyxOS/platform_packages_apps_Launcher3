@@ -6,4 +6,9 @@
     <string name="paused_apps_dialog_title">App pausado</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
     <string name="paused_apps_dialog_message">%1$s foi diretamente pausado pelo lançador</string>
+    <string name="work_apps_pause_btn_text_calyx">Desativar apps de trabalho</string>
+    <string name="work_apps_enable_btn_text_calyx">Ativar apps de trabalho</string>
+    <string name="work_apps_paused_info_body_calyx">Seus apps de trabalho não podem te enviar notificações, usar sua bateria, ou acessar sua localização</string>
+    <string name="work_apps_paused_title_calyx">Apps de trabalho estão desligados</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Seus apps de trabalho não conseguem receber ligações, mensagens de texto, enviar notificações, usar sua bateria, ou acessar sua localização</string>
 </resources>
