@@ -144,10 +144,12 @@ public final class AppSharing {
             PackageManager packageManager = view.getContext().getPackageManager();
             String sourceDir, appLabel;
             try {
-                PackageInfo packageInfo = packageManager.getPackageInfo(packageName, 0);
-                sourceDir = packageInfo.applicationInfo.sourceDir;
-                appLabel = packageManager.getApplicationLabel(packageInfo.applicationInfo)
-                        .toString() + APP_EXSTENSION;
+                IPC_EXECUTOR.submit(() -> {
+                    PackageInfo packageInfo = packageManager.getPackageInfo(packageName, 0);
+                    sourceDir = packageInfo.applicationInfo.sourceDir;
+                    appLabel = packageManager.getApplicationLabel(packageInfo.applicationInfo)
+                            .toString() + APP_EXSTENSION;
+                }).get();
             } catch (Exception e) {
                 Log.e(TAG, "Could not find info for package \"" + packageName + "\"");
                 return;

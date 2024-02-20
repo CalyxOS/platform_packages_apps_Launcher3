@@ -20,6 +20,7 @@ import static com.android.launcher3.LauncherSettings.Favorites.TABLE_NAME;
 import static com.android.launcher3.LauncherSettings.Favorites.TMP_TABLE;
 import static com.android.launcher3.provider.LauncherDbUtils.copyTable;
 import static com.android.launcher3.provider.LauncherDbUtils.dropTable;
+import static com.android.launcher3.util.Executors.IPC_EXECUTOR;
 
 import android.content.ComponentName;
 import android.content.ContentValues;
@@ -58,6 +59,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 /**
@@ -310,15 +312,21 @@ public class GridSizeMigrationUtil {
         // this set is removed.
         // Since the loader removes such items anyway, removing these items here doesn't cause
         // any extra data loss and gives us more free space on the grid for better migration.
-        HashSet<String> validPackages = new HashSet<>();
-        for (PackageInfo info : context.getPackageManager()
-                .getInstalledPackages(PackageManager.GET_UNINSTALLED_PACKAGES)) {
-            validPackages.add(info.packageName);
+        try {
+            return IPC_EXECUTOR.submit(() -> {
+                HashSet<String> validPackages = new HashSet<>();
+                for (PackageInfo info : context.getPackageManager()
+                        .getInstalledPackages(PackageManager.GET_UNINSTALLED_PACKAGES)) {
+                    validPackages.add(info.packageName);
+                }
+                InstallSessionHelper.INSTANCE.get(context)
+                        .getActiveSessions().keySet()
+                        .forEach(packageUserKey -> validPackages.add(packageUserKey.mPackageName));
+                return validPackages;
+            }).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e);
         }
-        InstallSessionHelper.INSTANCE.get(context)
-                .getActiveSessions().keySet()
-                .forEach(packageUserKey -> validPackages.add(packageUserKey.mPackageName));
-        return validPackages;
     }
 
     private static void solveGridPlacement(@NonNull final DatabaseHelper helper,

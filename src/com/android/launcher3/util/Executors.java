@@ -65,6 +65,18 @@ public class Executors {
             java.util.concurrent.Executors.newSingleThreadExecutor();
 
     /**
+     * The number of threads in the IPC thread pool. If too many threads are used, transactions may
+     * fail. For instance, if a user has several child profiles, this can lead to several threads
+     * simultaneously fetching the installed packages of each, which exhausts binder buffer space.
+     * To avoid this, we deliberately choose a conservative thread count.
+     */
+    private static final int IPC_THREAD_POOL_COUNT = Math.min(4, POOL_SIZE);
+
+    /** A background executor with a fixed thread pool size for IPC purposes. */
+    public static final ExecutorService IPC_EXECUTOR =
+            java.util.concurrent.Executors.newFixedThreadPool(IPC_THREAD_POOL_COUNT);
+
+    /**
      * Utility method to get a started handler thread statically
      */
     public static Looper createAndStartNewLooper(String name) {

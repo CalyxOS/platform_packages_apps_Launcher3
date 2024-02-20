@@ -16,6 +16,7 @@
 
 package com.android.launcher3.notification;
 
+import static com.android.launcher3.util.Executors.IPC_EXECUTOR;
 import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 import static com.android.launcher3.util.SettingsCache.NOTIFICATION_BADGING_URI;
@@ -48,6 +49,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 /**
@@ -213,9 +215,16 @@ public class NotificationListener extends NotificationListenerService {
     private @NonNull StatusBarNotification[] getActiveNotificationsSafely(@Nullable String[] keys) {
         StatusBarNotification[] result = null;
         try {
-            result = getActiveNotifications(keys);
-        } catch (SecurityException e) {
-            Log.e(TAG, "SecurityException: failed to fetch notifications");
+            result = IPC_EXECUTOR.submit(() -> {
+                try {
+                    return getActiveNotifications(keys);
+                } catch (SecurityException e) {
+                    Log.e(TAG, "SecurityException: failed to fetch notifications");
+                    return null;
+                }
+            }).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e.getCause());
         }
         return result == null ? new StatusBarNotification[0] : result;
     }

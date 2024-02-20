@@ -20,6 +20,8 @@ import static android.appwidget.AppWidgetManager.ACTION_APPWIDGET_BIND;
 import static android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_ID;
 import static android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_PROVIDER;
 
+import static com.android.launcher3.util.Executors.IPC_EXECUTOR;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.SearchManager;
@@ -49,6 +51,9 @@ import com.android.launcher3.R;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.graphics.FragmentWithPreview;
 import com.android.launcher3.widget.util.WidgetSizes;
+
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 /**
  * A frame layout which contains a QSB. This internally uses fragment to bind the view, which
@@ -94,10 +99,16 @@ public class QsbContainerView extends FrameLayout {
             return null;
         }
 
-        AppWidgetProviderInfo defaultWidgetForSearchPackage = null;
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-        for (AppWidgetProviderInfo info :
-                appWidgetManager.getInstalledProvidersForPackage(providerPkg, null)) {
+        final List<AppWidgetProviderInfo> providerInfos;
+        try {
+            providerInfos = IPC_EXECUTOR.submit(() ->
+                    appWidgetManager.getInstalledProvidersForPackage(providerPkg, null)).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        AppWidgetProviderInfo defaultWidgetForSearchPackage = null;
+        for (AppWidgetProviderInfo info : providerInfos) {
             if (info.provider.getPackageName().equals(providerPkg) && info.configure == null) {
                 if ((info.widgetCategory
                         & AppWidgetProviderInfo.WIDGET_CATEGORY_SEARCHBOX) != 0) {

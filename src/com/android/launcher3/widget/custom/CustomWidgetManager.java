@@ -17,6 +17,7 @@
 package com.android.launcher3.widget.custom;
 
 import static com.android.launcher3.widget.LauncherAppWidgetProviderInfo.CLS_CUSTOM_WIDGET_PREFIX;
+import static com.android.launcher3.util.Executors.IPC_EXECUTOR;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
@@ -41,6 +42,7 @@ import com.android.systemui.plugins.PluginListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
@@ -80,8 +82,14 @@ public class CustomWidgetManager implements PluginListener<CustomWidgetPlugin>, 
     @Override
     public void onPluginConnected(CustomWidgetPlugin plugin, Context context) {
         mPlugins.put(mAutoProviderId, plugin);
-        List<AppWidgetProviderInfo> providers = AppWidgetManager.getInstance(context)
-                .getInstalledProvidersForProfile(Process.myUserHandle());
+        final List<AppWidgetProviderInfo> providers;
+        try {
+            providers = IPC_EXECUTOR.submit(() ->
+                    AppWidgetManager.getInstance(context)
+                            .getInstalledProvidersForProfile(Process.myUserHandle())).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (providers.isEmpty()) return;
         Parcel parcel = Parcel.obtain();
         providers.get(0).writeToParcel(parcel, 0);

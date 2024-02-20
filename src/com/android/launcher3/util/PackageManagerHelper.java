@@ -16,6 +16,8 @@
 
 package com.android.launcher3.util;
 
+import static com.android.launcher3.util.Executors.IPC_EXECUTOR;
+
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -50,6 +52,7 @@ import com.android.launcher3.model.data.WorkspaceItemInfo;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Utility methods using package manager
@@ -110,11 +113,18 @@ public class PackageManagerHelper {
     public ApplicationInfo getApplicationInfo(@NonNull final String packageName,
             @NonNull final UserHandle user, final int flags) {
         try {
-            ApplicationInfo info = mLauncherApps.getApplicationInfo(packageName, flags, user);
-            return (info.flags & ApplicationInfo.FLAG_INSTALLED) == 0 || !info.enabled
-                    ? null : info;
-        } catch (PackageManager.NameNotFoundException e) {
-            return null;
+            return IPC_EXECUTOR.submit(() -> {
+                try {
+                    ApplicationInfo info =
+                            mLauncherApps.getApplicationInfo(packageName, flags, user);
+                    return (info.flags & ApplicationInfo.FLAG_INSTALLED) == 0 || !info.enabled
+                            ? null : info;
+                } catch (PackageManager.NameNotFoundException e) {
+                    return null;
+                }
+            }).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -124,9 +134,15 @@ public class PackageManagerHelper {
 
     @Nullable
     public Intent getAppLaunchIntent(@Nullable final String pkg, @NonNull final UserHandle user) {
-        List<LauncherActivityInfo> activities = mLauncherApps.getActivityList(pkg, user);
-        return activities.isEmpty() ? null :
-                AppInfo.makeLaunchIntent(activities.get(0));
+        try {
+            return IPC_EXECUTOR.submit(() -> {
+                List<LauncherActivityInfo> activities = mLauncherApps.getActivityList(pkg, user);
+                return activities.isEmpty() ? null :
+                        AppInfo.makeLaunchIntent(activities.get(0));
+            }).get();
+        } catch (ExecutionException|InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
