@@ -2,10 +2,10 @@
 <resources>
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s\?</string>
-    <string name="pause_apps_dialog_message">Notificações para %1$s serão pausadas</string>
+    <string name="pause_apps_dialog_message">Notificações de %1$s serão pausadas</string>
     <string name="paused_apps_dialog_title">App pausado</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
-    <string name="paused_apps_dialog_message">%1$s foi diretamente pausado pelo lançador</string>
+    <string name="paused_apps_dialog_message">%1$s foi diretamente pausado pela launcher</string>
     <string name="work_apps_pause_btn_text_calyx">Desativar apps de trabalho</string>
     <string name="work_apps_enable_btn_text_calyx">Ativar apps de trabalho</string>
     <string name="work_apps_paused_info_body_calyx">Seus apps de trabalho não podem te enviar notificações, usar sua bateria, ou acessar sua localização</string>
