@@ -352,7 +352,7 @@ public class WidgetCell extends LinearLayout {
             mWidgetBadge.setVisibility(View.GONE);
         } else {
             final int iconSize = mActivity.getDeviceProfile().allAppsIconSizePx;
-            try (BaseIconFactory bif = LauncherAppState.getInstance(mContext).getIconCache()
+            try (BaseIconFactory bif = LauncherAppState.getInstance(getContext()).getIconCache()
                     .getIconFactory()) {
                 final Drawable badge = bif.getBadgeForUser(mItem.user, iconSize);
                 if (badge != null) {
