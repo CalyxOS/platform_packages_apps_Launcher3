@@ -272,7 +272,7 @@ public abstract class SystemShortcut<T extends Context & ActivityContext> extend
         public void onClick(View view) {
             CharSequence appLabel = view.getContext().getPackageManager().getApplicationLabel(
                     new PackageManagerHelper(view.getContext()).getApplicationInfo(
-                            mItemInfo.getTargetComponent().getPackageName(), mItemInfo.user,0));
+                            mItemInfo.getTargetComponent().getPackageName(), mItemInfo.user, 0));
             new AlertDialog.Builder(view.getContext())
                     .setIcon(R.drawable.ic_hourglass_top)
                     .setTitle(view.getContext().getString(R.string.pause_apps_dialog_title,
@@ -293,7 +293,8 @@ public abstract class SystemShortcut<T extends Context & ActivityContext> extend
                                                 .setTitle(R.string.paused_apps_dialog_title)
                                                 .setMessage(R.string.paused_apps_dialog_message)
                                                 .setNeutralButtonAction(BUTTON_ACTION_UNSUSPEND)
-                                                .build(), view.getContext().getOpPackageName(),
+                                                .build(), 0, view.getContext().getOpPackageName(),
+                                        view.getContext().getUserId(),
                                         mItemInfo.user.getIdentifier());
                             } catch (RemoteException e) {
                                 Log.e(TAG, "Failed to pause app", e);
