@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93f92493_acdc2b04",
+        "filename": "src/com/android/launcher3/popup/SystemShortcut.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-03-06T22:00:40Z",
+      "side": 1,
+      "message": "This is the suspending user. Thoughts on using this vs other values (e.g. same as target user)?",
+      "range": {
+        "startLine": 297,
+        "startChar": 40,
+        "endLine": 297,
+        "endChar": 69
+      },
+      "revId": "e4f84ec1c109671b5ac80aecdb550a4c6ae93c2e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
