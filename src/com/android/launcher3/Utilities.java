@@ -593,7 +593,9 @@ public final class Utilities {
 
         Drawable badge = null;
         if ((info instanceof ItemInfoWithIcon iiwi) && !iiwi.usingLowResIcon()) {
-            badge = iiwi.bitmap.getBadgeDrawable(context, useTheme);
+            try (LauncherIcons li = LauncherIcons.obtain(context)) {
+                badge = iiwi.bitmap.withUser(iiwi.user, li).getBadgeDrawable(context, useTheme);
+            }
         }
 
         if (info instanceof PendingAddShortcutInfo) {
@@ -677,7 +679,7 @@ public final class Utilities {
 
         if (badge == null) {
             try (LauncherIcons li = LauncherIcons.obtain(context)) {
-                badge = BitmapInfo.LOW_RES_INFO.withFlags(
+                badge = BitmapInfo.LOW_RES_INFO.withUser(info.user, li).withFlags(
                                 li.getBitmapFlagOp(new BaseIconFactory.IconOptions().setUser(
                                         UserCache.INSTANCE.get(context).getUserInfo(info.user))))
                         .getBadgeDrawable(context, useTheme);
