@@ -16,6 +16,24 @@
       "message": "I\u0027ll check this more on Monday, but locally it looks like the original Launcher3 change may bot be needed at all anymore after https://review.calyxos.org/c/CalyxOS/platform_frameworks_libs_systemui/+/25137\n\nLauncher3 checked out to android-14.0.0_r29 + the libs/systemui change looks like it shows the different-colored badges already.",
       "revId": "aa7ec39f2d16fdd93b6e70779f044ff251b4d768",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b415efb_09a90e43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T14:10:09Z",
+      "side": 1,
+      "message": "See commit message\u0027s Test for a (minor) case that requires this change. There may be others.",
+      "parentUuid": "b97bd950_fd06e1ec",
+      "revId": "aa7ec39f2d16fdd93b6e70779f044ff251b4d768",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
