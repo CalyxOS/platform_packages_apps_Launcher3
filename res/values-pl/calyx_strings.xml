@@ -6,4 +6,8 @@
     <string name="paused_apps_dialog_title">Aplikacja wstrzymana</string>
     <string name="paused_apps_dialog_message">%1$s została wstrzymana bezpośrednio z poziomu launchera</string>
     <string name="paused_apps_drop_target_label">Wstrzymaj aplikację</string>
+    <string name="work_apps_pause_btn_text_calyx">Wyłącz aplikacje zawodowe</string>
+    <string name="work_apps_paused_info_body_calyx">Aplikacje służbowe nie mogą wysyłać powiadomień, zużywać baterii ani uzyskiwać dostępu do lokalizacji</string>
+    <string name="work_apps_enable_btn_text_calyx">Włącz aplikacje służbowe</string>
+    <string name="work_apps_paused_title_calyx">Aplikacje służbowe są wyłączone</string>
 </resources>

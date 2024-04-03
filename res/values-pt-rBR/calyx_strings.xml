@@ -2,13 +2,13 @@
 <resources>
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s\?</string>
-    <string name="pause_apps_dialog_message">Notificações para %1$s serão pausadas</string>
-    <string name="paused_apps_dialog_title">App pausado</string>
-    <string name="paused_apps_drop_target_label">Pausar app</string>
-    <string name="paused_apps_dialog_message">%1$s foi diretamente pausado pelo lançador</string>
-    <string name="work_apps_pause_btn_text_calyx">Desativar apps de trabalho</string>
-    <string name="work_apps_enable_btn_text_calyx">Ativar apps de trabalho</string>
-    <string name="work_apps_paused_info_body_calyx">Seus apps de trabalho não podem te enviar notificações, usar sua bateria, ou acessar sua localização</string>
-    <string name="work_apps_paused_title_calyx">Apps de trabalho estão desligados</string>
-    <string name="work_apps_paused_telephony_unavailable_body_calyx">Seus apps de trabalho não conseguem receber ligações, mensagens de texto, enviar notificações, usar sua bateria, ou acessar sua localização</string>
+    <string name="pause_apps_dialog_message">Notificações de %1$s serão pausadas</string>
+    <string name="paused_apps_dialog_title">Aplicativo pausado</string>
+    <string name="paused_apps_drop_target_label">Pausar aplicativo</string>
+    <string name="paused_apps_dialog_message">%1$s foi pausado diretamente pela launcher</string>
+    <string name="work_apps_pause_btn_text_calyx">Desligar aplicativos de trabalho</string>
+    <string name="work_apps_enable_btn_text_calyx">Ligar aplicativos de trabalho</string>
+    <string name="work_apps_paused_info_body_calyx">Seus aplicativos de trabalho não conseguem te enviar notificações, usar sua bateria, ou acessar sua localização</string>
+    <string name="work_apps_paused_title_calyx">Aplicativos de trabalho estão desligados</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Seus aplicativos de trabalho não conseguem receber ligações, mensagens de texto, enviar notificações, usar sua bateria, ou acessar sua localização</string>
 </resources>
