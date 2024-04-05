@@ -7,4 +7,8 @@
     <string name="pause">Pausieren</string>
     <string name="paused_apps_drop_target_label">App pausieren</string>
     <string name="work_apps_pause_btn_text_calyx">Geschäftliche Apps ausschalten</string>
+    <string name="work_apps_paused_info_body_calyx">Deine geschäftlichen Apps können dir keine Benachrichtigungen senden, deinen Akku verbrauchen oder auf deinen Standort zugreifen</string>
+    <string name="work_apps_enable_btn_text_calyx">Geschäftliche Apps einschalten</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Deine geschäftlichen Apps können keine Anrufe oder Textnachrichten empfangen, dir keine Benachrichtigungen senden, deinen Akku verbrauchen oder auf deinen Standort zugreifen</string>
+    <string name="work_apps_paused_title_calyx">Geschäftliche Apps sind ausgeschaltet</string>
 </resources>
