@@ -7,4 +7,8 @@
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s\?</string>
     <string name="work_apps_pause_btn_text_calyx">Desactive las aplicaciones de trabajo</string>
+    <string name="work_apps_paused_info_body_calyx">Tus aplicaciones del trabajo no pueden enviarte notificaciones, usar tu batería ni acceder a tu ubicación</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Tus aplicaciones del trabajo no pueden recibir llamadas telefónicas ni mensajes de texto, enviarte notificaciones, usar tu batería ni acceder a tu ubicación</string>
+    <string name="work_apps_paused_title_calyx">Las aplicaciones del trabajo están desactivadas</string>
+    <string name="work_apps_enable_btn_text_calyx">Activar las aplicaciones del trabajo</string>
 </resources>
