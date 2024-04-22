@@ -6,5 +6,9 @@
     <string name="pause_apps_dialog_message">Les notifications pour %1$s vont être suspendues</string>
     <string name="paused_apps_dialog_title">Application suspendue</string>
     <string name="paused_apps_drop_target_label">Suspendre l\'application</string>
-    <string name="work_apps_pause_btn_text_calyx">Eteindre</string>
+    <string name="work_apps_pause_btn_text_calyx">Désactiver les applications professionnelles</string>
+    <string name="work_apps_paused_info_body_calyx">Vos applications professionnelles ne peuvent vous envoyer des notifications, utiliser votre batterie ou accéder à votre localisation</string>
+    <string name="work_apps_paused_title_calyx">Les applications professionnelles sont désactivées</string>
+    <string name="work_apps_enable_btn_text_calyx">Activer les applications professionnelles</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Vos applications professionnelles ne peuvent pas recevoir d\'appel téléphonique ou de message textuel, vous envoyer des notifications, utiliser votre batterie ou accéder à votre localisation</string>
 </resources>
