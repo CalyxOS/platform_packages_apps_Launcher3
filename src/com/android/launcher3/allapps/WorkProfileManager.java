@@ -28,6 +28,7 @@ import static com.android.launcher3.model.data.AppsListData.FLAG_HAS_SHORTCUT_PE
 import static com.android.launcher3.model.data.AppsListData.FLAG_QUIET_MODE_CHANGE_PERMISSION;
 import static com.android.launcher3.model.data.AppsListData.FLAG_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.data.AppsListData.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
+import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -63,6 +64,7 @@ public class WorkProfileManager extends UserProfileManager
         implements PersonalWorkSlidingTabStrip.OnActivePageChangedListener {
     private static final String TAG = "WorkProfileManager";
     private final ActivityAllAppsContainerView<?> mAllApps;
+    private final UserCache mUserCache;
     private WorkUtilityView mWorkUtilityView;
     private final Predicate<UserHandle> mWorkProfileMatcher;
 
@@ -70,6 +72,7 @@ public class WorkProfileManager extends UserProfileManager
             StatsLogManager statsLogManager, UserCache userCache) {
         super(statsLogManager, userCache);
         mAllApps = allApps;
+        mUserCache = userCache;
         mWorkProfileMatcher = (user) -> userCache.getUserInfo(user).isWork();
     }
 
@@ -258,5 +261,15 @@ public class WorkProfileManager extends UserProfileManager
     @Override
     public Predicate<UserHandle> getUserMatcher() {
         return mWorkProfileMatcher;
+    }
+
+    @Override
+    protected void setQuietMode(boolean enabled, Context context) {
+        UI_HELPER_EXECUTOR.post(() ->
+                mUserCache.getUserProfiles()
+                        .stream()
+                        .filter(getUserMatcher())
+                        .forEach(userHandle ->
+                                setQuietModeSafely(enabled, userHandle, context)));
     }
 }
