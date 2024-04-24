@@ -31,6 +31,7 @@ import com.android.launcher3.pm.UserCache;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.stream.Stream;
 import java.util.function.Predicate;
 
 /**
@@ -73,12 +74,20 @@ public abstract class UserProfileManager {
     protected void setQuietMode(boolean enabled) {
         if (Utilities.ATLEAST_P) {
             UI_HELPER_EXECUTOR.post(() -> {
-                mUserCache.getUserProfiles()
+                Stream<UserHandle> userProfiles = mUserCache.getUserProfiles()
                         .stream()
-                        .filter(getUserMatcher())
-                        .findFirst()
-                        .ifPresent(userHandle ->
-                                mUserManager.requestQuietModeEnabled(enabled, userHandle));
+                        .filter(getUserMatcher());
+                boolean isWork = this instanceof WorkProfileManager;
+                if (isWork) {
+                    userProfiles
+                            .forEach(userHandle ->
+                                    mUserManager.requestQuietModeEnabled(enabled, userHandle));
+                } else {
+                    userProfiles
+                            .findFirst()
+                            .ifPresent(userHandle ->
+                                    mUserManager.requestQuietModeEnabled(enabled, userHandle));
+                }
             });
         }
     }
