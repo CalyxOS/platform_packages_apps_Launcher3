@@ -16,6 +16,24 @@
       "message": "Thanks for the submission! I noticed this, too, but never got around to looking at it. (For my particular use case, this new incorrect behavior has been convenient in a way... but that\u0027s no reason not to address it.)\n\nWe\u0027ve discussed making the UI for all of this better, too, but that will take some.",
       "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d744b142_dd652c7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000114
+      },
+      "writtenOn": "2024-04-24T17:27:37Z",
+      "side": 1,
+      "message": "Also UserProfileManager is the base class for WorkProfileManager and PrivateProfileManager.\n\nbut setQuietMode() is only used by WorkProfileManager so safe to do this I think.",
+      "parentUuid": "82ec6488_504c3d63",
+      "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
