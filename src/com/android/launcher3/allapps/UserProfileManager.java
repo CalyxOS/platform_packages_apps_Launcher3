@@ -76,8 +76,7 @@ public abstract class UserProfileManager {
                 mUserCache.getUserProfiles()
                         .stream()
                         .filter(getUserMatcher())
-                        .findFirst()
-                        .ifPresent(userHandle ->
+                        .forEach(userHandle ->
                                 mUserManager.requestQuietModeEnabled(enabled, userHandle));
             });
         }
