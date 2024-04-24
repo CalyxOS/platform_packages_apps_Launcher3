@@ -34,6 +34,23 @@
       "parentUuid": "82ec6488_504c3d63",
       "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc10aea5_69072ee6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000114
+      },
+      "writtenOn": "2024-04-24T17:33:07Z",
+      "side": 1,
+      "message": "Hold plz. I found an issue that fab don\u0027t work after pause and unpause when single work profile is present",
+      "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
