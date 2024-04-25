@@ -68,6 +68,24 @@
       "message": "That\u0027s different issue. not related to this.",
       "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc09189f_ad03203a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-25T16:25:30Z",
+      "side": 1,
+      "message": "It works fine without this patch FWIW, unless it\u0027s something else.",
+      "parentUuid": "bc10aea5_69072ee6",
+      "revId": "f1ddfffa1b4a478d8696c5f15bfc61109e33a13e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
