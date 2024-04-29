@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b87ea0a9_21efdf36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-29T13:14:08Z",
+      "side": 1,
+      "message": "PS2, which affects all profile types, sounds like a fine approach to me. A few reasons:\n1. If upstream makes changes, they will conflict and we\u0027ll see them easily. We\u0027ll probably want to match, or adapt to, their behavior.\n2. None of the other profile types should support multiple profiles in our builds, I believe, but if someone manages to create more than one, there should be no harm in affecting them all.\n\nAny reason to think there *could* be harm in affecting them all?\n\nThanks for the time and effort you\u0027ve put into this.",
+      "revId": "e989a0aa4c864980f893e343b4c8d1f5f2884da2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
