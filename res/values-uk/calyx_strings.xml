@@ -7,4 +7,8 @@
     <string name="pause_apps_dialog_message">Сповіщення для %1$s буде призупинено</string>
     <string name="paused_apps_dialog_title">Застосунок призупинено</string>
     <string name="work_apps_pause_btn_text_calyx">Вимкнути робочі застосунки</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Ваші робочі застосунки не можуть приймати телефонні дзвінки або текстові повідомлення, надсилати сповіщення, використовувати батарею або отримувати доступ до вашого місцеположення</string>
+    <string name="work_apps_paused_title_calyx">Робочі застосунки вимкнено</string>
+    <string name="work_apps_enable_btn_text_calyx">Увімкнути робочі застосунки</string>
+    <string name="work_apps_paused_info_body_calyx">Робочі застосунки не можуть надсилати вам сповіщення, використовувати батарею або отримувати доступ до вашого місцеположення</string>
 </resources>
