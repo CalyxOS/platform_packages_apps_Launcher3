@@ -217,16 +217,14 @@ public class WorkProfileManager extends UserProfileManager
     }
 
     private void onWorkFabClickedTurnOff(View view) {
-        if (Utilities.ATLEAST_P && getCurrentState() == STATE_ENABLED
-                && mWorkModeSwitch.isEnabled()) {
+        if (getCurrentState() == STATE_ENABLED && mWorkModeSwitch.isEnabled()) {
             logEvents(LAUNCHER_TURN_OFF_WORK_APPS_TAP);
             setWorkProfileEnabled(false);
         }
     }
 
     private void onWorkFabClickedTurnOn(View view) {
-        if (Utilities.ATLEAST_P && getCurrentState() == STATE_DISABLED
-                && mWorkModeSwitch.isEnabled()) {
+        if (getCurrentState() == STATE_DISABLED && mWorkModeSwitch.isEnabled()) {
             logEvents(LAUNCHER_TURN_ON_WORK_APPS_TAP);
             setWorkProfileEnabled(true);
         }
@@ -266,14 +264,12 @@ public class WorkProfileManager extends UserProfileManager
 
     @Override
     public void setQuietMode(boolean enabled) {
-        if (Utilities.ATLEAST_P) {
-            UI_HELPER_EXECUTOR.post(() -> {
-                mUserCache.getUserProfiles()
-                        .stream()
-                        .filter(getUserMatcher())
-                        .forEach(userHandle ->
-                                mUserManager.requestQuietModeEnabled(enabled, userHandle));
-            });
-        }
+        UI_HELPER_EXECUTOR.post(() -> {
+            mUserCache.getUserProfiles()
+                    .stream()
+                    .filter(getUserMatcher())
+                    .forEach(userHandle ->
+                            mUserManager.requestQuietModeEnabled(enabled, userHandle));
+        });
     }
 }
