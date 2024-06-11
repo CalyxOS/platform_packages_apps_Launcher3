@@ -61,6 +61,7 @@ import java.util.List;
 public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         implements View.OnClickListener {
 
+    private static final String TAG = SystemShortcut.class.getSimpleName();
     private final int mIconResId;
     protected final int mLabelResId;
     protected int mAccessibilityActionId;
@@ -319,16 +320,19 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         }
     }
 
-    public static final Factory<BaseDraggingActivity> PAUSE_APPS =
+    public static final Factory<ActivityContext> PAUSE_APPS =
             (activity, itemInfo, originalView) -> {
-                if (new PackageManagerHelper(activity).isAppSuspended(
+                if (originalView == null) {
+                    return null;
+                }
+                if (new PackageManagerHelper(originalView.getContext()).isAppSuspended(
                         itemInfo.getTargetComponent().getPackageName(), itemInfo.user)) {
                     return null;
                 }
                 return new PauseApps(activity, itemInfo, originalView);
     };
 
-    public static class PauseApps<T extends Context & ActivityContext> extends SystemShortcut<T> {
+    public static class PauseApps<T extends ActivityContext> extends SystemShortcut<T> {
 
         public PauseApps(T target, ItemInfo itemInfo, View originalView) {
             super(R.drawable.ic_hourglass_top, R.string.paused_apps_drop_target_label, target,
