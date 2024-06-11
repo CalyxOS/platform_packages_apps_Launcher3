@@ -17,6 +17,7 @@ package com.android.quickstep;
 
 import static com.android.launcher3.Flags.enableOverviewIconMenu;
 import static com.android.launcher3.util.DisplayController.CHANGE_DENSITY;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 
 import android.annotation.Nullable;
 import android.app.ActivityManager;
@@ -31,7 +32,6 @@ import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.SparseArray;
-import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.WorkerThread;
 
@@ -42,11 +42,12 @@ import com.android.launcher3.icons.BaseIconFactory.IconOptions;
 import com.android.launcher3.icons.BitmapInfo;
 import com.android.launcher3.icons.IconProvider;
 import com.android.launcher3.pm.UserCache;
+import com.android.launcher3.util.CancellableTask;
 import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.DisplayController.DisplayInfoChangeListener;
 import com.android.launcher3.util.DisplayController.Info;
+import com.android.launcher3.util.FlagOp;
 import com.android.launcher3.util.Preconditions;
-import com.android.quickstep.util.CancellableTask;
 import com.android.quickstep.util.TaskKeyLruCache;
 import com.android.quickstep.util.TaskVisualsChangeListener;
 import com.android.systemui.shared.recents.model.Task;
@@ -62,7 +63,6 @@ import java.util.function.Consumer;
 public class TaskIconCache implements DisplayInfoChangeListener {
 
     private final Executor mBgExecutor;
-    private final AccessibilityManager mAccessibilityManager;
 
     private final Context mContext;
     private final TaskKeyLruCache<TaskCacheEntry> mIconCache;
@@ -79,7 +79,6 @@ public class TaskIconCache implements DisplayInfoChangeListener {
     public TaskIconCache(Context context, Executor bgExecutor, IconProvider iconProvider) {
         mContext = context;
         mBgExecutor = bgExecutor;
-        mAccessibilityManager = context.getSystemService(AccessibilityManager.class);
         mIconProvider = iconProvider;
 
         Resources res = context.getResources();
@@ -111,21 +110,17 @@ public class TaskIconCache implements DisplayInfoChangeListener {
             callback.accept(task);
             return null;
         }
-        CancellableTask<TaskCacheEntry> request = new CancellableTask<TaskCacheEntry>() {
-            @Override
-            public TaskCacheEntry getResultOnBg() {
-                return getCacheEntry(task);
-            }
-
-            @Override
-            public void handleResult(TaskCacheEntry result) {
-                task.icon = result.icon;
-                task.titleDescription = result.contentDescription;
-                task.title = result.title;
-                callback.accept(task);
-                dispatchIconUpdate(task.key.id);
-            }
-        };
+        CancellableTask<TaskCacheEntry> request = new CancellableTask<>(
+                () -> getCacheEntry(task),
+                MAIN_EXECUTOR,
+                result -> {
+                    task.icon = result.icon;
+                    task.titleDescription = result.contentDescription;
+                    task.title = result.title;
+                    callback.accept(task);
+                    dispatchIconUpdate(task.key.id);
+                }
+        );
         mBgExecutor.execute(request);
         return request;
     }
@@ -193,8 +188,7 @@ public class TaskIconCache implements DisplayInfoChangeListener {
             entry.contentDescription = getBadgedContentDescription(
                     activityInfo, task.key.userId, task.taskDescription);
             if (enableOverviewIconMenu()) {
-                entry.title = Utilities.trim(
-                        activityInfo.applicationInfo.loadLabel(mContext.getPackageManager()));
+                entry.title = Utilities.trim(activityInfo.loadLabel(mContext.getPackageManager()));
             }
         }
 
@@ -239,10 +233,10 @@ public class TaskIconCache implements DisplayInfoChangeListener {
                 return mDefaultIcons.valueAt(index).newIcon(mContext);
             } else {
                 try (BaseIconFactory li = getIconFactory()) {
-                    BitmapInfo info = mDefaultIconBase.withUser(UserHandle.of(userId), li)
-                            .withFlags(li.getBitmapFlagOp(new IconOptions()
-                                    .setUser(UserCache.INSTANCE.get(mContext)
-                                            .getUserInfo(UserHandle.of(userId)))));
+                    BitmapInfo info = mDefaultIconBase.withFlags(
+                            UserCache.INSTANCE.get(mContext).getUserInfo(UserHandle.of(userId))
+                                    .applyBitmapInfoFlags(FlagOp.NO_OP))
+                                            .withUser(UserHandle.of(userId), li);
                     mDefaultIcons.put(userId, info);
                     return info.newIcon(mContext);
                 }
