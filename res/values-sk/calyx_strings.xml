@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">Pozastaviť</string>
+    <string name="pause_apps_dialog_title">Pozastaviť %1$s?</string>
+    <string name="pause_apps_dialog_message">Oznámenia z %1$s budú pozastavené</string>
+    <string name="paused_apps_dialog_title">Aplikácia je pozastavená</string>
+    <string name="paused_apps_dialog_message">Aplikácia %1$s bola pozastavená priamo z prehľadu aplikácií</string>
+    <string name="paused_apps_drop_target_label">Pozastaviť aplikáciu</string>
+    <string name="work_apps_pause_btn_text_calyx">Vypnúť pracovné aplikácií</string>
+    <string name="work_apps_paused_title_calyx">Pracovné aplikácie sú vypnuté</string>
+    <string name="work_apps_enable_btn_text_calyx">Zapnúť pracovné aplikácie</string>
+    <string name="work_apps_paused_info_body_calyx">Vaše pracovné aplikácie vám nemôžu posielať oznámenia, používať vašu batériu ani zisťovať vašu polohu</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Vaše pracovné aplikácie nemôžu prijímať hovory ani textové správy, posielať vám oznámenia, používať vašu batériu alebo zisťovať vašu polohu</string>
+</resources>

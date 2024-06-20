@@ -7,4 +7,8 @@
     <string name="work_apps_pause_btn_text_calyx">បិទកម្មវិធីការងារ</string>
     <string name="pause_apps_dialog_message">ការជូនដំណឹងសម្រាប់ %1$s នឹងត្រូវបានផ្អាក</string>
     <string name="paused_apps_dialog_title">កម្មវិធីបានផ្អាក</string>
+    <string name="work_apps_paused_info_body_calyx">កម្មវិធីការងាររបស់អ្នកមិនអាចបញ្ជូនការផ្ដល់ដំណឹងឲ្យអ្នកឡើយ, ប្រើថ្មរបស់អ្នក ឬអាក់សេសទីតាំងរបស់អ្នក</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">កម្មវិធីការងាររបស់អ្នកមិនអាចទទួលការហៅទូរសព្ទឬសារជាអក្សរ បញ្ជូនការផ្ដល់ដំណឹងឲ្យអ្នក ប្រើថ្មរបស់អ្នក ឬអាក់សេសទីតាំងរបស់អ្នក</string>
+    <string name="work_apps_paused_title_calyx">កម្មវិធីការងារត្រូវបិទ</string>
+    <string name="work_apps_enable_btn_text_calyx">បើកកម្មវិធីការងារ</string>
 </resources>
