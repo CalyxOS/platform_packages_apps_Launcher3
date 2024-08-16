@@ -6,4 +6,5 @@
     <string name="pause">تعليق</string>
     <string name="paused_apps_dialog_title">تعليق التطبيق</string>
     <string name="paused_apps_dialog_message">%1$s تم تعليقه بشكل مباشر من المشغل</string>
+    <string name="work_apps_paused_info_body_calyx">تطبيقات العمل الخاصة بك غير قادرة على إرسال اشعارات، استعنال بطاريتك، او الوصول لموقعك</string>
 </resources>
