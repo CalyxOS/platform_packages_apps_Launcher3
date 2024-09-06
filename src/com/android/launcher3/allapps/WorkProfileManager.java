@@ -22,8 +22,6 @@ import static com.android.launcher3.allapps.ActivityAllAppsContainerView.Adapter
 import static com.android.launcher3.allapps.BaseAllAppsAdapter.VIEW_TYPE_WORK_DISABLED_CARD;
 import static com.android.launcher3.allapps.BaseAllAppsAdapter.VIEW_TYPE_WORK_EDU_CARD;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TURN_OFF_WORK_APPS_TAP;
-import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TURN_ON_WORK_APPS_TAP;
-import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCUT_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_ENABLED;
@@ -63,8 +61,6 @@ public class WorkProfileManager extends UserProfileManager
     private WorkModeSwitch mWorkModeSwitch;
     private final Predicate<UserHandle> mWorkProfileMatcher;
 
-    private boolean mHasMultipleProfiles;
-
     public WorkProfileManager(
             UserManager userManager, ActivityAllAppsContainerView allApps,
             StatsLogManager statsLogManager, UserCache userCache) {
@@ -90,14 +86,7 @@ public class WorkProfileManager extends UserProfileManager
         if (mWorkModeSwitch != null) {
             if (page == MAIN || page == SEARCH) {
                 mWorkModeSwitch.animateVisibility(false);
-            } else if (page == WORK && shouldShowWorkApps()) {
-                if (getCurrentState() == STATE_ENABLED) {
-                    mWorkModeSwitch.setPauseMode(true /* doPause */);
-                    mWorkModeSwitch.setOnClickListener(this::onWorkFabClickedTurnOff);
-                } else if (getCurrentState() == STATE_DISABLED) {
-                    mWorkModeSwitch.setPauseMode(false /* doPause */);
-                    mWorkModeSwitch.setOnClickListener(this::onWorkFabClickedTurnOn);
-                }
+            } else if (page == WORK && getCurrentState() == STATE_ENABLED) {
                 mWorkModeSwitch.animateVisibility(true);
             }
         }
@@ -123,7 +112,6 @@ public class WorkProfileManager extends UserProfileManager
     }
 
     private void updateCurrentState(@UserProfileState int currentState) {
-        mHasMultipleProfiles = mAllApps.getAppsStore().hasModelFlag(FLAG_HAS_MULTIPLE_PROFILES);
         setCurrentState(currentState);
         if (getAH() != null) {
             getAH().mAppsList.updateAdapterItems();
@@ -131,7 +119,7 @@ public class WorkProfileManager extends UserProfileManager
         if (mWorkModeSwitch != null) {
             updateWorkFAB(mAllApps.getCurrentPage());
         }
-        if (shouldShowWorkApps()) {
+        if (getCurrentState() == STATE_ENABLED) {
             attachWorkModeSwitch();
         } else if (getCurrentState() == STATE_DISABLED) {
             detachWorkModeSwitch();
@@ -160,6 +148,7 @@ public class WorkProfileManager extends UserProfileManager
         if (getAH() != null) {
             getAH().applyPadding();
         }
+        mWorkModeSwitch.setOnClickListener(this::onWorkFabClicked);
         return true;
     }
     /**
@@ -185,8 +174,7 @@ public class WorkProfileManager extends UserProfileManager
      * returns whether or not work apps should be visible in work tab.
      */
     public boolean shouldShowWorkApps() {
-        return getCurrentState() != WorkProfileManager.STATE_DISABLED
-                || mHasMultipleProfiles;
+        return getCurrentState() != WorkProfileManager.STATE_DISABLED;
     }
 
     public boolean hasWorkApps() {
@@ -197,7 +185,7 @@ public class WorkProfileManager extends UserProfileManager
      * Adds work profile specific adapter items to adapterItems and returns number of items added
      */
     public int addWorkItems(ArrayList<AdapterItem> adapterItems) {
-        if (!shouldShowWorkApps()) {
+        if (getCurrentState() == WorkProfileManager.STATE_DISABLED) {
             //add disabled card here.
             adapterItems.add(new AdapterItem(VIEW_TYPE_WORK_DISABLED_CARD));
         } else if (getCurrentState() == WorkProfileManager.STATE_ENABLED && !isEduSeen()) {
@@ -210,17 +198,10 @@ public class WorkProfileManager extends UserProfileManager
         return LauncherPrefs.get(mAllApps.getContext()).get(WORK_EDU_STEP) != 0;
     }
 
-    private void onWorkFabClickedTurnOff(View view) {
+    private void onWorkFabClicked(View view) {
         if (getCurrentState() == STATE_ENABLED && mWorkModeSwitch.isEnabled()) {
             logEvents(LAUNCHER_TURN_OFF_WORK_APPS_TAP);
             setWorkProfileEnabled(false);
-        }
-    }
-
-    private void onWorkFabClickedTurnOn(View view) {
-        if (getCurrentState() == STATE_DISABLED && mWorkModeSwitch.isEnabled()) {
-            logEvents(LAUNCHER_TURN_ON_WORK_APPS_TAP);
-            setWorkProfileEnabled(true);
         }
     }
 
