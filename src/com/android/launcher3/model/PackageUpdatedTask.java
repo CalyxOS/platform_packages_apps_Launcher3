@@ -15,7 +15,6 @@
  */
 package com.android.launcher3.model;
 
-import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
@@ -195,8 +194,7 @@ public class PackageUpdatedTask implements ModelUpdateTask {
                     }
                 } else {
                     // We are not synchronizing here, as int operations are atomic
-                    appsList.setFlags(FLAG_QUIET_MODE_ENABLED, ums.isAllProfilesQuietModeEnabled());
-                    appsList.setFlags(FLAG_HAS_MULTIPLE_PROFILES, ums.hasMultipleProfiles());
+                    appsList.setFlags(FLAG_QUIET_MODE_ENABLED, ums.isAnyProfileQuietModeEnabled());
                 }
                 break;
             }
