@@ -358,7 +358,8 @@ public class DeviceProfile {
         boolean isTaskBarEnabled = LineageSettings.System.getInt(context.getContentResolver(),
                 LineageSettings.System.ENABLE_TASKBAR,
                 (isTablet || (enableTinyTaskbar() && isGestureMode)) ? 1 : 0) == 1;
-        isTaskbarPresent = isTaskBarEnabled && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS;
+        isTaskbarPresent = isTaskBarEnabled
+                && WindowManagerProxy.INSTANCE.get(context).isTaskbarDrawnInProcess();
 
         // Some more constants.
         context = getContext(context, info, isVerticalBarLayout() || (isTablet && isLandscape)
