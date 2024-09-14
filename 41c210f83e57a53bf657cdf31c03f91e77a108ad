@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97b5ad56_ab475cde",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-14T15:59:02Z",
+      "side": 1,
+      "message": "Given that this is under go/ - is this even used for us, or was this just to make Launcher3 build?",
+      "revId": "41c210f83e57a53bf657cdf31c03f91e77a108ad",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
