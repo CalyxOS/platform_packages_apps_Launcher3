@@ -16,6 +16,24 @@
       "message": "Given that this is under go/ - is this even used for us, or was this just to make Launcher3 build?",
       "revId": "41c210f83e57a53bf657cdf31c03f91e77a108ad",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca580b93_8c368643",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-09-16T13:33:59Z",
+      "side": 1,
+      "message": "asfp builds targets that we don\u0027t (including tests), this one causes a compilation failure when it runs it\u0027s soong sync job",
+      "parentUuid": "97b5ad56_ab475cde",
+      "revId": "41c210f83e57a53bf657cdf31c03f91e77a108ad",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
