@@ -19,6 +19,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.WindowInsets;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -52,6 +53,7 @@ public class WorkModeSwitch extends LinearLayout implements Insettable,
 
     // Threshold when user scrolls up/down to determine when should button extend/collapse
     private final int mScrollThreshold;
+    private ImageView mIcon;
     private TextView mTextView;
     private boolean mDoPause = true;
 
@@ -75,6 +77,7 @@ public class WorkModeSwitch extends LinearLayout implements Insettable,
     protected void onFinishInflate() {
         super.onFinishInflate();
 
+        mIcon = findViewById(R.id.work_icon);
         mTextView = findViewById(R.id.pause_text);
         setSelected(true);
         KeyboardInsetAnimationCallback keyboardInsetAnimationCallback =
