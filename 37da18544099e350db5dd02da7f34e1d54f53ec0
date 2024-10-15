@@ -16,6 +16,24 @@
       "message": "I think we should pick this instead https://review.lineageos.org/c/LineageOS/android_packages_apps_Trebuchet/+/402802",
       "revId": "37da18544099e350db5dd02da7f34e1d54f53ec0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88dcfda6_17f014aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-15T14:20:54Z",
+      "side": 1,
+      "message": "... and remove GMS references/adapt it to calyx apps.",
+      "parentUuid": "659b5c4a_353c6a55",
+      "revId": "37da18544099e350db5dd02da7f34e1d54f53ec0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
