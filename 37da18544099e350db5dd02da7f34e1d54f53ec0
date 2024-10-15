@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "659b5c4a_353c6a55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-15T14:20:01Z",
+      "side": 1,
+      "message": "I think we should pick this instead https://review.lineageos.org/c/LineageOS/android_packages_apps_Trebuchet/+/402802",
+      "revId": "37da18544099e350db5dd02da7f34e1d54f53ec0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
