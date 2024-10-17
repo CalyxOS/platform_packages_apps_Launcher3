@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b348982b_0ed86ab5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-10-17T23:10:20Z",
+      "side": 1,
+      "message": "added super-widget 2.0.",
+      "revId": "899ebac3cd7ed7e57bdb7da1fbfd1e41c4e99cf3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
