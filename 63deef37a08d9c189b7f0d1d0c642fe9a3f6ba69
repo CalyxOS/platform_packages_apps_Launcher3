@@ -16,6 +16,23 @@
       "message": "haven\u0027t compile tested in CalyxOS. Please try, test multiple work profiles, pause fab should work fine now",
       "revId": "63deef37a08d9c189b7f0d1d0c642fe9a3f6ba69",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d4d2d99_bc0b083c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-11-14T22:02:22Z",
+      "side": 1,
+      "message": "I\u0027ve tested this and it works. Thanks so much for taking the time to work on and submit this fix!",
+      "revId": "63deef37a08d9c189b7f0d1d0c642fe9a3f6ba69",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
