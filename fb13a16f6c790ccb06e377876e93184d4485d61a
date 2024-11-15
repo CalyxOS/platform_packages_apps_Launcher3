@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb8123bc_4c10c0e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000114
+      },
+      "writtenOn": "2024-11-15T09:14:26Z",
+      "side": 1,
+      "message": "Fixed the code indentation and line length.",
+      "revId": "fb13a16f6c790ccb06e377876e93184d4485d61a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
