@@ -6,4 +6,7 @@
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_message">%1$s からの通知は一時停止されます</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
+    <string name="work_apps_paused_title_calyx">アプリがアクティブではありません</string>
+    <string name="work_apps_pause_btn_text_calyx">アプリを停止する</string>
+    <string name="work_apps_enable_btn_text_calyx">アプリをアクティブにする</string>
 </resources>

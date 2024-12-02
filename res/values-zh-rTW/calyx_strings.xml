@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">暫停</string>
+    <string name="pause_apps_dialog_title">暫停 %1$s？</string>
+    <string name="pause_apps_dialog_message">%1$s 的通知將被暫停</string>
+    <string name="paused_apps_dialog_title">應用程式已暫停</string>
+    <string name="paused_apps_dialog_message">%1$s 已從啟動器直接暫停</string>
+    <string name="paused_apps_drop_target_label">暫停應用程式</string>
+    <string name="work_apps_paused_info_body_calyx">您的工作應用程式無法向您發送通知、使用電池或訪問您的位置</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">您的工作應用程式無法接收電話或簡訊、向您發送通知、使用電池或訪問您的位置資訊</string>
+    <string name="work_apps_paused_title_calyx">工作應用程式已關閉</string>
+    <string name="work_apps_pause_btn_text_calyx">關閉工作應用</string>
+    <string name="work_apps_enable_btn_text_calyx">開啟工作應用</string>
+</resources>
