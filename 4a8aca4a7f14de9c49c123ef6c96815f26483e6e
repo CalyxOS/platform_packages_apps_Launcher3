@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a237b57_7ca9203c",
+        "filename": "src/com/android/launcher3/Launcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-11T22:48:21Z",
+      "side": 1,
+      "message": "How about:\n\n`mShouldUpdateSuspensions \u003d mIsColdStartupAfterReboot`\n\nDoes the unlock state check here help us?",
+      "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
