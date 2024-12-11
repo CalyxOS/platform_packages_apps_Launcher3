@@ -51,6 +51,24 @@
       "parentUuid": "9a237b57_7ca9203c",
       "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6a053d3_d7bd6790",
+        "filename": "src/com/android/launcher3/Launcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-11T22:53:01Z",
+      "side": 1,
+      "message": "I thought about using `mIsColdStartupAfterReboot`, but I couldn\u0027t come up with a good reason and was having some trouble understanding the purpose behind it.\n\nIf judging by the name of that variable alone - we don\u0027t currently support updating Launcher3 out-of-band, but if we ever did, then resource IDs could be a problem when the app gets updated, and it would be nice for the suspension updates to take effect in that case, too, not just after a cold reboot.\n\nDo you think checking for unlock would protect us from anything? I don\u0027t see how... We also already don\u0027t really react until we get a list of apps and we have exception handling all over the place.",
+      "parentUuid": "88570f48_90125660",
+      "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
