@@ -69,6 +69,24 @@
       "parentUuid": "88570f48_90125660",
       "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96d80310_8c036eaf",
+        "filename": "src/com/android/launcher3/Launcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-11T22:57:02Z",
+      "side": 1,
+      "message": "\u003e Do you think checking for unlock would protect us from anything? I don\u0027t see how... We also already don\u0027t really react until we get a list of apps and we have exception handling all over the place.\n\nProtect no, I was more thinking if it\u0027d be useful that\u0027s all. But my test was on a device with a pin and it worked fine on that anyways, and thus simple is probably better than unless complexity is needed.",
+      "parentUuid": "e6a053d3_d7bd6790",
+      "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
