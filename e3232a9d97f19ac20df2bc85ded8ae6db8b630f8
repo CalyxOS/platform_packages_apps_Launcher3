@@ -16,6 +16,24 @@
       "message": "Did you test this in any other language? Are the Settings instructions for this translated?",
       "revId": "e3232a9d97f19ac20df2bc85ded8ae6db8b630f8",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "872cf0f3_7f7112bb",
+        "filename": "src/com/android/launcher3/allapps/search/AllAppsSearchBarController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-12-13T19:02:28Z",
+      "side": 1,
+      "message": "Yes to both",
+      "parentUuid": "d25e64c9_7159bf1c",
+      "revId": "e3232a9d97f19ac20df2bc85ded8ae6db8b630f8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
