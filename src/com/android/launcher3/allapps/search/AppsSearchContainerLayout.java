@@ -39,8 +39,10 @@ import com.android.launcher3.R;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
 import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
+import com.android.launcher3.allapps.PrivateProfileManager;
 import com.android.launcher3.allapps.SearchUiManager;
 import com.android.launcher3.search.SearchCallback;
+import com.android.launcher3.util.ApiWrapper;
 import com.android.launcher3.views.ActivityContext;
 
 import java.util.ArrayList;
@@ -165,6 +167,10 @@ public class AppsSearchContainerLayout extends ExtendedEditText
 
     @Override
     public void onSearchResult(String query, ArrayList<AdapterItem> items) {
+        if (query.equalsIgnoreCase(mContext.getString(R.string.private_space_label))) {
+            privateSpaceQuery();
+            return;
+        }
         if (items != null) {
             mAppsView.setSearchResults(items);
         }
@@ -189,5 +195,15 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     @Override
     public ExtendedEditText getEditText() {
         return this;
+    }
+
+    private void privateSpaceQuery() {
+        PrivateProfileManager privateProfileManager = mAppsView.getPrivateProfileManager();
+        if (privateProfileManager.isPrivateSpaceHidden()) {
+            privateProfileManager.setQuietMode(false);
+        } else if (!mAppsView.hasPrivateProfile()) {
+            mLauncher.startActivitySafely(mAppsView,
+                    ApiWrapper.INSTANCE.get(mContext).getPrivateSpaceSettingsIntent(), null);
+        }
     }
 }
