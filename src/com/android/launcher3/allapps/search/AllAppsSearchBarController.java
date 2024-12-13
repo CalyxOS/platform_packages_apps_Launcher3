@@ -15,6 +15,7 @@
  */
 package com.android.launcher3.allapps.search;
 
+import android.content.Context;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -27,10 +28,13 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.android.launcher3.ExtendedEditText;
+import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
+import com.android.launcher3.allapps.PrivateProfileManager;
 import com.android.launcher3.search.SearchAlgorithm;
 import com.android.launcher3.search.SearchCallback;
+import com.android.launcher3.util.ApiWrapper;
 import com.android.launcher3.views.ActivityContext;
 
 /**
@@ -85,7 +89,7 @@ public class AllAppsSearchBarController
         if (text instanceof SpannableStringBuilder) {
             SpannableStringBuilder spanned = (SpannableStringBuilder) text;
             SuggestionSpan[] suggestionSpans =
-                spanned.getSpans(0, text.length(), SuggestionSpan.class);
+                    spanned.getSpans(0, text.length(), SuggestionSpan.class);
             if (suggestionSpans != null && suggestionSpans.length > 0) {
                 spanned.removeSpan(suggestionSpans[0]);
                 return suggestionSpans[0].getSuggestions();
@@ -103,6 +107,7 @@ public class AllAppsSearchBarController
         } else {
             mSearchAlgorithm.cancel(false);
             mSearchAlgorithm.doSearch(mQuery, mTextConversions, mCallback);
+            privateSpaceQuery();
         }
     }
 
@@ -113,6 +118,7 @@ public class AllAppsSearchBarController
         // If play store continues auto updating an app, we want to show partial result.
         mSearchAlgorithm.cancel(false);
         mSearchAlgorithm.doSearch(mQuery, mCallback);
+        privateSpaceQuery();
     }
 
     @Override
@@ -159,5 +165,20 @@ public class AllAppsSearchBarController
      */
     public boolean isSearchFieldFocused() {
         return mInput.isFocused();
+    }
+
+    private void privateSpaceQuery() {
+        final Context context = mLauncher.getAppsView().getContext();
+        if (mQuery.equalsIgnoreCase(context.getString(R.string.private_space_label))) {
+            PrivateProfileManager privateProfileManager =
+                    mLauncher.getAppsView().getPrivateProfileManager();
+            if (privateProfileManager.isPrivateSpaceHidden()) {
+                privateProfileManager.setQuietMode(false);
+            } else if (!mLauncher.getAppsView().hasPrivateProfile()) {
+                mLauncher.startActivitySafely(mLauncher.getAppsView(),
+                        ApiWrapper.INSTANCE.get(context).getPrivateSpaceSettingsIntent(),
+                        null);
+            }
+        }
     }
 }
