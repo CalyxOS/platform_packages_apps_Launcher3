@@ -22,6 +22,30 @@
       },
       "revId": "f4bb7512ddae6248514df63edd54c59ce716d823",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42af66b7_0409a23b",
+        "filename": "src/com/android/launcher3/allapps/search/AppsSearchContainerLayout.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-16T17:29:21Z",
+      "side": 1,
+      "message": "Fix applied but we need to import Intent.",
+      "parentUuid": "1c47e743_10133042",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 206,
+        "endChar": 93
+      },
+      "revId": "f4bb7512ddae6248514df63edd54c59ce716d823",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
