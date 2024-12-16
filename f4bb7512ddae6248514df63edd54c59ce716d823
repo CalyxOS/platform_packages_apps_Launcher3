@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c47e743_10133042",
+        "filename": "src/com/android/launcher3/allapps/search/AppsSearchContainerLayout.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-16T17:24:23Z",
+      "side": 1,
+      "message": "getPrivateSpaceSettingsIntent() will return null if private space is not available. *Shouldn\u0027t* happen, but it did for me due to an aflags issue, which led to a launcher crash as soon as I finished typing \"Private Space\".\n\nHere, we could just do nothing if the intent is null.\n\n```suggestion\n            final Intent privateSpaceSettingsIntent \u003d\n                    ApiWrapper.INSTANCE.get(mContext).getPrivateSpaceSettingsIntent();\n            if (privateSpaceSettingsIntent !\u003d null) {\n                mLauncher.startActivitySafely(mAppsView, privateSpaceSettingsIntent, null);\n            }\n```",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 206,
+        "endChar": 93
+      },
+      "revId": "f4bb7512ddae6248514df63edd54c59ce716d823",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
