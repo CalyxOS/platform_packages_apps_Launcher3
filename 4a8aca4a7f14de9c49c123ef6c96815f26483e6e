@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "abf688ce_f5130bc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-12-20T17:19:37Z",
+      "side": 1,
+      "message": "Just as a note, this patch causes compilation failures for ASfP. Current theory is that ASfP builds targets we don\u0027t during normal building and that SuspendDialogInfo is visible in other parts of the package but not in PackageManagerHelper. The solutions would be to either relocate the code or figure out what needs to be added under Android.bp to support it where it currently is.",
+      "revId": "4a8aca4a7f14de9c49c123ef6c96815f26483e6e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9a237b57_7ca9203c",
         "filename": "src/com/android/launcher3/Launcher.java",
         "patchSetId": 1
