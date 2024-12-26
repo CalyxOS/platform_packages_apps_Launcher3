@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d09a141_81c73c7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-26T13:00:24Z",
+      "side": 1,
+      "message": "Fixes ASfP soong sync, without apparently negatively affecting our launcher. Beyond that I don\u0027t know.",
+      "revId": "8f03b8992f30a3fe215a3ffcbc7b27df7a0e2ee0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
