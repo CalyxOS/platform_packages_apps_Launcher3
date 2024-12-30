@@ -94,7 +94,6 @@ import static com.android.launcher3.model.ItemInstallQueue.FLAG_ACTIVITY_PAUSED;
 import static com.android.launcher3.model.ItemInstallQueue.FLAG_DRAG_AND_DROP;
 import static com.android.launcher3.popup.SystemShortcut.APP_INFO;
 import static com.android.launcher3.popup.SystemShortcut.INSTALL;
-import static com.android.launcher3.popup.SystemShortcut.PAUSE_APPS;
 import static com.android.launcher3.popup.SystemShortcut.WIDGETS;
 import static com.android.launcher3.states.RotationHelper.REQUEST_LOCK;
 import static com.android.launcher3.states.RotationHelper.REQUEST_NONE;
@@ -169,7 +168,6 @@ import com.android.launcher3.DropTarget.DragObject;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
 import com.android.launcher3.allapps.AllAppsRecyclerView;
-import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.AllAppsTransitionController;
 import com.android.launcher3.allapps.DiscoveryBounce;
 import com.android.launcher3.anim.AnimationSuccessListener;
@@ -235,7 +233,6 @@ import com.android.launcher3.util.IntSet;
 import com.android.launcher3.util.ItemInflater;
 import com.android.launcher3.util.KeyboardShortcutsDelegate;
 import com.android.launcher3.util.LockedUserState;
-import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.PendingRequestArgs;
 import com.android.launcher3.util.PluginManagerWrapper;
@@ -285,7 +282,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -293,7 +289,7 @@ import java.util.stream.Stream;
  */
 public class Launcher extends StatefulActivity<LauncherState>
         implements Callbacks, InvariantDeviceProfile.OnIDPChangeListener,
-        PluginListener<LauncherOverlayPlugin>, AllAppsStore.OnUpdateListener {
+        PluginListener<LauncherOverlayPlugin> {
     public static final String TAG = "Launcher";
 
     public static final ActivityTracker<Launcher> ACTIVITY_TRACKER = new ActivityTracker<>();
@@ -416,7 +412,6 @@ public class Launcher extends StatefulActivity<LauncherState>
 
     private final List<BackPressHandler> mBackPressedHandlers = new ArrayList<>();
     private boolean mIsColdStartupAfterReboot;
-    private boolean mShouldUpdateSuspensions;
 
     private boolean mIsNaturalScrollingEnabled;
 
@@ -430,7 +425,6 @@ public class Launcher extends StatefulActivity<LauncherState>
     @Override
     @TargetApi(Build.VERSION_CODES.S)
     protected void onCreate(Bundle savedInstanceState) {
-        mShouldUpdateSuspensions = sIsNewProcess;
         mStartupLatencyLogger = createStartupLatencyLogger(
                 sIsNewProcess
                         ? LockedUserState.get(this).isUserUnlockedAtLauncherStartup()
@@ -1393,7 +1387,6 @@ public class Launcher extends StatefulActivity<LauncherState>
         // Setup Apps
         mAppsView = findViewById(R.id.apps_view);
         mAppsView.setAllAppsTransitionController(mAllAppsController);
-        mAppsView.getAppsStore().addUpdateListener(this);
 
         // Setup Scrim
         mScrimView = findViewById(R.id.scrim_view);
@@ -1405,41 +1398,6 @@ public class Launcher extends StatefulActivity<LauncherState>
         mWorkspace.getPageIndicator().setShouldAutoHide(true);
         mWorkspace.getPageIndicator().setPaintColor(Themes.getAttrBoolean(
                 this, R.attr.isWorkspaceDarkText) ? Color.BLACK : Color.WHITE);
-    }
-
-    public void onAppsUpdated() {
-        if (mShouldUpdateSuspensions) {
-            // We do this only once.
-            mShouldUpdateSuspensions = false;
-            updateSuspensions();
-            return;
-        }
-    }
-
-    /**
-     * Reapply suspensions to apps we paused, so as to update suspend dialogs. This is necessary
-     * to ensure that the resources used by the dialog are still correct, particularly in the event
-     * that our app was updated after the suspension took place and may have different resource IDs.
-     */
-    private void updateSuspensions() {
-        final PackageManagerHelper pmHelper = new PackageManagerHelper(this);
-
-        final Map<UserHandle, List<String>> pausedAppsByUser =
-                Stream.of(mAppsView.getAppsStore().getApps())
-                        .filter(i -> pmHelper.isAppSuspendedByUs(i.getTargetPackage(), i.user))
-                        .collect(Collectors.groupingBy((ItemInfo item) -> item.user,
-                                Collectors.mapping(item -> item.getTargetPackage(),
-                                        Collectors.toList())));
-
-        pausedAppsByUser.forEach((targetUser, packages) -> {
-            Log.d(TAG, "Re-suspending apps to update suspend dialogs for user " + targetUser
-                    + ": " + packages);
-            try {
-                pmHelper.suspendPackages(packages, targetUser);
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to re-suspend packages for user " + targetUser + "!", e);
-            }
-        });
     }
 
     /**
@@ -3159,7 +3117,7 @@ public class Launcher extends StatefulActivity<LauncherState>
     }
 
     public Stream<SystemShortcut.Factory> getSupportedShortcuts() {
-        return Stream.of(APP_INFO, PAUSE_APPS, WIDGETS, INSTALL);
+        return Stream.of(APP_INFO, WIDGETS, INSTALL);
     }
 
     /**
@@ -3210,6 +3168,10 @@ public class Launcher extends StatefulActivity<LauncherState>
     @Nullable
     public ArrowPopup<?> getOptionsPopup() {
         return findViewById(R.id.popup_container);
+    }
+
+    protected boolean getIsNewProcess() {
+        return sIsNewProcess;
     }
 
     // End of Getters and Setters
