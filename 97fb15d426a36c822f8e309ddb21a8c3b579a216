@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08b287b6_d68105ec",
+        "filename": "quickstep/src/com/android/launcher3/uioverrides/QuickstepLauncher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1430,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-12-31T03:01:17Z",
+      "side": 1,
+      "message": "Missing registration?",
+      "range": {
+        "startLine": 1430,
+        "startChar": 16,
+        "endLine": 1430,
+        "endChar": 29
+      },
+      "revId": "97fb15d426a36c822f8e309ddb21a8c3b579a216",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
