@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4af44e33_3586a8bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-31T14:12:49Z",
+      "side": 1,
+      "message": "Is this strictly a refactor to prevent needing to add privileged APIs to the plain Launcher3 build (with the main known benefit to us being to fix ASfP, since we otherwise don\u0027t build Launcher3), or does it do other things, too?",
+      "revId": "97fb15d426a36c822f8e309ddb21a8c3b579a216",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "08b287b6_d68105ec",
         "filename": "quickstep/src/com/android/launcher3/uioverrides/QuickstepLauncher.java",
         "patchSetId": 1
