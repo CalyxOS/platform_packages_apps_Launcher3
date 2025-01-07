@@ -234,14 +234,11 @@ public class TaskIconCache implements TaskIconDataSource, DisplayInfoChangeListe
             if ((index = mDefaultIcons.indexOfKey(userId)) >= 0) {
                 return mDefaultIcons.valueAt(index).newIcon(mContext);
             } else {
-                try (BaseIconFactory li = getIconFactory()) {
-                    BitmapInfo info = mDefaultIconBase.withFlags(
-                            UserCache.INSTANCE.get(mContext).getUserInfo(UserHandle.of(userId))
-                                    .applyBitmapInfoFlags(FlagOp.NO_OP))
-                                            .withUser(UserHandle.of(userId), li);
-                    mDefaultIcons.put(userId, info);
-                    return info.newIcon(mContext);
-                }
+                BitmapInfo info = mDefaultIconBase.withFlags(
+                        UserCache.INSTANCE.get(mContext).getUserInfo(UserHandle.of(userId))
+                                .applyBitmapInfoFlags(FlagOp.NO_OP));
+                mDefaultIcons.put(userId, info);
+                return info.newIcon(mContext);
             }
         }
     }
