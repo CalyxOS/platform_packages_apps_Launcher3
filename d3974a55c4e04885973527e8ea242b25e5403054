@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "440d4957_6d8bb3d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-01-13T21:34:08Z",
+      "side": 1,
+      "message": "I\u0027d like it to be agnostic to the launcher, but it\u0027s basing itself off `LauncherModel.mBgAllAppsList` which is updated asynchronously. If it were a sync call to a system API we could handle it there",
+      "revId": "d3974a55c4e04885973527e8ea242b25e5403054",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
