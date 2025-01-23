@@ -16,6 +16,24 @@
       "message": "I\u0027d like it to be agnostic to the launcher, but it\u0027s basing itself off `LauncherModel.mBgAllAppsList` which is updated asynchronously. If it were a sync call to a system API we could handle it there",
       "revId": "d3974a55c4e04885973527e8ea242b25e5403054",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "692e165f_8c9cf237",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-01-23T19:56:33Z",
+      "side": 1,
+      "message": "I have not been able to identify any third-party launchers that support Private Space yet. I have tried a few. Nova Launcher treats it as a Work profile, but it doesn\u0027t show any of the apps anywhere. I did try to see if I could install Launcher3 (non-Quickstep) on stock, but it crashes due to trying to use hidden APIs, so we can\u0027t use it to test, either. So it\u0027s going to be a challenge to test whether any solution we come up with for third-party launchers is going to work, right now.\n\nWhile I think supporting third-party launchers is nice, I don\u0027t personally think it needs to be a blocker, especially given that we don\u0027t have anything to verify against.",
+      "parentUuid": "440d4957_6d8bb3d0",
+      "revId": "d3974a55c4e04885973527e8ea242b25e5403054",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
