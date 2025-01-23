@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "011555f2_1a251d6a",
+        "filename": "src/com/android/launcher3/allapps/search/DefaultAppSearchAlgorithm.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-01-23T20:36:35Z",
+      "side": 1,
+      "message": "If submitting upstream, since this lives outside quickstep, ideally something not requiring APIs that aren\u0027t public should be used so that other launchers can inherit the behaviour if forking Launcher3",
+      "range": {
+        "startLine": 101,
+        "startChar": 34,
+        "endLine": 101,
+        "endChar": 58
+      },
+      "revId": "535d6f8411d4d2ce71f63ac133934e66d08a3e58",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "804f50f6_0fc458d3",
+        "filename": "src/com/android/launcher3/allapps/search/DefaultAppSearchAlgorithm.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-01-23T20:36:35Z",
+      "side": 1,
+      "message": "Should this be break instead?",
+      "range": {
+        "startLine": 105,
+        "startChar": 16,
+        "endLine": 105,
+        "endChar": 24
+      },
+      "revId": "535d6f8411d4d2ce71f63ac133934e66d08a3e58",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
