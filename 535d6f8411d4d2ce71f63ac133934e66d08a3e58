@@ -24,6 +24,30 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ccd75ab_a7f9243c",
+        "filename": "src/com/android/launcher3/allapps/search/DefaultAppSearchAlgorithm.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T16:24:51Z",
+      "side": 1,
+      "message": "I wouldn\u0027t worry about upstream, especially AOSP.\n\nAnd also not about third party launchers, while trying to fix a bug for our users.\n\nSo, this is fine.",
+      "parentUuid": "011555f2_1a251d6a",
+      "range": {
+        "startLine": 101,
+        "startChar": 34,
+        "endLine": 101,
+        "endChar": 58
+      },
+      "revId": "535d6f8411d4d2ce71f63ac133934e66d08a3e58",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "804f50f6_0fc458d3",
