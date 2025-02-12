@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6bb87436_d8fcac82",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T19:58:53Z",
+      "side": 1,
+      "message": "Is this applicable only to private space, or more?",
+      "revId": "4b363e9e04dbd1514f32431a6ed226e2ad7543b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
