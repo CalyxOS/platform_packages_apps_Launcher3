@@ -16,6 +16,23 @@
       "message": "Is this applicable only to private space, or more?",
       "revId": "4b363e9e04dbd1514f32431a6ed226e2ad7543b0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d50f64b_bfa448c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-02-12T21:41:34Z",
+      "side": 1,
+      "message": "This appears to be working fine to me! At least, I tried some simple things to break it, like locking/unlocking, and it kept working.\n\nThe commit subject is already correct, here, but one important thing to note about this change is that, even if the private space is just locked and not hidden, search doesn\u0027t return the results of the private space. I actually think that\u0027s a great thing.",
+      "revId": "4b363e9e04dbd1514f32431a6ed226e2ad7543b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
