@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "88f9444a_8d2d1f83",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-02-18T17:06:51Z",
+      "side": 1,
+      "message": "We\u0027re only checking quiet mode which applies to both rather than filtering by profile type",
+      "parentUuid": "6bb87436_d8fcac82",
+      "revId": "4b363e9e04dbd1514f32431a6ed226e2ad7543b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "9d50f64b_bfa448c4",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 4
