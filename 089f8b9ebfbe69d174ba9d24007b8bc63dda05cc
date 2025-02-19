@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b213cbc_c3bdfa5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-02-19T02:15:53Z",
+      "side": 1,
+      "message": "We don\u0027t support any go devices, this is purely cosmetic",
+      "revId": "089f8b9ebfbe69d174ba9d24007b8bc63dda05cc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
