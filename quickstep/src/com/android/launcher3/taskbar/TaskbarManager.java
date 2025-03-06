@@ -255,6 +255,18 @@ public class TaskbarManager {
                 .register(USER_SETUP_COMPLETE_URI, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mWindowContext)
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
+        mEnableTaskBarListener = c -> {
+            // Create the illusion of this taking effect immediately
+            // Also needed because TaskbarManager inits before SystemUiProxy on start
+            boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
+                    LineageSettings.System.ENABLE_TASKBAR, 0) == 1;
+            SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
+
+            // Restart launcher
+            System.exit(0);
+        };
+        SettingsCache.INSTANCE.get(mContext)
+                .register(ENABLE_TASKBAR_URI, mEnableTaskBarListener);
         Log.d(TASKBAR_NOT_DESTROYED_TAG, "registering component callbacks from constructor.");
         mWindowContext.registerComponentCallbacks(mDefaultComponentCallbacks);
         mShutdownReceiver.register(mWindowContext, Intent.ACTION_SHUTDOWN);
@@ -340,18 +352,7 @@ public class TaskbarManager {
             @Override
             public void onLowMemory() { }
         };
-        mEnableTaskBarListener = c -> {
-            // Create the illusion of this taking effect immediately
-            // Also needed because TaskbarManager inits before SystemUiProxy on start
-            boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
-                    LineageSettings.System.ENABLE_TASKBAR, 0) == 1;
-            SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
-
-            // Restart launcher
-            System.exit(0);
-        };
-        SettingsCache.INSTANCE.get(mContext)
-                .register(ENABLE_TASKBAR_URI, mEnableTaskBarListener);
+    }
 
     private void destroyAllTaskbars() {
         for (int i = 0; i < mTaskbars.size(); i++) {
