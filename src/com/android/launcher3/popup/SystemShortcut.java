@@ -13,6 +13,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ShortcutInfo;
 import android.graphics.Rect;
 import android.os.Process;
@@ -39,6 +40,7 @@ import com.android.launcher3.model.data.WorkspaceItemInfo;
 import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.util.ActivityOptionsWrapper;
 import com.android.launcher3.util.ApiWrapper;
+import com.android.launcher3.util.ApplicationInfoWrapper;
 import com.android.launcher3.util.ComponentKey;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageManagerHelper;
@@ -326,8 +328,11 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                 if (originalView == null) {
                     return null;
                 }
-                if (new PackageManagerHelper(originalView.getContext()).isAppSuspended(
-                        itemInfo.getTargetComponent().getPackageName(), itemInfo.user)) {
+                final ApplicationInfoWrapper appInfoWrapper = new ApplicationInfoWrapper(
+                        originalView.getContext(),
+                        itemInfo.getTargetComponent().getPackageName(),
+                        itemInfo.user);
+                if (appInfoWrapper.isSuspended()) {
                     return null;
                 }
                 return new PauseApps(activity, itemInfo, originalView);
@@ -343,11 +348,12 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         @Override
         public void onClick(View view) {
             final Context context = view.getContext();
-            final PackageManagerHelper pmHelper = new PackageManagerHelper(context);
             final String packageToSuspend = mItemInfo.getTargetComponent().getPackageName();
             final UserHandle packageUser = mItemInfo.user;
+            final ApplicationInfo applicationInfo =
+                    new ApplicationInfoWrapper(context, packageToSuspend, packageUser).getInfo();
             final CharSequence appLabel = context.getPackageManager().getApplicationLabel(
-                    pmHelper.getApplicationInfo(packageToSuspend, packageUser, 0));
+                    applicationInfo);
             new AlertDialog.Builder(context)
                     .setIcon(R.drawable.ic_hourglass_top)
                     .setTitle(context.getString(R.string.pause_apps_dialog_title, appLabel))
