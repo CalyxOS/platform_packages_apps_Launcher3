@@ -258,14 +258,14 @@ public class TaskbarManager {
         mEnableTaskBarListener = c -> {
             // Create the illusion of this taking effect immediately
             // Also needed because TaskbarManager inits before SystemUiProxy on start
-            boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
+            boolean enabled = LineageSettings.System.getInt(mWindowContext.getContentResolver(),
                     LineageSettings.System.ENABLE_TASKBAR, 0) == 1;
-            SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
+            SystemUiProxy.INSTANCE.get(mWindowContext).setTaskbarEnabled(enabled);
 
             // Restart launcher
             System.exit(0);
         };
-        SettingsCache.INSTANCE.get(mContext)
+        SettingsCache.INSTANCE.get(mWindowContext)
                 .register(ENABLE_TASKBAR_URI, mEnableTaskBarListener);
         Log.d(TASKBAR_NOT_DESTROYED_TAG, "registering component callbacks from constructor.");
         mWindowContext.registerComponentCallbacks(mDefaultComponentCallbacks);
