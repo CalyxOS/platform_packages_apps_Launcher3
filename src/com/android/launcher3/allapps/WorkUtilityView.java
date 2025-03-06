@@ -419,7 +419,7 @@ public class WorkUtilityView extends LinearLayout implements Insettable,
         updateStringFromCache();
     }
 
-    private void setPauseMode(final boolean doPause) {
+    public void setPauseMode(final boolean doPause) {
         mDoPause = doPause;
         updatePauseMode();
     }
