@@ -30,6 +30,7 @@ import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
+import android.content.Context;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
@@ -263,13 +264,12 @@ public class WorkProfileManager extends UserProfileManager
     }
 
     @Override
-    public void setQuietMode(boolean enabled) {
-        UI_HELPER_EXECUTOR.post(() -> {
-            mUserCache.getUserProfiles()
-                    .stream()
-                    .filter(getUserMatcher())
-                    .forEach(userHandle ->
-                            mUserManager.requestQuietModeEnabled(enabled, userHandle));
-        });
+    protected void setQuietMode(boolean enabled, Context context) {
+        UI_HELPER_EXECUTOR.post(() ->
+                mUserCache.getUserProfiles()
+                        .stream()
+                        .filter(getUserMatcher())
+                        .forEach(userHandle ->
+                                setQuietModeSafely(enabled, userHandle, context)));
     }
 }
