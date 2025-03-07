@@ -34,6 +34,23 @@
       "parentUuid": "78e772c9_1825fb94",
       "revId": "591d8e2e54c9ed2f5e82752354459aa7fed08897",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28424191_c60b1149",
+        "filename": "src/com/android/launcher3/allapps/UserProfileManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-03-07T16:47:24Z",
+      "side": 1,
+      "message": "Line too long",
+      "revId": "591d8e2e54c9ed2f5e82752354459aa7fed08897",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
