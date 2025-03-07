@@ -16,6 +16,24 @@
       "message": "Was the issue here build related?",
       "revId": "591d8e2e54c9ed2f5e82752354459aa7fed08897",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93685351_53dfab7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-03-07T16:47:05Z",
+      "side": 1,
+      "message": "Meaning there was a build failure without this? Yes.",
+      "parentUuid": "78e772c9_1825fb94",
+      "revId": "591d8e2e54c9ed2f5e82752354459aa7fed08897",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
