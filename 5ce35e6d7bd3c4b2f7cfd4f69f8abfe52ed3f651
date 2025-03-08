@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61bf27b2_14b5e9ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-03-08T16:11:40Z",
+      "side": 1,
+      "message": "I noticed navbar height was being weird in setupwizard on some devices, found this commit on AOSP",
+      "revId": "5ce35e6d7bd3c4b2f7cfd4f69f8abfe52ed3f651",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
