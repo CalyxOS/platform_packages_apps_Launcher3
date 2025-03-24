@@ -1211,6 +1211,9 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     }
 
     public int getSetupWindowSize() {
+        if (isPhoneButtonNavMode()) {
+            return getResources().getDimensionPixelSize(R.dimen.taskbar_phone_size);
+        }
         return getResources().getDimensionPixelSize(R.dimen.taskbar_suw_frame);
     }
 
