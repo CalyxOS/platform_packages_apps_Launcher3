@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "011defb5_f4ab429f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-03-26T14:38:07Z",
+      "side": 1,
+      "message": "There is a lot of movement in this change. It also moves things around that the original change doesn\u0027t touch - kind of a fixup of [Pause apps feature](https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/36813) as well, right?\n\nAnyway, I ported it to android15-qpr2 [here](https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/37706) but it appears we\u0027ll want to move this change to the android15-qpr2 branch.",
+      "revId": "b9883fb221675ce04963c830a2de38f81e5b3a90",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
