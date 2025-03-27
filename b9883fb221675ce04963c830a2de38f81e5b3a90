@@ -16,6 +16,24 @@
       "message": "There is a lot of movement in this change. It also moves things around that the original change doesn\u0027t touch - kind of a fixup of [Pause apps feature](https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/36813) as well, right?\n\nAnyway, I ported it to android15-qpr2 [here](https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Launcher3/+/37706) but it appears we\u0027ll want to move this change to the android15-qpr2 branch.",
       "revId": "b9883fb221675ce04963c830a2de38f81e5b3a90",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ead3f276_39f37f85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-03-27T14:37:19Z",
+      "side": 1,
+      "message": "It felt unnecessarily messy trying to rewrite this into two fixups when the suspend dialog change could have been a fixup itself, so that\u0027s the reason I reverted it and put them both into this.",
+      "parentUuid": "011defb5_f4ab429f",
+      "revId": "b9883fb221675ce04963c830a2de38f81e5b3a90",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
