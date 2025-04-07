@@ -332,7 +332,7 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                         originalView.getContext(),
                         itemInfo.getTargetComponent().getPackageName(),
                         itemInfo.user);
-                if (appInfoWrapper.isSuspended()) {
+                if (appInfoWrapper.isArchived() || appInfoWrapper.isSuspended()) {
                     return null;
                 }
                 return new PauseApps(activity, itemInfo, originalView);
