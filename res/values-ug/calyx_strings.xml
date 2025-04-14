@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">ۋاقىتلىق توختا</string>
+    <string name="pause_apps_dialog_title">%1$s نى ۋاقىتلىق توختىتامدۇ؟</string>
+    <string name="pause_apps_dialog_message">%1$s نىڭ ئۇقتۇرۇشى ۋاقىتلىق توختىتىلىدۇ</string>
+    <string name="paused_apps_dialog_title">ئەپ ۋاقىتلىق توختىتىلدى</string>
+    <string name="paused_apps_dialog_message">%1$s قوزغاتقۇچتىن بىۋاسىتە ۋاقىتلىق توختىتىلدى</string>
+    <string name="paused_apps_drop_target_label">ئەپنى ۋاقىتلىق توختات</string>
+    <string name="work_apps_paused_title_calyx">خىزمەت ئەپى تاقاق</string>
+    <string name="work_apps_pause_btn_text_calyx">خىزمەت ئەپىنى تاقا</string>
+    <string name="work_apps_enable_btn_text_calyx">خىزمەت ئەپىنى ئاچ</string>
+    <string name="work_apps_paused_info_body_calyx">خىزمەت ئەپىڭىز سىزگە ئۇقتۇرۇش يوللىيالمايدۇ، توكدانىڭىزنى ئىشلىتىشى ياكى ئورۇن ئۇچۇرىڭىزنى زىيارەت قىلىشى مۇمكىن</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">خىزمەت ئەپىڭىز تېلېفون چاقىرىشى ياكى تېكىست ئۇچۇرىنى قوبۇللىيالمايدۇ، سىزگە ئۇقتۇرۇش يوللايدۇ، توكدانىڭىزنى ئىشلىتىپ ياكى ئورۇن ئۇچۇرىڭىزنى زىيارەت قىلىدۇ</string>
+</resources>

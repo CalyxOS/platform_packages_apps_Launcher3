@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pause">Peata</string>
+    <string name="pause_apps_dialog_title">Kas peatada %1$s?</string>
+    <string name="pause_apps_dialog_message">%1$s märguanded peatatakse</string>
+    <string name="paused_apps_dialog_title">Rakendus peatati</string>
+    <string name="paused_apps_dialog_message">%1$s peatati otse käivitusprogrammis</string>
+    <string name="paused_apps_drop_target_label">Peata rakendus</string>
+    <string name="work_apps_pause_btn_text_calyx">Lülita töörakendused välja</string>
+    <string name="work_apps_paused_telephony_unavailable_body_calyx">Töörakendused ei saa vastu võtta telefonikõnesid ja tekstisõnumeid, saata märguandeid, kasutada akut ega pääse juurde asukohale</string>
+    <string name="work_apps_paused_title_calyx">Töörakendused on välja lülitatud</string>
+    <string name="work_apps_paused_info_body_calyx">Töörakendused ei saa märguandeid saata, akut kasutada ega asukohale juurde pääseda</string>
+    <string name="work_apps_enable_btn_text_calyx">Lülita töörakendused sisse</string>
+</resources>
