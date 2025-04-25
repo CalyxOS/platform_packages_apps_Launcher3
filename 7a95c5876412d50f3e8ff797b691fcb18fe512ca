@@ -70,6 +70,24 @@
       "parentUuid": "e118416c_675be93e",
       "revId": "7a95c5876412d50f3e8ff797b691fcb18fe512ca",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39cc9f72_1e2fec2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-04-25T21:26:46Z",
+      "side": 1,
+      "message": "It fixes app icons failing to cache and load properly for some users on rare occasions (mostly when there are multiple profiles on a device and inaccessible). If you\u0027ve ever tapped an app icon on a profile or secondary user and get a \"App not found\" toast, this is one of the potential reasons",
+      "parentUuid": "54f45a39_0072186a",
+      "revId": "7a95c5876412d50f3e8ff797b691fcb18fe512ca",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
