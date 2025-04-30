@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bb85ec7_6056a8f5",
+        "filename": "src/com/android/launcher3/model/LoaderTask.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-04-30T14:40:50Z",
+      "side": 1,
+      "message": "This compares by reference. We should probably compare by value.\n\n```suggestion\n                if (Process.myUserHandle().equals(user)) {\n```",
+      "range": {
+        "startLine": 716,
+        "startChar": 0,
+        "endLine": 716,
+        "endChar": 53
+      },
+      "revId": "56cbd3b6b151cec57a6c6374575f0b2c9d381bbe",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
