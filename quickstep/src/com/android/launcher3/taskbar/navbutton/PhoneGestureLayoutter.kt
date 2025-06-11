@@ -17,25 +17,21 @@
 package com.android.launcher3.taskbar.navbutton
 
 import android.content.res.Resources
-import android.view.Gravity
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Space
-import com.android.launcher3.DeviceProfile
 import com.android.launcher3.taskbar.TaskbarActivityContext
 
 /** Layoutter for showing gesture navigation on phone screen. No buttons here, no-op container */
 class PhoneGestureLayoutter(
     resources: Resources,
-    navButtonsView: NearestTouchFrame,
     navBarContainer: LinearLayout,
     endContextualContainer: ViewGroup,
     startContextualContainer: ViewGroup,
     imeSwitcher: ImageView?,
     a11yButton: ImageView?,
-    space: Space?
+    space: Space?,
 ) :
     AbstractNavButtonLayoutter(
         resources,
@@ -44,11 +40,11 @@ class PhoneGestureLayoutter(
         startContextualContainer,
         imeSwitcher,
         a11yButton,
-        space
+        space,
     ) {
-    private val mNavButtonsView = navButtonsView
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
+<<<<<<< HEAD
         // TODO: look into if we should use SetupNavLayoutter instead.
         if (!context.isUserSetupComplete) {
             // Since setup wizard only has back button enabled, it looks strange to be
@@ -70,6 +66,8 @@ class PhoneGestureLayoutter(
             navButtonContainer.layoutParams = navButtonsLayoutParams
         }
 
+=======
+>>>>>>> android-16.0.0_r1
         endContextualContainer.removeAllViews()
         startContextualContainer.removeAllViews()
     }

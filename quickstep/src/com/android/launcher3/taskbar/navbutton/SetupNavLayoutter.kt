@@ -17,6 +17,7 @@
 package com.android.launcher3.taskbar.navbutton
 
 import android.content.res.Resources
+import android.os.SystemProperties
 import android.view.Gravity
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -28,18 +29,21 @@ import com.android.launcher3.DeviceProfile
 import com.android.launcher3.R
 import com.android.launcher3.taskbar.TaskbarActivityContext
 
+const val SUW_THEME_SYSTEM_PROPERTY = "setupwizard.theme"
+const val GLIF_EXPRESSIVE_THEME = "glif_expressive"
+const val GLIF_EXPRESSIVE_LIGHT_THEME = "glif_expressive_light"
 const val SQUARE_ASPECT_RATIO_BOTTOM_BOUND = 0.95
 const val SQUARE_ASPECT_RATIO_UPPER_BOUND = 1.05
 
 class SetupNavLayoutter(
     resources: Resources,
-    navButtonsView: NearestTouchFrame,
+    nearestTouchFrame: NearestTouchFrame,
     navButtonContainer: LinearLayout,
     endContextualContainer: ViewGroup,
     startContextualContainer: ViewGroup,
     imeSwitcher: ImageView?,
     a11yButton: ImageView?,
-    space: Space?
+    space: Space?,
 ) :
     AbstractNavButtonLayoutter(
         resources,
@@ -48,15 +52,21 @@ class SetupNavLayoutter(
         startContextualContainer,
         imeSwitcher,
         a11yButton,
-        space
+        space,
     ) {
-    private val mNavButtonsView = navButtonsView
+    // mNearestTouchFrame is a ViewGroup that contains start, end, nav button ViewGroups
+    private val mNearestTouchFrame = nearestTouchFrame
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
+        val SUWTheme = SystemProperties.get(SUW_THEME_SYSTEM_PROPERTY, "")
+        if (SUWTheme == GLIF_EXPRESSIVE_THEME || SUWTheme == GLIF_EXPRESSIVE_LIGHT_THEME) {
+            return
+        }
         // Since setup wizard only has back button enabled, it looks strange to be
         // end-aligned, so start-align instead.
         val navButtonsLayoutParams = navButtonContainer.layoutParams as FrameLayout.LayoutParams
-        val navButtonsViewLayoutParams = mNavButtonsView.layoutParams as FrameLayout.LayoutParams
+        val navButtonsOverallViewGroupLayoutParams =
+            mNearestTouchFrame.layoutParams as FrameLayout.LayoutParams
         val deviceProfile: DeviceProfile = context.deviceProfile
 
         navButtonsLayoutParams.marginEnd = 0
@@ -71,14 +81,17 @@ class SetupNavLayoutter(
         ) {
             navButtonsLayoutParams.marginStart =
                 resources.getDimensionPixelSize(R.dimen.taskbar_back_button_suw_start_margin)
+<<<<<<< HEAD
+=======
+            navButtonsOverallViewGroupLayoutParams.bottomMargin =
+                resources.getDimensionPixelSize(R.dimen.taskbar_back_button_suw_bottom_margin)
+            navButtonsLayoutParams.height =
+                resources.getDimensionPixelSize(R.dimen.taskbar_back_button_suw_height)
+>>>>>>> android-16.0.0_r1
         } else {
-            adjustForSetupInPhoneMode(
-                navButtonsLayoutParams,
-                navButtonsViewLayoutParams,
-                deviceProfile
-            )
+            adjustForSetupInPhoneMode(navButtonsOverallViewGroupLayoutParams, deviceProfile)
         }
-        mNavButtonsView.layoutParams = navButtonsViewLayoutParams
+        mNearestTouchFrame.layoutParams = navButtonsOverallViewGroupLayoutParams
         navButtonContainer.layoutParams = navButtonsLayoutParams
 
         endContextualContainer.removeAllViews()
@@ -92,7 +105,7 @@ class SetupNavLayoutter(
             WRAP_CONTENT,
             contextualMargin,
             contextualMargin,
-            Gravity.START
+            Gravity.START,
         )
 
         if (imeSwitcher != null) {
