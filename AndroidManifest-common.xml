@@ -133,15 +133,24 @@
             android:writePermission="${applicationId}.permission.WRITE_SETTINGS"
             android:readPermission="${applicationId}.permission.READ_SETTINGS" />
 
+<<<<<<< HEAD
         <!--
         The content provider for exposing various launcher grid options.
         -->
+=======
+        <!-- The content provider for exposing various launcher grid options. -->
+>>>>>>> android-16.0.0_r1
         <provider
-            android:name="com.android.launcher3.graphics.GridCustomizationsProvider"
+            android:name="com.android.launcher3.graphics.LauncherCustomizationProvider"
             android:authorities="${applicationId}.grid_control"
+<<<<<<< HEAD
             android:exported="true"
             android:writePermission="${applicationId}.permission.WRITE_SETTINGS"
             android:readPermission="${applicationId}.permission.READ_SETTINGS" />
+=======
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:exported="true" />
+>>>>>>> android-16.0.0_r1
 
         <!--
         The settings activity. To extend point settings_fragment_name to appropriate fragment class
