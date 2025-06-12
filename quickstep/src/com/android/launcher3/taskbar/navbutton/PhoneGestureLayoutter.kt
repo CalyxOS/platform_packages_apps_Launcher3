@@ -44,30 +44,6 @@ class PhoneGestureLayoutter(
     ) {
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
-<<<<<<< HEAD
-        // TODO: look into if we should use SetupNavLayoutter instead.
-        if (!context.isUserSetupComplete) {
-            // Since setup wizard only has back button enabled, it looks strange to be
-            // end-aligned, so start-align instead.
-            val navButtonsLayoutParams = navButtonContainer.layoutParams as FrameLayout.LayoutParams
-            val navButtonsViewLayoutParams =
-                mNavButtonsView.layoutParams as FrameLayout.LayoutParams
-            val deviceProfile: DeviceProfile = context.deviceProfile
-
-            navButtonsLayoutParams.marginEnd = 0
-            navButtonsLayoutParams.gravity = Gravity.START
-
-            adjustForSetupInPhoneMode(
-                navButtonsLayoutParams,
-                navButtonsViewLayoutParams,
-                deviceProfile
-            )
-            mNavButtonsView.layoutParams = navButtonsViewLayoutParams
-            navButtonContainer.layoutParams = navButtonsLayoutParams
-        }
-
-=======
->>>>>>> android-16.0.0_r1
         endContextualContainer.removeAllViews()
         startContextualContainer.removeAllViews()
     }

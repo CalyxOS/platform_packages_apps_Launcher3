@@ -120,8 +120,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     public static final float PULL_MULTIPLIER = .02f;
     public static final float FLING_VELOCITY_MULTIPLIER = 1200f;
     protected static final String BUNDLE_KEY_CURRENT_PAGE = "launcher.allapps.current_page";
-    // As of this writing, search transition does not seem to work properly, so set duration to 0.
-    private static final long DEFAULT_SEARCH_TRANSITION_DURATION_MS = 0;
+    private static final long DEFAULT_SEARCH_TRANSITION_DURATION_MS = 300;
     // Render the header protection at all times to debug clipping issues.
     private static final boolean DEBUG_HEADER_PROTECTION = false;
     /** Context of an activity or window that is inflating this container. */
@@ -407,7 +406,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             // If exiting search, revert predictive back scale on all apps
             mAllAppsTransitionController.animateAllAppsToNoScale();
         }
-        setScrollbarVisibility(!goingToSearch);
         mSearchTransitionController.animateToState(goingToSearch, durationMs,
                 /* onEndRunnable = */ () -> {
                     mIsSearching = goingToSearch;
@@ -747,22 +745,13 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 tabsHidden);
 
         int padding = mHeader.getMaxTranslation();
-        for (int i = 0; i < mAH.size(); i++) {
-            final AdapterHolder adapterHolder = mAH.get(i);
-            // Search and other adapters need to be handled a bit differently; otherwise, when
-            // when leaving search, the All Apps view may be noticeably shifted downward because
-            // its padding was unnecessarily impacted, and never restored, upon entering search.
-            if (i != AdapterHolder.SEARCH && !tabsHidden && mHeader.getFloatingRowsHeight() == 0) {
-                // Only the Search adapter needs padding when there are tabs but no floating rows.
-                adapterHolder.mPadding.top = 0;
-            } else {
-                adapterHolder.mPadding.top = padding;
-            }
+        mAH.forEach(adapterHolder -> {
+            adapterHolder.mPadding.top = padding;
             adapterHolder.applyPadding();
             if (adapterHolder.mRecyclerView != null) {
                 adapterHolder.mRecyclerView.scrollToTop();
             }
-        }
+        });
         mAdditionalHeaderRows.forEach(row -> mHeader.onPluginConnected(row, mActivityContext));
 
         removeCustomRules(mHeader);
@@ -811,7 +800,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             mTabsProtectionAlpha = tabsAlpha;
             invalidateHeader();
         }
-        getSearchView().setBackgroundResource(R.drawable.bg_all_apps_searchbox);
         if (mSearchUiManager.getEditText() == null) {
             return;
         }
@@ -897,15 +885,13 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         }
 
         RelativeLayout.LayoutParams layoutParams = (LayoutParams) v.getLayoutParams();
-        layoutParams.addRule(RelativeLayout.BELOW, R.id.search_container_all_apps);
+        layoutParams.addRule(RelativeLayout.ALIGN_TOP, R.id.search_container_all_apps);
 
         int topMargin = getContext().getResources().getDimensionPixelSize(
-                R.dimen.all_apps_search_bar_bottom_adjustment);
+                R.dimen.all_apps_header_top_margin);
         if (includeTabsMargin) {
             topMargin += getContext().getResources().getDimensionPixelSize(
-                    R.dimen.all_apps_header_pill_height)
-                    + getContext().getResources().getDimensionPixelSize(
-                    R.dimen.all_apps_tabs_margin_top);
+                    R.dimen.all_apps_header_pill_height);
         }
         layoutParams.topMargin = topMargin;
     }
@@ -933,7 +919,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         layoutParams.removeRule(RelativeLayout.ABOVE);
         layoutParams.removeRule(RelativeLayout.ALIGN_TOP);
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
-        layoutParams.removeRule(RelativeLayout.BELOW);
     }
 
     protected BaseAllAppsAdapter<T> createAdapter(AlphabeticalAppsList<T> appsList) {
@@ -1220,13 +1205,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             float top = getHeight() / 2f + (getHeight() / 2f - mNavBarScrimHeight) / getScaleY();
             canvas.drawRect(left, top, getWidth() / getScaleX(),
                     top + mNavBarScrimHeight / getScaleY(), mNavBarScrimPaint);
-        }
-    }
-
-    protected void setScrollbarVisibility(boolean visible) {
-        AllAppsRecyclerView rv = getActiveRecyclerView();
-        if (rv != null && rv.getScrollbar() != null) {
-            rv.getScrollbar().setVisibility(visible ? VISIBLE : GONE);
         }
     }
 

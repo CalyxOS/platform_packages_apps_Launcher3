@@ -638,15 +638,8 @@ public final class Utilities {
         Drawable mainIcon = null;
 
         Drawable badge = null;
-<<<<<<< HEAD
-        if ((info instanceof ItemInfoWithIcon iiwi) && !iiwi.usingLowResIcon()) {
-            try (LauncherIcons li = LauncherIcons.obtain(context)) {
-                badge = iiwi.bitmap.withUser(iiwi.user, li).getBadgeDrawable(context, useTheme);
-            }
-=======
         if ((info instanceof ItemInfoWithIcon iiwi) && !iiwi.getMatchingLookupFlag().useLowRes()) {
             badge = iiwi.bitmap.getBadgeDrawable(context, useTheme, getIconShapeOrNull(context));
->>>>>>> android-16.0.0_r1
         }
 
         if (info instanceof PendingAddShortcutInfo) {
@@ -722,22 +715,12 @@ public final class Utilities {
         }
 
         if (badge == null) {
-<<<<<<< HEAD
-            try (LauncherIcons li = LauncherIcons.obtain(context)) {
-                badge = BitmapInfo.LOW_RES_INFO.withUser(info.user, li).withFlags(
-                                UserCache.INSTANCE.get(context)
-                                        .getUserInfo(info.user)
-                                        .applyBitmapInfoFlags(FlagOp.NO_OP))
-                        .getBadgeDrawable(context, useTheme);
-            }
-=======
             badge = BitmapInfo.LOW_RES_INFO.withFlags(
                     UserCache.INSTANCE.get(context)
                             .getUserInfo(info.user)
                             .applyBitmapInfoFlags(FlagOp.NO_OP)
                     )
                     .getBadgeDrawable(context, useTheme, getIconShapeOrNull(context));
->>>>>>> android-16.0.0_r1
             if (badge == null) {
                 badge = new ColorDrawable(Color.TRANSPARENT);
             }

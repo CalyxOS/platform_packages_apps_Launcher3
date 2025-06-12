@@ -28,11 +28,7 @@ import static com.android.launcher3.QuickstepTransitionManager.PINNED_TASKBAR_TR
 import static com.android.launcher3.config.FeatureFlags.ENABLE_TASKBAR_NAVBAR_UNIFICATION;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TRANSIENT_TASKBAR_HIDE;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TRANSIENT_TASKBAR_SHOW;
-<<<<<<< HEAD
-import static com.android.launcher3.taskbar.TaskbarManager.NAVIGATION_BAR_HINT;
-=======
 import static com.android.launcher3.taskbar.TaskbarActivityContext.ENABLE_TASKBAR_BEHIND_SHADE;
->>>>>>> android-16.0.0_r1
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 import static com.android.launcher3.util.FlagDebugUtils.appendFlag;
 import static com.android.launcher3.util.FlagDebugUtils.formatFlagChange;
@@ -71,7 +67,6 @@ import com.android.launcher3.anim.AnimatedFloat;
 import com.android.launcher3.anim.AnimationSuccessListener;
 import com.android.launcher3.anim.AnimatorListeners;
 import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
-import com.android.launcher3.util.SettingsCache;
 import com.android.quickstep.SystemUiProxy;
 import com.android.quickstep.util.SystemUiFlagUtils;
 
@@ -319,14 +314,11 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
         if (mActivity.isPhoneMode()) {
             mUnstashedHeight = mActivity.getResources().getDimensionPixelSize(
                     R.dimen.taskbar_phone_size);
-            mStashedHeight = SettingsCache.INSTANCE.get(mActivity).getValue(NAVIGATION_BAR_HINT, 1)
-                    ? mActivity.getResources().getDimensionPixelSize(R.dimen.taskbar_stashed_size)
-                    : 0;
+            mStashedHeight = mActivity.getResources().getDimensionPixelSize(
+                    R.dimen.taskbar_stashed_size);
         } else {
             mUnstashedHeight = mActivity.getDeviceProfile().taskbarHeight;
-            mStashedHeight = SettingsCache.INSTANCE.get(mActivity).getValue(NAVIGATION_BAR_HINT, 1)
-                    ? mActivity.getDeviceProfile().stashedTaskbarHeight
-                    : 0;
+            mStashedHeight = mActivity.getDeviceProfile().stashedTaskbarHeight;
         }
     }
 

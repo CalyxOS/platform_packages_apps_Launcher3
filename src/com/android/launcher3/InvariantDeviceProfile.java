@@ -34,12 +34,7 @@ import static com.android.launcher3.util.DisplayController.CHANGE_TASKBAR_PINNIN
 import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 
 import android.content.Context;
-<<<<<<< HEAD
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-=======
 import android.content.Intent;
->>>>>>> android-16.0.0_r1
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
@@ -96,14 +91,10 @@ import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
-<<<<<<< HEAD
-public class InvariantDeviceProfile implements SafeCloseable, OnSharedPreferenceChangeListener {
-=======
 import javax.inject.Inject;
 
 @LauncherAppSingleton
 public class InvariantDeviceProfile {
->>>>>>> android-16.0.0_r1
 
     public static final String TAG = "IDP";
     // We do not need any synchronization for this variable as its only written on UI thread.
@@ -124,8 +115,6 @@ public class InvariantDeviceProfile {
     public static final int TYPE_TABLET = 2;
 
     private static final float ICON_SIZE_DEFINED_IN_APP_DP = 48;
-
-    public static final String KEY_ALLAPPS_THEMED_ICONS = "pref_allapps_themed_icons";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
@@ -269,13 +258,7 @@ public class InvariantDeviceProfile {
 
     public Point defaultWallpaperSize;
 
-<<<<<<< HEAD
-    private Context mContext;
-
-    private final ArrayList<OnIDPChangeListener> mChangeListeners = new ArrayList<>();
-=======
     private final List<OnIDPChangeListener> mChangeListeners = new CopyOnWriteArrayList<>();
->>>>>>> android-16.0.0_r1
 
     @Inject
     InvariantDeviceProfile(
@@ -290,17 +273,7 @@ public class InvariantDeviceProfile {
         mPrefs = prefs;
         mThemeManager = themeManager;
 
-<<<<<<< HEAD
-    @TargetApi(23)
-    private InvariantDeviceProfile(Context context) {
-        mContext = context;
-
-        SharedPreferences prefs = LauncherPrefs.getPrefs(context);
-        prefs.registerOnSharedPreferenceChangeListener(this);
-        String gridName = getCurrentGridName(context);
-=======
         String gridName = prefs.get(GRID_NAME);
->>>>>>> android-16.0.0_r1
         initGrid(context, gridName);
 
         dc.setPriorityListener(
@@ -333,97 +306,10 @@ public class InvariantDeviceProfile {
         lifeCycle.addCloseable(() -> prefs.removeListener(prefListener,
                 FIXED_LANDSCAPE_MODE, ENABLE_TWOLINE_ALLAPPS_TOGGLE));
 
-<<<<<<< HEAD
-    /**
-     * This constructor should NOT have any monitors by design.
-     */
-    public InvariantDeviceProfile(Context context, String gridName) {
-        String newName = initGrid(context, gridName);
-        if (newName == null || !newName.equals(gridName)) {
-            throw new IllegalArgumentException("Unknown grid name: " + gridName);
-        }
-    }
-
-    /**
-     * This constructor should NOT have any monitors by design.
-     */
-    public InvariantDeviceProfile(Context context, Display display) {
-        // Ensure that the main device profile is initialized
-        INSTANCE.get(context);
-        String gridName = getCurrentGridName(context);
-
-        // Get the display info based on default display and interpolate it to existing display
-        Info defaultInfo = DisplayController.INSTANCE.get(context).getInfo();
-        @DeviceType int defaultDeviceType = defaultInfo.getDeviceType();
-        DisplayOption defaultDisplayOption = invDistWeightedInterpolate(
-                defaultInfo,
-                getPredefinedDeviceProfiles(
-                        context,
-                        gridName,
-                        defaultInfo,
-                        /*allowDisabledGrid=*/false,
-                        FIXED_LANDSCAPE_MODE.get(context)
-                ),
-                defaultDeviceType);
-
-        Context displayContext = context.createDisplayContext(display);
-        Info myInfo = new Info(displayContext);
-        @DeviceType int deviceType = myInfo.getDeviceType();
-        DisplayOption myDisplayOption = invDistWeightedInterpolate(
-                myInfo,
-                getPredefinedDeviceProfiles(
-                        context,
-                        gridName,
-                        myInfo,
-                        /*allowDisabledGrid=*/false,
-                        FIXED_LANDSCAPE_MODE.get(context)
-                ),
-                deviceType);
-
-        DisplayOption result = new DisplayOption(defaultDisplayOption.grid)
-                .add(myDisplayOption);
-        result.iconSizes[INDEX_DEFAULT] =
-                defaultDisplayOption.iconSizes[INDEX_DEFAULT];
-        for (int i = 1; i < COUNT_SIZES; i++) {
-            result.iconSizes[i] = Math.min(
-                    defaultDisplayOption.iconSizes[i], myDisplayOption.iconSizes[i]);
-        }
-
-        System.arraycopy(defaultDisplayOption.minCellSize, 0, result.minCellSize, 0,
-                COUNT_SIZES);
-        System.arraycopy(defaultDisplayOption.borderSpaces, 0, result.borderSpaces, 0,
-                COUNT_SIZES);
-
-        initGrid(context, myInfo, result);
-    }
-
-    @Override
-    public void close() {
-        DisplayController.INSTANCE.executeIfCreated(dc -> dc.setPriorityListener(null));
-        if (mLandscapeModePreferenceListener != null) {
-            LauncherPrefs.INSTANCE.executeIfCreated(
-                    lp -> lp.removeListener(mLandscapeModePreferenceListener, FIXED_LANDSCAPE_MODE)
-            );
-        }
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        switch (key) {
-            case KEY_ALLAPPS_THEMED_ICONS:
-                onConfigChanged(mContext);
-                break;
-        }
-    }
-
-    public static String getCurrentGridName(Context context) {
-        return LauncherPrefs.get(context).get(GRID_NAME);
-=======
         SimpleBroadcastReceiver localeReceiver = new SimpleBroadcastReceiver(context,
                 MAIN_EXECUTOR, i -> onConfigChanged(context));
         localeReceiver.register(Intent.ACTION_LOCALE_CHANGED);
         lifeCycle.addCloseable(() -> localeReceiver.unregisterReceiverSafely());
->>>>>>> android-16.0.0_r1
     }
 
     private String initGrid(Context context, String gridName) {

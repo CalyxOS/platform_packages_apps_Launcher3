@@ -42,8 +42,6 @@ import static com.android.launcher3.config.FeatureFlags.enableTaskbarPinning;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_FOLDER_OPEN;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_DRAGGING;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_FULLSCREEN;
-import static com.android.launcher3.taskbar.TaskbarManager.ENABLE_TASKBAR;
-import static com.android.launcher3.taskbar.TaskbarManager.NAVIGATION_BAR_HINT;
 import static com.android.launcher3.taskbar.TaskbarStashController.SHOULD_BUBBLES_FOLLOW_DEFAULT_VALUE;
 import static com.android.launcher3.testing.shared.ResourceUtils.getBoolByName;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
@@ -578,10 +576,6 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
-        if (mDeviceProfile.isTaskbarPresent &&
-                !SettingsCache.INSTANCE.get(this).getValue(ENABLE_TASKBAR, 1)) {
-            return true;
-        }
         return ENABLE_TASKBAR_NAVBAR_UNIFICATION
                 && mDeviceProfile.isPhone
                 && !mDeviceProfile.isTaskbarPresent;
@@ -789,6 +783,9 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     public void onConfigurationChanged(@Config int configChanges) {
         mControllers.onConfigurationChanged(configChanges);
+        if (!mIsUserSetupComplete) {
+            setTaskbarWindowSize(getSetupWindowSize());
+        }
     }
 
     public boolean isThreeButtonNav() {
@@ -1323,14 +1320,14 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     public int getDefaultTaskbarWindowSize() {
         Resources resources = getResources();
 
-        if (isGestureNav() && !SettingsCache.INSTANCE.get(this).getValue(NAVIGATION_BAR_HINT, 1)) {
-            return 0;
-        }
-
         if (isPhoneMode()) {
             return isThreeButtonNav() ?
                     resources.getDimensionPixelSize(R.dimen.taskbar_phone_size) :
                     resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size);
+        }
+
+        if (!isUserSetupComplete()) {
+            return getSetupWindowSize();
         }
 
         int bubbleBarTop = mControllers.bubbleControllers.map(bubbleControllers ->
@@ -1365,6 +1362,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
                 + getCornerRadius()
                 + extraHeightForTaskbarTooltips;
         return Math.max(taskbarWindowSize, bubbleBarTop);
+    }
+
+    public int getSetupWindowSize() {
+        return getResources().getDimensionPixelSize(R.dimen.taskbar_suw_frame);
     }
 
     public DeviceProfile getTransientTaskbarDeviceProfile() {

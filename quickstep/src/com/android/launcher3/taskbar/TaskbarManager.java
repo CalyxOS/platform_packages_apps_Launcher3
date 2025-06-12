@@ -102,8 +102,6 @@ import com.android.systemui.shared.system.TaskStackChangeListeners;
 import com.android.systemui.unfold.UnfoldTransitionProgressProvider;
 import com.android.systemui.unfold.util.ScopedUnfoldTransitionProgressProvider;
 
-import lineageos.providers.LineageSettings;
-
 import java.io.PrintWriter;
 import java.util.Set;
 import java.util.StringJoiner;
@@ -141,23 +139,6 @@ public class TaskbarManager implements DisplayDecorationListener {
     private static final Uri NAV_BAR_KIDS_MODE = Settings.Secure.getUriFor(
             Settings.Secure.NAV_BAR_KIDS_MODE);
 
-<<<<<<< HEAD
-    public static final Uri NAV_BAR_INVERSE = Settings.Secure.getUriFor(
-            "sysui_nav_bar_inverse");
-
-    public static final Uri ENABLE_TASKBAR = LineageSettings.System.getUriFor(
-            LineageSettings.System.ENABLE_TASKBAR);
-
-    public static final Uri NAVIGATION_BAR_HINT = LineageSettings.System.getUriFor(
-            LineageSettings.System.NAVIGATION_BAR_HINT);
-
-    private final Context mWindowContext;
-    private final @Nullable Context mNavigationBarPanelContext;
-    private WindowManager mWindowManager;
-    private boolean mAddedWindow;
-    private final TaskbarNavButtonController mDefaultNavButtonController;
-    private final ComponentCallbacks mDefaultComponentCallbacks;
-=======
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
     private final TaskbarNavButtonCallbacks mNavCallbacks;
@@ -166,7 +147,6 @@ public class TaskbarManager implements DisplayDecorationListener {
     private final WindowManager mPrimaryWindowManager;
     private TaskbarNavButtonController mPrimaryNavButtonController;
     private ComponentCallbacks mPrimaryComponentCallbacks;
->>>>>>> android-16.0.0_r1
 
     private final SimpleBroadcastReceiver mShutdownReceiver;
 
@@ -259,10 +239,6 @@ public class TaskbarManager implements DisplayDecorationListener {
             }
         }
     }
-<<<<<<< HEAD
-    private final SettingsCache.OnChangeListener mOnSettingsChangeListener = c -> recreateTaskbar();
-    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener = c -> System.exit(0);
-=======
 
     private final SettingsCache.OnChangeListener mOnSettingsChangeListener = c -> {
         debugPrimaryTaskbar("Settings changed! Recreating Taskbar!");
@@ -389,7 +365,6 @@ public class TaskbarManager implements DisplayDecorationListener {
                     //NO-OP
                 }
             };
->>>>>>> android-16.0.0_r1
 
     private boolean mUserUnlocked = false;
 
@@ -482,17 +457,6 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .register(USER_SETUP_COMPLETE_URI, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
-<<<<<<< HEAD
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .register(NAV_BAR_INVERSE, mOnSettingsChangeListener);
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .register(ENABLE_TASKBAR, mOnTaskBarChangeListener);
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .register(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
-        Log.d(TASKBAR_NOT_DESTROYED_TAG, "registering component callbacks from constructor.");
-        mWindowContext.registerComponentCallbacks(mDefaultComponentCallbacks);
-        mShutdownReceiver.register(mWindowContext, Intent.ACTION_SHUTDOWN);
-=======
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .registerDisplayDecorationListener(this);
         mShutdownReceiver =
@@ -513,7 +477,6 @@ public class TaskbarManager implements DisplayDecorationListener {
         } else {
             mGrowthBroadcastReceiver = null;
         }
->>>>>>> android-16.0.0_r1
         UI_HELPER_EXECUTOR.execute(() -> {
             mSharedState.taskbarSystemActionPendingIntent = PendingIntent.getBroadcast(
                     mPrimaryWindowContext,
@@ -1147,17 +1110,6 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .unregister(USER_SETUP_COMPLETE_URI, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
-<<<<<<< HEAD
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .unregister(NAV_BAR_INVERSE, mOnSettingsChangeListener);
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .unregister(ENABLE_TASKBAR, mOnTaskBarChangeListener);
-        SettingsCache.INSTANCE.get(mWindowContext)
-                .unregister(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
-        Log.d(TASKBAR_NOT_DESTROYED_TAG, "unregistering component callbacks from destroy().");
-        mWindowContext.unregisterComponentCallbacks(mDefaultComponentCallbacks);
-        mShutdownReceiver.unregisterReceiverSafely(mWindowContext);
-=======
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .unregisterDisplayDecorationListener(this);
         debugPrimaryTaskbar("destroy: unregistering component callbacks");
@@ -1181,7 +1133,6 @@ public class TaskbarManager implements DisplayDecorationListener {
         // user plugs in their device to external displays
         return Flags.perceptibleTasks()
                 && (mIsAndroidPC || mSupportsFreeformWindowsManagement);
->>>>>>> android-16.0.0_r1
     }
 
     public @Nullable TaskbarActivityContext getCurrentActivityContext() {

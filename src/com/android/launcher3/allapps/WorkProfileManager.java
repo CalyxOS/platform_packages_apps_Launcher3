@@ -22,15 +22,11 @@ import static com.android.launcher3.allapps.ActivityAllAppsContainerView.Adapter
 import static com.android.launcher3.allapps.BaseAllAppsAdapter.VIEW_TYPE_WORK_DISABLED_CARD;
 import static com.android.launcher3.allapps.BaseAllAppsAdapter.VIEW_TYPE_WORK_EDU_CARD;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TURN_OFF_WORK_APPS_TAP;
-import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TURN_ON_WORK_APPS_TAP;
-import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCUT_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
-import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
-import android.content.Context;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
@@ -65,17 +61,10 @@ public class WorkProfileManager extends UserProfileManager
     private WorkUtilityView mWorkUtilityView;
     private final Predicate<UserHandle> mWorkProfileMatcher;
 
-    private boolean mHasMultipleProfiles;
-
-    private final UserManager mUserManager;
-    private final UserCache mUserCache;
-
     public WorkProfileManager(
             UserManager userManager, ActivityAllAppsContainerView allApps,
             StatsLogManager statsLogManager, UserCache userCache) {
         super(userManager, statsLogManager, userCache);
-        mUserManager = userManager;
-        mUserCache = userCache;
         mAllApps = allApps;
         mWorkProfileMatcher = (user) -> userCache.getUserInfo(user).isWork();
     }
@@ -97,14 +86,7 @@ public class WorkProfileManager extends UserProfileManager
         if (mWorkUtilityView != null) {
             if (page == MAIN || page == SEARCH) {
                 mWorkUtilityView.animateVisibility(false);
-            } else if (page == WORK && shouldShowWorkApps()) {
-                if (getCurrentState() == STATE_ENABLED) {
-                    mWorkUtilityView.setPauseMode(true /* doPause */);
-                    mWorkUtilityView.setOnClickListener(this::onWorkFabClickedTurnOff);
-                } else if (getCurrentState() == STATE_DISABLED) {
-                    mWorkUtilityView.setPauseMode(false /* doPause */);
-                    mWorkUtilityView.setOnClickListener(this::onWorkFabClickedTurnOn);
-                }
+            } else if (page == WORK && getCurrentState() == STATE_ENABLED) {
                 mWorkUtilityView.animateVisibility(true);
             }
         }
@@ -130,18 +112,17 @@ public class WorkProfileManager extends UserProfileManager
     }
 
     private void updateCurrentState(@UserProfileState int currentState) {
-        mHasMultipleProfiles = mAllApps.getAppsStore().hasModelFlag(FLAG_HAS_MULTIPLE_PROFILES);
         setCurrentState(currentState);
         if (getAH() != null) {
             getAH().mAppsList.updateAdapterItems();
         }
-        if (shouldShowWorkApps()) {
+        if (mWorkUtilityView != null) {
+            updateWorkUtilityViews(mAllApps.getCurrentPage());
+        }
+        if (getCurrentState() == STATE_ENABLED) {
             attachWorkUtilityViews();
         } else if (getCurrentState() == STATE_DISABLED) {
             detachWorkUtilityViews();
-        }
-        if (mWorkUtilityView != null) {
-            updateWorkUtilityViews(mAllApps.getCurrentPage());
         }
     }
 
@@ -167,6 +148,7 @@ public class WorkProfileManager extends UserProfileManager
         if (getAH() != null) {
             getAH().applyPadding();
         }
+        mWorkUtilityView.getWorkFAB().setOnClickListener(this::onWorkFabClicked);
         return true;
     }
     /**
@@ -192,8 +174,7 @@ public class WorkProfileManager extends UserProfileManager
      * returns whether or not work apps should be visible in work tab.
      */
     public boolean shouldShowWorkApps() {
-        return getCurrentState() != WorkProfileManager.STATE_DISABLED
-                || mHasMultipleProfiles;
+        return getCurrentState() != WorkProfileManager.STATE_DISABLED;
     }
 
     public boolean hasWorkApps() {
@@ -204,7 +185,7 @@ public class WorkProfileManager extends UserProfileManager
      * Adds work profile specific adapter items to adapterItems and returns number of items added
      */
     public int addWorkItems(ArrayList<AdapterItem> adapterItems) {
-        if (!shouldShowWorkApps()) {
+        if (getCurrentState() == WorkProfileManager.STATE_DISABLED) {
             //add disabled card here.
             adapterItems.add(new AdapterItem(VIEW_TYPE_WORK_DISABLED_CARD));
         } else if (getCurrentState() == WorkProfileManager.STATE_ENABLED && !isEduSeen()) {
@@ -217,18 +198,11 @@ public class WorkProfileManager extends UserProfileManager
         return LauncherPrefs.get(mAllApps.getContext()).get(WORK_EDU_STEP) != 0;
     }
 
-    private void onWorkFabClickedTurnOff(View view) {
+    private void onWorkFabClicked(View view) {
         if (getCurrentState() == STATE_ENABLED && mWorkUtilityView.isEnabled()) {
             Log.d(TAG, "Work FAB clicked.");
             logEvents(LAUNCHER_TURN_OFF_WORK_APPS_TAP);
             setWorkProfileEnabled(false);
-        }
-    }
-
-    private void onWorkFabClickedTurnOn(View view) {
-        if (getCurrentState() == STATE_DISABLED && mWorkUtilityView.isEnabled()) {
-            logEvents(LAUNCHER_TURN_ON_WORK_APPS_TAP);
-            setWorkProfileEnabled(true);
         }
     }
 
@@ -262,15 +236,5 @@ public class WorkProfileManager extends UserProfileManager
     @Override
     public Predicate<UserHandle> getUserMatcher() {
         return mWorkProfileMatcher;
-    }
-
-    @Override
-    protected void setQuietMode(boolean enabled, Context context) {
-        UI_HELPER_EXECUTOR.post(() ->
-                mUserCache.getUserProfiles()
-                        .stream()
-                        .filter(getUserMatcher())
-                        .forEach(userHandle ->
-                                setQuietModeSafely(enabled, userHandle, context)));
     }
 }

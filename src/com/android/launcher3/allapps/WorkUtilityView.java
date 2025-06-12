@@ -96,12 +96,8 @@ public class WorkUtilityView extends LinearLayout implements Insettable,
     private TextView mPauseText;
     private ImageView mWorkIcon;
     private ImageButton mSchedulerButton;
-<<<<<<< HEAD
-    private boolean mDoPause = true;
-=======
     private final StatsLogManager mStatsLogManager;
     private LinearLayout mWorkUtilityView;
->>>>>>> android-16.0.0_r1
 
     public WorkUtilityView(@NonNull Context context) {
         this(context, null, 0);
@@ -144,7 +140,7 @@ public class WorkUtilityView extends LinearLayout implements Insettable,
         // Expand is the default state upon initialization.
         addFlag(FLAG_IS_EXPAND);
         setInsets(mActivityContext.getDeviceProfile().getInsets());
-        updatePauseMode();
+        updateStringFromCache();
         mSchedulerButton.setVisibility(GONE);
         mSchedulerButton.setOnClickListener(null);
         if (shouldUseScheduler()) {
@@ -434,8 +430,7 @@ public class WorkUtilityView extends LinearLayout implements Insettable,
     public void updateStringFromCache(){
         StringCache cache = mActivityContext.getStringCache();
         if (cache != null) {
-            mPauseText.setText(mDoPause ? cache.workProfilePauseButton :
-                    cache.workProfileEnableButton);
+            mPauseText.setText(cache.workProfilePauseButton);
         }
     }
 
@@ -447,15 +442,5 @@ public class WorkUtilityView extends LinearLayout implements Insettable,
     @VisibleForTesting
     ImageButton getSchedulerButton() {
         return mSchedulerButton;
-    }
-
-    private void updatePauseMode() {
-        mWorkIcon.setImageResource(mDoPause ? R.drawable.ic_corp_off : R.drawable.ic_corp);
-        updateStringFromCache();
-    }
-
-    public void setPauseMode(final boolean doPause) {
-        mDoPause = doPause;
-        updatePauseMode();
     }
 }

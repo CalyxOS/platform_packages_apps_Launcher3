@@ -34,12 +34,6 @@ import com.android.launcher3.dagger.ApplicationContext;
 import com.android.launcher3.dagger.LauncherAppSingleton;
 import com.android.launcher3.dagger.LauncherBaseAppComponent;
 
-<<<<<<< HEAD
-import lineageos.providers.LineageSettings;
-
-import java.util.HashMap;
-=======
->>>>>>> android-16.0.0_r1
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -85,15 +79,10 @@ public class SettingsCache extends ContentObserver {
     private static final String SYSTEM_URI_PREFIX = Settings.System.CONTENT_URI.toString();
     private static final String GLOBAL_URI_PREFIX = Settings.Global.CONTENT_URI.toString();
 
-<<<<<<< HEAD
-    private static final String LINEAGE_SYSTEM_URI_PREFIX =
-            LineageSettings.System.CONTENT_URI.toString();
-=======
     private final Function<Uri, CopyOnWriteArrayList<OnChangeListener>> mListenerMapper = uri -> {
         registerUriAsync(uri);
         return new CopyOnWriteArrayList<>();
     };
->>>>>>> android-16.0.0_r1
 
     /**
      * Caches the last seen value for registered keys.
@@ -172,8 +161,6 @@ public class SettingsCache extends ContentObserver {
             newVal = Settings.System.getInt(mResolver, key, defaultValue) == 1;
         } else if (keyUri.toString().startsWith(GLOBAL_URI_PREFIX)) {
             newVal = Settings.Global.getInt(mResolver, key, defaultValue) == 1;
-        } else if (keyUri.toString().startsWith(LINEAGE_SYSTEM_URI_PREFIX)) {
-            newVal = LineageSettings.System.getInt(mResolver, key, defaultValue) == 1;
         } else { // SETTING_SECURE
             newVal = Settings.Secure.getInt(mResolver, key, defaultValue) == 1;
         }

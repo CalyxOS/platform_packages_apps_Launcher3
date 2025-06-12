@@ -423,11 +423,7 @@ public class TouchInteractionService extends Service {
                 try {
                     reply.sendResult(null);
                 } catch (RemoteException e) {
-<<<<<<< HEAD
-                    Log.w(TAG, "onUnbind: Failed to reply to OverviewProxyService", e);
-=======
                     Log.w(TAG, "onUnbind: Failed to reply to LauncherProxyService", e);
->>>>>>> android-16.0.0_r1
                 }
             });
         }

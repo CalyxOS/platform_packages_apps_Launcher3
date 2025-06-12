@@ -88,9 +88,6 @@ abstract class AbstractNavButtonLayoutter(
     ) {
         val phoneOrPortraitSetupMargin =
             resources.getDimensionPixelSize(R.dimen.taskbar_contextual_button_suw_margin)
-<<<<<<< HEAD
-        navButtonsLayoutParams.marginStart = phoneOrPortraitSetupMargin
-=======
         nearestTouchFrameLayoutParams.marginStart = phoneOrPortraitSetupMargin
         nearestTouchFrameLayoutParams.bottomMargin =
             if (!deviceProfile.isLandscape) 0
@@ -100,7 +97,6 @@ abstract class AbstractNavButtonLayoutter(
 
         nearestTouchFrameLayoutParams.height =
             resources.getDimensionPixelSize(R.dimen.taskbar_contextual_button_suw_height)
->>>>>>> android-16.0.0_r1
     }
 
     open fun repositionContextualContainer(

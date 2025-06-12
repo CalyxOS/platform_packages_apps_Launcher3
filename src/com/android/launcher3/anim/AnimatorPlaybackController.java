@@ -383,8 +383,7 @@ public class AnimatorPlaybackController implements ValueAnimator.AnimatorUpdateL
         }
 
         public void setProgress(float progress) {
-            float fraction = boundToRange(mapper.getProgress(progress, globalEndProgress), 0, 1);
-            anim.setCurrentFraction(fraction);
+            anim.setCurrentFraction(mapper.getProgress(progress, globalEndProgress));
         }
 
         public void reset() {

@@ -128,31 +128,12 @@ public final class WidgetsPredictionUpdateTask implements ModelUpdateTask {
             }
         }
 
-<<<<<<< HEAD
-        List<ItemInfo> items;
-        if (enableCategorizedWidgetSuggestions()) {
-            WidgetRecommendationCategoryProvider categoryProvider =
-                    WidgetRecommendationCategoryProvider.newInstance(context);
-            items = servicePredictedItems.stream()
-                    .filter(it -> it.widgetInfo != null)
-                    .map(it -> new PendingAddWidgetInfo(it.widgetInfo, CONTAINER_WIDGETS_PREDICTION,
-                            categoryProvider.getWidgetRecommendationCategory(context, it)))
-                    .collect(Collectors.toList());
-        } else {
-            items = servicePredictedItems.stream()
-                    .filter(it -> it.widgetInfo != null)
-                    .map(it -> new PendingAddWidgetInfo(it.widgetInfo,
-                            CONTAINER_WIDGETS_PREDICTION)).collect(
-                            Collectors.toList());
-        }
-=======
         WidgetRecommendationCategoryProvider categoryProvider =
                 new WidgetRecommendationCategoryProvider();
         List<ItemInfo> items = servicePredictedItems.stream()
                 .map(it -> new PendingAddWidgetInfo(it.widgetInfo, CONTAINER_WIDGETS_PREDICTION,
                         categoryProvider.getWidgetRecommendationCategory(context, it)))
                 .collect(Collectors.toList());
->>>>>>> android-16.0.0_r1
         FixedContainerItems fixedContainerItems =
                 new FixedContainerItems(mPredictorState.containerId, items);
 
