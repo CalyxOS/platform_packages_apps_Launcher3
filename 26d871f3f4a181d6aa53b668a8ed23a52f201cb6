@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01ceb2c3_5efff5b1",
+        "filename": "src/com/android/launcher3/LauncherPrefs.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-06-13T10:53:16Z",
+      "side": 1,
+      "message": "Unsure about this",
+      "revId": "26d871f3f4a181d6aa53b668a8ed23a52f201cb6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
