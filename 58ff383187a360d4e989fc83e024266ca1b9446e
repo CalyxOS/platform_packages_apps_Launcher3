@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "450fd83c_bc6714df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-07-28T22:13:18Z",
+      "side": 1,
+      "message": "Works on pixel tablet in portait mode",
+      "revId": "58ff383187a360d4e989fc83e024266ca1b9446e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
