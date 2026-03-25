@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68ee7572_1be4864c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-03-25T21:01:52Z",
+      "side": 1,
+      "message": "Not sure the issue still exists. When tapping the FAB, it goes away along with the apps in the work profile and a button  to turn on work apps appears. When doing this, I can press the FAB to turn off again.",
+      "revId": "1bebb150cdd8cc7b15055c05d631eb7068d49aab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
