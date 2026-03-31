@@ -80,7 +80,7 @@
         launcher:y="0"
         launcher:spanX="4"
         launcher:spanY="1"
-        launcher:packageName="org.chromium.chrome"
+        launcher:packageName="org.calyxos.chromium"
         launcher:className="org.chromium.chrome.browser.searchwidget.SearchWidgetProvider"
         launcher:appWidgetId="-1" />
 
