@@ -29,7 +29,11 @@ import static com.android.launcher3.model.data.AppsListData.FLAG_QUIET_MODE_CHAN
 import static com.android.launcher3.model.data.AppsListData.FLAG_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.data.AppsListData.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
 
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.Log;
 import android.view.View;
 
@@ -194,7 +198,25 @@ public class WorkProfileManager extends UserProfileManager
         return adapterItems.size();
     }
 
+    private boolean isProvisionedBy(Context context, String targetPackage) {
+        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
+        UserManager um = context.getSystemService(UserManager.class);
+
+        for (UserHandle user : um.getUserProfiles()) {
+            if (um.isManagedProfile(user.getIdentifier())) {
+                ComponentName admin = dpm.getProfileOwnerAsUser(user);
+                if (admin != null && targetPackage.equals(admin.getPackageName())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     private boolean isEduSeen() {
+        if (isProvisionedBy(mAllApps.getContext(), "org.calyxos.bellis")) {
+            return true;
+        }
         return LauncherPrefs.get(mAllApps.getContext()).get(WORK_EDU_STEP) != 0;
     }
 
