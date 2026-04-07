@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b996a05a_5db6b1ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-04-07T17:43:50Z",
+      "side": 1,
+      "message": "In a build with this change I didn\u0027t see the card talking about IT admin above my work apps anymore. Great work!",
+      "revId": "9afedc2683724d184f0743165a1fc8234de5c550",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
