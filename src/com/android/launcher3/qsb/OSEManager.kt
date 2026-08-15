@@ -30,6 +30,7 @@ import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
 import android.os.Process.myUserHandle
 import android.os.UserHandle
+import android.provider.Settings
 import android.util.Log
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.WorkerThread
@@ -271,6 +272,11 @@ class OSEManager(
         val OSE_LOOPER = LooperExecutor("OSEManager")
 
         const val OVERLAY_ACTION = "com.android.launcher3.WINDOW_OVERLAY"
+
+        @JvmStatic
+        fun isOseWidgetEnabled(context: Context): Boolean =
+            !Settings.Secure.getString(context.contentResolver, SEARCH_ENGINE_SETTINGS_KEY)
+                .isNullOrEmpty()
 
         @JvmStatic fun get(context: Context): OSEManager = context.appComponent.getOseManager()
     }
