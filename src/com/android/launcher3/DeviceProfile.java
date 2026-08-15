@@ -59,6 +59,7 @@ import com.android.launcher3.deviceprofile.WorkspaceProfile;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.model.data.ItemInfo;
+import com.android.launcher3.qsb.OSEManager;
 import com.android.launcher3.responsive.CalculatedCellSpec;
 import com.android.launcher3.responsive.CalculatedHotseatSpec;
 import com.android.launcher3.responsive.CalculatedResponsiveSpec;
@@ -275,6 +276,8 @@ public class DeviceProfile {
 
         int qsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
 
+        boolean isOseEnabled = OSEManager.isOseWidgetEnabled(context);
+
         HotseatProfileInitialValues hotseatProfileInitialValues =
                 HotseatProfileInitialValues.Factory.createHotseatProfileInitialValues(
                         /*deviceProperties*/ getDeviceProperties(),
@@ -289,7 +292,8 @@ public class DeviceProfile {
                                 R.dimen.workspace_page_indicator_height
                         ),
                         /*responsiveWorkspaceCellSpec*/ mResponsiveWorkspaceCellSpec,
-                        qsbHeight
+                        /*qsbHeight*/ qsbHeight,
+                        /*isOseEnabled*/ isOseEnabled
                 );
 
         int allAppsTopPadding = mDeviceProperties.getInsets().top;
